@@ -20,10 +20,10 @@ export default async function Home({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations("landing");
   return (
-    <main className="relative bg-gradient-to-b from-red-400/10 to-transparent">
+    <div className="relative bg-gradient-to-b from-red-400/10 to-transparent">
       {/* Hero Section */}
-      <section className="relative container mx-auto px-4 py-20 sm:px-6 lg:px-8">
-        <div className="relative mx-auto">
+      <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto">
           <div className="mx-auto max-w-4xl text-center">
             <div className="mb-6 flex justify-center">
               <Bitcoin className="text-primary animate-fast-pulse h-20 w-20" />
@@ -116,7 +116,7 @@ export default async function Home({ params }: Props) {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
 

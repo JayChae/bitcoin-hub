@@ -19,7 +19,7 @@ export default async function RootLayout({ children }: Props) {
       <body className="relative size-full antialiased">
         <NextIntlClientProvider>
           <Header />
-          {children}
+          <main className="pt-16">{children}</main>
         </NextIntlClientProvider>
       </body>
     </html>
