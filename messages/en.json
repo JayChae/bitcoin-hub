@@ -10,5 +10,9 @@
       "title": "Global Centers & Organizations",
       "description": "Explore Bitcoin education centers and organizations across all continents"
     }
+  },
+  "about": {
+    "title": "About Us",
+    "description": "We are a team of Bitcoin enthusiasts who are dedicated to educating people about Bitcoin and the Lightning Network."
   }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { Bitcoin, Languages } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
@@ -20,6 +20,7 @@ const links = [
 ];
 export default function Header() {
   const pathname = usePathname();
+  const path = pathname.split("/").slice(2).join("/");
   return (
     <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -61,11 +62,11 @@ export default function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {languages.map((lang) => (
-                    <DropdownMenuItem>
-                      <Link href={`/${lang.code}`} locale={lang.code}>
+                    <Link key={lang.code} href={`/${path}`} locale={lang.code}>
+                      <DropdownMenuItem className="cursor-pointer">
                         {lang.label}
-                      </Link>
-                    </DropdownMenuItem>
+                      </DropdownMenuItem>
+                    </Link>
                   ))}
                 </DropdownMenuContent>
               </DropdownMenu>
