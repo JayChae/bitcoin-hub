@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl";
@@ -27,6 +28,7 @@ export default async function RootLayout({ children }: Props) {
           <Header />
           <main className="pt-16">{children}</main>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
