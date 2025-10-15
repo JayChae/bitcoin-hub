@@ -20,36 +20,34 @@ export default async function Home({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations("landing");
   return (
-    <div className="relative bg-gradient-to-b from-red-400/10 to-transparent">
+    <div className="relative">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 flex justify-center">
-              <Bitcoin className="text-primary animate-fast-pulse h-20 w-20" />
-            </div>
-            <h1 className="from-primary to-primary mb-6 bg-gradient-to-r via-yellow-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
-              {t("title")}
-            </h1>
-            <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
-              {t("description")}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/about">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  Learn More
-                </Button>
-              </Link>
-            </div>
+      <section className="px-4 py-44 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="mb-6 flex justify-center">
+            <Bitcoin className="text-primary animate-fast-pulse h-20 w-20" />
+          </div>
+          <h1 className="from-primary to-primary mb-6 bg-gradient-to-r via-yellow-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
+            {t("title")}
+          </h1>
+          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
+            {t("description")}
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/about">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Development Resources Section */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-red-400/7 to-transparent px-4 py-24 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold">
@@ -84,7 +82,7 @@ export default async function Home({ params }: Props) {
 
       {/* Features Section */}
       {/* Global Centers & Organizations Section */}
-      <section className="bg-secondary/20 px-4 py-16 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-l from-yellow-400/10 to-transparent px-4 py-32 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold">{t("global.title")}</h2>
