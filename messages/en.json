@@ -1,0 +1,14 @@
+{
+  "landing": {
+    "title": "Bitcoin Education Hub",
+    "description": "Your gateway to understanding Bitcoin, Lightning Network, and the future of decentralized finance. Join a global community dedicated to learning and sharing knowledge.",
+    "development": {
+      "title": "Bitcoin Development",
+      "description": "Explore development resources for Bitcoin, Lightning Network, and education."
+    },
+    "global": {
+      "title": "Global Centers & Organizations",
+      "description": "Explore Bitcoin education centers and organizations across all continents"
+    }
+  }
+}

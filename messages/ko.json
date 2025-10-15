@@ -1,0 +1,14 @@
+{
+  "landing": {
+    "title": "Bitcoin Education Hub",
+    "description": "비트코인과 라이트닝 네트워크의 원리를 깊이 이해하고, 탈중앙화 금융의 변화를 함께 만들어가는 글로벌 커뮤니티에 참여하세요.",
+    "development": {
+      "title": "비트코인 개발",
+      "description": "비트코인, 라이트닝 네트워크, 그리고 교육 관련 개발 자료를 탐색하세요."
+    },
+    "global": {
+      "title": "글로벌 센터 및 단체",
+      "description": "전 세계 대륙의 비트코인 교육 센터와 단체들을 살펴보세요."
+    }
+  }
+}

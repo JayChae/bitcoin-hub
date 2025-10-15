@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./components/header";
+import Header from "../../components/header";
+import { NextIntlClientProvider } from "next-intl";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +17,10 @@ export default async function RootLayout({ children, params }: Props) {
   return (
     <html lang="en">
       <body className="antialiased size-full">
-        <Header />
-        {children}
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+        </NextIntlClientProvider>
       </body>
     </html>
   );
