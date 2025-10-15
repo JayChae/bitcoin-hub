@@ -1,7 +1,9 @@
-import type { Metadata } from "next";
 import "./globals.css";
-import Header from "../../components/header";
+
+import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
+
+import Header from "../../components/header";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -9,14 +11,12 @@ export const metadata: Metadata = {
 };
 type Props = {
   children: React.ReactNode;
-  params: Promise<{ locale: string }>;
 };
 
-export default async function RootLayout({ children, params }: Props) {
-  const { locale } = await params;
+export default async function RootLayout({ children }: Props) {
   return (
     <html lang="en" className="overflow-y-scroll">
-      <body className="antialiased size-full">
+      <body className="relative size-full antialiased">
         <NextIntlClientProvider>
           <Header />
           {children}

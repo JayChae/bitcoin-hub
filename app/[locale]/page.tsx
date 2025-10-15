@@ -1,5 +1,7 @@
+import { Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Bitcoin, Zap, BookOpen, MapPin } from "lucide-react";
 import { IntlType, LocaleType } from "@/types";
 
 type Props = {
@@ -21,19 +22,19 @@ export default async function Home({ params }: Props) {
   return (
     <main className="relative bg-gradient-to-b from-red-400/10 to-transparent">
       {/* Hero Section */}
-      <section className="container mx-auto relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto relative">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <Bitcoin className="w-20 h-20 text-primary animate-fast-pulse" />
+      <section className="relative container mx-auto px-4 py-20 sm:px-6 lg:px-8">
+        <div className="relative mx-auto">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-6 flex justify-center">
+              <Bitcoin className="text-primary animate-fast-pulse h-20 w-20" />
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-yellow-400 to-primary bg-clip-text text-transparent">
+            <h1 className="from-primary to-primary mb-6 bg-gradient-to-r via-yellow-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
               {t("title")}
             </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
               {t("description")}
             </p>
-            <div className="flex gap-4 justify-center flex-wrap">
+            <div className="flex flex-wrap justify-center gap-4">
               <Link href="/about">
                 <Button
                   size="lg"
@@ -48,26 +49,26 @@ export default async function Home({ params }: Props) {
       </section>
 
       {/* Development Resources Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold">
               {t("development.title")}
             </h2>
             <p className="text-muted-foreground">
               {t("development.description")}
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {devResources.map((resource) => {
               const Icon = resource.icon;
               const name = resource.name[locale];
               const description = resource.description[locale];
               return (
                 <Link key={resource.link} href={resource.link}>
-                  <Card className="hover:border-primary/50 transition-colors cursor-pointer text-center">
+                  <Card className="hover:border-primary/50 cursor-pointer text-center transition-colors">
                     <CardHeader>
-                      <Icon className="w-12 h-12 text-primary mb-2 mx-auto" />
+                      <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
                       <CardTitle>{name}</CardTitle>
                     </CardHeader>
                     <CardContent>
@@ -83,28 +84,28 @@ export default async function Home({ params }: Props) {
 
       {/* Features Section */}
       {/* Global Centers & Organizations Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-secondary/20">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">{t("global.title")}</h2>
+      <section className="bg-secondary/20 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-12 text-center">
+            <h2 className="mb-4 text-3xl font-bold">{t("global.title")}</h2>
             <p className="text-muted-foreground">{t("global.description")}</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {continents.map((continent: ContinentType) => {
               const name = continent.name[locale];
               return (
                 <Link
                   href={continent.link}
                   key={continent.link}
-                  className="block group"
+                  className="group block"
                 >
-                  <Card className="relative overflow-hidden hover:shadow-lg transition-all duration-300 hover:border-primary/50">
+                  <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}
+                      className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
                     />
                     <CardHeader className="text-center">
-                      <div className="mx-auto bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors">
-                        <MapPin className="w-8 h-8 text-primary" />
+                      <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
+                        <MapPin className="text-primary h-8 w-8" />
                       </div>
                       <CardTitle className="text-xl"> {name}</CardTitle>
                     </CardHeader>

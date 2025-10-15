@@ -1,9 +1,12 @@
 "use client";
 
-import { Link } from "@/i18n/navigation";
 import { Bitcoin, Languages } from "lucide-react";
 import { usePathname } from "next/navigation";
+
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { LanguageType, LocaleType } from "@/types/intl";
+
 import { Button } from "./ui/button";
 import {
   DropdownMenu,
@@ -11,7 +14,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
-import { IntlType, LanguageType, LocaleType } from "@/types/intl";
 
 const links = [
   { href: "/about", label: "About Us" },
@@ -22,27 +24,30 @@ export default function Header() {
   const pathname = usePathname();
   const path = pathname.split("/").slice(2).join("/");
   return (
-    <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-border bg-card/50 fixed top-0 right-0 left-0 z-50 w-full border-b backdrop-blur-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <nav className="flex items-center justify-between h-16">
+        <nav className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+            className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors"
           >
-            <Bitcoin className="w-8 h-8" />
+            <Bitcoin className="h-8 w-8" />
             <span className="text-xl font-bold">Bitcoin Education</span>
           </Link>
 
-          <ul className="flex gap-6 items-center">
+          <ul className="flex items-center gap-6">
             {links.map((link) => (
-              <li className="text-sm font-medium transition-colors hover:text-primary">
+              <li
+                key={link.href}
+                className="hover:text-primary text-sm font-medium transition-colors"
+              >
                 <Link
                   key={link.href}
                   href={link.href}
                   className={cn(
                     pathname === link.href
                       ? "text-primary"
-                      : "text-muted-foreground"
+                      : "text-muted-foreground",
                   )}
                 >
                   {link.label}
