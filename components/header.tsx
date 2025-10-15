@@ -1,8 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { Bitcoin } from "lucide-react";
+import { Bitcoin, Languages } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
+import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "./ui/dropdown-menu";
+import { IntlType, LanguageType, LocaleType } from "@/types/intl";
 
 const links = [
   { href: "/about", label: "About Us" },
@@ -12,9 +21,9 @@ const links = [
 export default function Header() {
   const pathname = usePathname();
   return (
-    <nav className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+    <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <nav className="flex items-center justify-between h-16">
           <Link
             href="/"
             className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
@@ -23,23 +32,56 @@ export default function Header() {
             <span className="text-xl font-bold">Bitcoin Education</span>
           </Link>
 
-          <div className="flex gap-6">
+          <ul className="flex gap-6 items-center">
             {links.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
+              <li className="text-sm font-medium transition-colors hover:text-primary">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    pathname === link.href
+                      ? "text-primary"
+                      : "text-muted-foreground"
+                  )}
+                >
+                  {link.label}
+                </Link>
+              </li>
             ))}
-          </div>
-        </div>
+            <li>
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-muted-foreground"
+                  >
+                    <Languages className="h-5 w-5" />
+                  </Button>
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  {languages.map((lang) => (
+                    <DropdownMenuItem>
+                      <Link href={`/${lang.code}`} locale={lang.code}>
+                        {lang.label}
+                      </Link>
+                    </DropdownMenuItem>
+                  ))}
+                </DropdownMenuContent>
+              </DropdownMenu>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
+
+type Language = {
+  code: LocaleType;
+  label: LanguageType;
+};
+const languages: Language[] = [
+  { code: "en", label: "English" },
+  { code: "ko", label: "한국어" },
+];

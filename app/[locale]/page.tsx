@@ -21,7 +21,7 @@ export default async function Home({ params }: Props) {
   return (
     <main className="relative bg-gradient-to-b from-red-400/10 to-transparent">
       {/* Hero Section */}
-      <section className="container mx-auto relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="container mx-auto relative py-20 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto relative">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-6">

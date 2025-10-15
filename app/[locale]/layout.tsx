@@ -15,7 +15,7 @@ type Props = {
 export default async function RootLayout({ children, params }: Props) {
   const { locale } = await params;
   return (
-    <html lang="en">
+    <html lang="en" className="overflow-y-scroll">
       <body className="antialiased size-full">
         <NextIntlClientProvider>
           <Header />
