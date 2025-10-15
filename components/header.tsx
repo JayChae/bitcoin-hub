@@ -37,22 +37,22 @@ export default function Header() {
 
           <ul className="flex items-center gap-6">
             {links.map((link) => (
-              <li
+              <Link
                 key={link.href}
-                className="hover:text-primary text-sm font-medium transition-colors"
+                href={link.href}
+                className={cn(
+                  pathname === link.href
+                    ? "text-primary"
+                    : "text-muted-foreground",
+                )}
               >
-                <Link
+                <li
                   key={link.href}
-                  href={link.href}
-                  className={cn(
-                    pathname === link.href
-                      ? "text-primary"
-                      : "text-muted-foreground",
-                  )}
+                  className="hover:text-primary text-sm font-medium transition-colors"
                 >
                   {link.label}
-                </Link>
-              </li>
+                </li>
+              </Link>
             ))}
             <li>
               <DropdownMenu>

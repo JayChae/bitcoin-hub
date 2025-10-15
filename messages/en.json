@@ -14,5 +14,9 @@
   "about": {
     "title": "About Us",
     "description": "We are a team of Bitcoin enthusiasts who are dedicated to educating people about Bitcoin and the Lightning Network."
+  },
+  "coming-soon": {
+    "title": "Coming Soon",
+    "description": "This page is under construction"
   }
 }
