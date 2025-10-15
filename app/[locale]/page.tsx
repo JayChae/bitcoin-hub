@@ -47,7 +47,7 @@ export default async function Home({ params }: Props) {
       </section>
 
       {/* Development Resources Section */}
-      <section className="bg-gradient-to-r from-red-400/7 to-transparent px-4 py-24 sm:px-6 lg:px-8">
+      <section className="bg-gradient-to-r from-red-400/7 to-transparent px-4 py-32 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-12 text-center">
             <h2 className="mb-4 text-3xl font-bold">
