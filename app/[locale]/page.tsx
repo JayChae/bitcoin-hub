@@ -1,5 +1,4 @@
 import { Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
-import Link from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Button } from "@/components/ui/button";
@@ -10,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { Link } from "@/i18n/navigation";
 import { IntlType, LocaleType } from "@/types";
 
 type Props = {
@@ -36,7 +36,7 @@ export default async function Home({ params }: Props) {
             {t("description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/about">
+            <Link href="/about" locale={locale}>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -65,7 +65,7 @@ export default async function Home({ params }: Props) {
               const name = resource.name[locale];
               const description = resource.description[locale];
               return (
-                <Link key={resource.link} href={resource.link}>
+                <Link key={resource.link} href={resource.link} locale={locale}>
                   <Card className="hover:border-primary/50 cursor-pointer text-center transition-colors">
                     <CardHeader>
                       <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
@@ -96,6 +96,7 @@ export default async function Home({ params }: Props) {
               return (
                 <Link
                   href={continent.link}
+                  locale={locale}
                   key={continent.link}
                   className="group block"
                 >

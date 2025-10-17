@@ -20,9 +20,8 @@ const links = [
   { href: "/global", label: "Global" },
   { href: "/development", label: "Development" },
 ];
-export default function Header() {
+export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
-  console.log(pathname);
   const path = pathname.split("/").slice(2).join("/");
   return (
     <header className="border-border bg-card/50 fixed top-0 right-0 left-0 z-50 w-full border-b backdrop-blur-sm">
@@ -31,6 +30,7 @@ export default function Header() {
           <Link
             href="/"
             className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors"
+            locale={locale}
           >
             <Bitcoin className="h-8 w-8" />
             <span className="text-xl font-bold">Bitcoin Education</span>
@@ -41,6 +41,7 @@ export default function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                locale={locale}
                 className={cn(
                   pathname === link.href
                     ? "text-primary"
@@ -68,7 +69,11 @@ export default function Header() {
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
                   {languages.map((lang) => (
-                    <Link key={lang.code} href={`/${path}`} locale={lang.code}>
+                    <Link
+                      key={lang.code}
+                      href={`/${path}`}
+                      locale={lang.code as LocaleType}
+                    >
                       <DropdownMenuItem className="cursor-pointer">
                         {lang.label}
                       </DropdownMenuItem>

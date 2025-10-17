@@ -31,7 +31,7 @@ export default async function Layout({
         className={`relative size-full antialiased ${pretendardFont.className}`}
       >
         <NextIntlClientProvider locale={locale}>
-          <Header />
+          <Header locale={locale} />
           <main className="size-full pt-16">{children}</main>
         </NextIntlClientProvider>
         <SpeedInsights />
