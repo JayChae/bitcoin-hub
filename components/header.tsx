@@ -57,7 +57,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
               </Link>
             ))}
             <li>
-              <DropdownMenu>
+              <DropdownMenu modal={false}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
