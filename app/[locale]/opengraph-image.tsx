@@ -1,12 +1,10 @@
 import { ImageResponse } from "next/og";
 import { getTranslations } from "next-intl/server";
 
-import { LocaleType } from "@/types";
-
 export default async function OpenGraphImage({
   params,
 }: {
-  params: Promise<{ locale: LocaleType }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "OpenGraphImage" });

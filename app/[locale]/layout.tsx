@@ -7,16 +7,16 @@ import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { routing } from "@/i18n/routing";
-import { LocaleType } from "@/types";
 
 import Header from "../../components/header";
 
-type Props = {
+export default async function Layout({
+  children,
+  params,
+}: {
   children: React.ReactNode;
-  params: Promise<{ locale: LocaleType }>;
-};
-
-export default async function Layout({ children, params }: Props) {
+  params: Promise<{ locale: string }>;
+}) {
   const { locale } = await params;
   if (!hasLocale(routing.locales, locale)) {
     notFound();
@@ -47,7 +47,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ locale: LocaleType }>;
+  params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "landing.Metadata" });
