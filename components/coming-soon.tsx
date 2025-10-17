@@ -1,7 +1,7 @@
 import { getTranslations } from "next-intl/server";
 
 export default async function ComingSoon() {
-  const t = await getTranslations("coming-soon");
+  const t = await getTranslations("comingSoon");
 
   return (
     <div className="flex min-h-[50vh] flex-col items-center justify-center space-y-4 p-4 text-center">

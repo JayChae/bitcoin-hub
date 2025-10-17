@@ -22,6 +22,7 @@ const links = [
 ];
 export default function Header() {
   const pathname = usePathname();
+  console.log(pathname);
   const path = pathname.split("/").slice(2).join("/");
   return (
     <header className="border-border bg-card/50 fixed top-0 right-0 left-0 z-50 w-full border-b backdrop-blur-sm">

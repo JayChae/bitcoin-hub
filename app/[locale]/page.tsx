@@ -1,6 +1,6 @@
 import { Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
 import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -18,6 +18,8 @@ type Props = {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
+  // Enable static rendering
+  setRequestLocale(locale);
   const t = await getTranslations("landing");
   return (
     <div className="relative">

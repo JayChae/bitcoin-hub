@@ -1,5 +1,9 @@
 {
   "landing": {
+    "Metadata": {
+      "title": "Bitcoin Education Hub",
+      "description": ""
+    },
     "title": "Bitcoin Education Hub",
     "description": "비트코인과 라이트닝 네트워크의 원리를 깊이 이해하고, 탈중앙화 금융의 변화를 함께 만들어가는 글로벌 커뮤니티에 참여하세요.",
     "development": {
@@ -18,5 +22,16 @@
   "coming-soon": {
     "title": "준비중",
     "description": "페이지 준비중입니다"
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "description": "찾으시는 페이지를 찾을 수 없습니다.",
+    "goHome": "홈으로 이동"
+  },
+  "errorPage": {
+    "title": "앗! 문제가 발생했습니다",
+    "description": "문제가 발생했습니다. 나중에 다시 시도해주세요.",
+    "retry": "다시 시도",
+    "goHome": "홈으로 이동"
   }
 }
