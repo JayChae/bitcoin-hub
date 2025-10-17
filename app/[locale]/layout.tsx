@@ -60,4 +60,7 @@ export async function generateMetadata({
 
 const pretendardFont = localFont({
   src: "../../public/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  preload: true,
 });
