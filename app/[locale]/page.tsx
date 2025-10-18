@@ -1,5 +1,6 @@
 import { Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
 import { IntlType, LocaleType } from "@/types";
 
 type Props = {
@@ -49,75 +51,107 @@ export default async function Home({ params }: Props) {
       </section>
 
       {/* Development Resources Section */}
-      <section className="bg-gradient-to-r from-red-400/7 to-transparent px-4 py-32 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">
-              {t("development.title")}
-            </h2>
-            <p className="text-muted-foreground">
-              {t("development.description")}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {devResources.map((resource) => {
-              const Icon = resource.icon;
-              const name = resource.name[locale];
-              const description = resource.description[locale];
-              return (
-                <Link key={resource.link} href={resource.link} locale={locale}>
-                  <Card className="hover:border-primary/50 cursor-pointer text-center transition-colors">
-                    <CardHeader>
-                      <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
-                      <CardTitle>{name}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <CardDescription>{description}</CardDescription>
-                    </CardContent>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
+
+      <Section
+        title={t("development.title")}
+        description={t("development.description")}
+        className="bg-gradient-to-r from-red-400/7 to-transparent"
+      >
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {devResources.map((resource) => {
+            const Icon = resource.icon;
+            const name = resource.name[locale];
+            const description = resource.description[locale];
+            return (
+              <Link key={resource.link} href={resource.link} locale={locale}>
+                <Card className="hover:border-primary/50 cursor-pointer text-center transition-colors">
+                  <CardHeader>
+                    <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
+                    <CardTitle>{name}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription>{description}</CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
-      </section>
+      </Section>
 
       {/* Features Section */}
       {/* Global Centers & Organizations Section */}
-      <section className="bg-gradient-to-l from-yellow-400/10 to-transparent px-4 py-32 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">{t("global.title")}</h2>
-            <p className="text-muted-foreground">{t("global.description")}</p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {continents.map((continent: ContinentType) => {
-              const name = continent.name[locale];
-              return (
-                <Link
-                  href={continent.link}
-                  locale={locale}
-                  key={continent.link}
-                  className="group block"
-                >
-                  <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                    />
-                    <CardHeader className="text-center">
-                      <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
-                        <MapPin className="text-primary h-8 w-8" />
-                      </div>
-                      <CardTitle className="text-xl"> {name}</CardTitle>
-                    </CardHeader>
-                  </Card>
-                </Link>
-              );
-            })}
-          </div>
+
+      <Section
+        title={t("global.title")}
+        description={t("global.description")}
+        className="bg-gradient-to-l from-yellow-400/10 to-transparent"
+      >
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {continents.map((continent: ContinentType) => {
+            const name = continent.name[locale];
+            return (
+              <Link
+                href={continent.link}
+                locale={locale}
+                key={continent.link}
+                className="group block"
+              >
+                <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                  />
+                  <CardHeader className="text-center">
+                    <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
+                      <MapPin className="text-primary h-8 w-8" />
+                    </div>
+                    <CardTitle className="text-xl"> {name}</CardTitle>
+                  </CardHeader>
+                </Card>
+              </Link>
+            );
+          })}
         </div>
-      </section>
+      </Section>
+
+      <Section
+        title={t("internship.title")}
+        description={t("internship.description")}
+        className="from-card to-secondary/20 bg-gradient-to-r"
+      >
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link href="/internship">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              {t("internship.details")}
+            </Button>
+          </Link>
+        </div>
+      </Section>
     </div>
+  );
+}
+
+type SectionProps = {
+  children: ReactNode;
+  className?: string;
+  title: string;
+  description: string;
+};
+
+function Section({ children, className, title, description }: SectionProps) {
+  return (
+    <section className={cn("px-4 py-32 sm:px-6 lg:px-8", className)}>
+      <div className="mx-auto max-w-4xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold">{title}</h2>
+          <p className="text-muted-foreground">{description}</p>
+        </div>
+        {children}
+      </div>
+    </section>
   );
 }
 

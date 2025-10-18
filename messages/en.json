@@ -13,6 +13,11 @@
     "global": {
       "title": "Global Centers & Organizations",
       "description": "Explore Bitcoin education centers and organizations across all continents"
+    },
+    "internship": {
+      "title": "Internship Program",
+      "description": "Join internship programs to deeply understand the technology and philosophy of Bitcoin while gaining hands-on experience through real projects. Learn Bitcoin development through lectures and mentoring, and experience contributing directly to the Bitcoin ecosystem through practical work.",
+      "details": "Explore Programs"
     }
   },
   "about": {
@@ -33,5 +38,10 @@
     "description": "We're sorry, but something went wrong. Please try again later.",
     "retry": "Retry",
     "goHome": "Go Home"
+  },
+  "footer": {
+    "contact": "Email",
+    "support": "Support Us",
+    "whitepaper": "Bitcoin Whitepaper"
   }
 }
