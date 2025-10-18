@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import Footer from "@/components/footer";
 import { routing } from "@/i18n/routing";
 
 import Header from "../../components/header";
@@ -32,7 +33,8 @@ export default async function Layout({
       >
         <NextIntlClientProvider locale={locale}>
           <Header locale={locale} />
-          <main className="size-full pt-16">{children}</main>
+          <main className="min-h-full min-w-full pt-16">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
         <SpeedInsights />
       </body>
