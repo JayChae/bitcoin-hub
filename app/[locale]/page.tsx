@@ -1,4 +1,4 @@
-import { Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
+import { ArrowRight, Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
@@ -77,6 +77,8 @@ export default async function Home({ params }: Props) {
             );
           })}
         </div>
+
+        <ExploreAllButton href="/development" text={t("exploreAll")} />
       </Section>
 
       {/* Features Section */}
@@ -112,6 +114,7 @@ export default async function Home({ params }: Props) {
             );
           })}
         </div>
+        <ExploreAllButton href="/global" text={t("exploreAll")} />
       </Section>
 
       <Section
@@ -152,6 +155,21 @@ function Section({ children, className, title, description }: SectionProps) {
         {children}
       </div>
     </section>
+  );
+}
+
+function ExploreAllButton({ href, text }: { href: string; text: string }) {
+  return (
+    <Link href={href} className="mt-12 flex justify-center">
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
+      >
+        {text}
+        <ArrowRight className="h-4 w-4" />
+      </Button>
+    </Link>
   );
 }
 

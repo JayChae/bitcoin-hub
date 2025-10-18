@@ -3,8 +3,6 @@ import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 
-import { Button } from "./ui/button";
-
 async function Footer() {
   const t = await getTranslations("footer");
 
