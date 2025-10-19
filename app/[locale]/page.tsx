@@ -51,41 +51,40 @@ export default async function Home({ params }: Props) {
       </section>
 
       {/* Development Resources Section */}
-
       <Section
         title={t("development.title")}
         description={t("development.description")}
         className="from-secondary/10 bg-gradient-to-r to-transparent"
       >
-        <div className="flex flex-wrap justify-center gap-4">
+        <ul className="flex flex-wrap justify-center gap-4">
           {devResources.map((resource) => {
             const Icon = resource.icon;
             const name = resource.name[locale];
             const description = resource.description[locale];
             return (
-              <Link key={resource.link} href={resource.link} locale={locale}>
-                <Card className="hover:border-primary/50 w-full max-w-3xs cursor-pointer text-center transition-colors">
-                  <CardHeader>
-                    <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
-                    <CardTitle>{name}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{description}</CardDescription>
-                  </CardContent>
-                </Card>
-              </Link>
+              <li key={resource.link}>
+                <Link href={resource.link} locale={locale}>
+                  <Card className="hover:border-primary/50 h-full w-full max-w-2xs cursor-pointer gap-4 text-center transition-colors sm:gap-6">
+                    <CardHeader>
+                      <Icon className="text-primary mx-auto mb-2 size-10 sm:size-12 lg:size-14" />
+                      <CardTitle>{name}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription>{description}</CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </li>
             );
           })}
-        </div>
+        </ul>
 
         <div className="mt-12 flex justify-center">
           <ExploreAllButton href="/development" text={t("exploreAll")} />
         </div>
       </Section>
 
-      {/* Features Section */}
       {/* Global Centers & Organizations Section */}
-
       <Section
         title={t("global.title")}
         description={t("global.description")}
@@ -107,7 +106,7 @@ export default async function Home({ params }: Props) {
                     />
                     <CardHeader className="text-center">
                       <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
-                        <MapPin className="text-primary h-8 w-8" />
+                        <MapPin className="text-primary size-6 sm:size-8 lg:size-10" />
                       </div>
                       <CardTitle className="text-xl"> {name}</CardTitle>
                     </CardHeader>
@@ -122,6 +121,7 @@ export default async function Home({ params }: Props) {
         </div>
       </Section>
 
+      {/* Internship Section */}
       <Section
         title={t("internship.title")}
         description={t("internship.description")}
@@ -195,18 +195,17 @@ const devResources: DevResourceType[] = [
   {
     name: { en: "Bitcoin", ko: "비트코인" },
     description: {
-      en: "Master the fundamentals of Bitcoin, blockchain technology, and peer-to-peer transactions.",
-      ko: "비트코인, 블록체인 기술, 그리고 P2P 거래의 기초를 배우세요.",
+      en: "Browse key Bitcoin development resources — including libraries, APIs, utilities, and SDKs.",
+      ko: "라이브러리, API, 유틸리티, SDK — 다양한 비트코인 개발 리소스를 탐색하세요.",
     },
-
     icon: Bitcoin,
     link: "/development/bitcoin",
   },
   {
     name: { en: "Lightning Network", ko: "라이트닝 네트워크" },
     description: {
-      en: "Explore Layer 2 scaling solutions and instant, low-cost Bitcoin transactions.",
-      ko: "레이어 2 확장 솔루션과 인스턴트, 저렴한 비트코인 거래를 탐색하세요.",
+      en: "Explore Lightning Network development resources — from libraries and SDKs to monitoring and routing tools.",
+      ko: "라이브러리, SDK, 모니터링, 라우팅 — 라이트닝 네트워크 개발 리소스를 탐색하세요.",
     },
     icon: Zap,
     link: "/development/lightning-network",
@@ -214,8 +213,8 @@ const devResources: DevResourceType[] = [
   {
     name: { en: "Education", ko: "교육" },
     description: {
-      en: "Access curated learning materials, documentation, and development tools.",
-      ko: "학습 자료, 문서, 그리고 개발 도구에 접근하세요.",
+      en: "Access curated learning materials, tutorials, courses, certifications, and books for Bitcoin and Lightning Network development.",
+      ko: "학습 자료, 튜토리얼, 강좌, 인증 프로그램, 참고서적을 만나보세요.",
     },
     icon: BookOpen,
     link: "/development/education",

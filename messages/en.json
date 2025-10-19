@@ -5,14 +5,14 @@
       "description": ""
     },
     "title": "Bitcoin Education Hub",
-    "description": "Your gateway to understanding Bitcoin, Lightning Network, and the future of decentralized finance. Join a global community dedicated to learning and sharing knowledge.",
+    "description": "Your gateway to Bitcoin development, internship opportunities, and global communities — everything you need to explore, learn, and connect in the world of Bitcoin.",
     "development": {
       "title": "Bitcoin Development",
       "description": "Explore development resources for Bitcoin, Lightning Network, and education."
     },
     "global": {
-      "title": "Global Centers & Organizations",
-      "description": "Explore Bitcoin education centers and organizations across all continents"
+      "title": "Global Communities",
+      "description": "Explore Bitcoin centers, organizations, and communities across all continents"
     },
     "internship": {
       "title": "Internship Program",
