@@ -34,7 +34,7 @@ export default async function Home({ params }: Props) {
           <h1 className="from-primary to-secondary mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
             {t("title")}
           </h1>
-          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
+          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-base sm:text-xl">
             {t("description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
