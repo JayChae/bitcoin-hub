@@ -1,6 +1,6 @@
 "use client";
 
-import { Bitcoin, Languages, Menu, X } from "lucide-react";
+import { Bitcoin, Languages, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
