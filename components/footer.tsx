@@ -25,7 +25,7 @@ async function Footer() {
             bitcoinspecter@getalby.com
           </span>
         </div>
-        <p>
+        <p className="text-center">
           © {new Date().getFullYear()} Bitcoin Education Hub. Empowering
           through knowledge.
         </p>

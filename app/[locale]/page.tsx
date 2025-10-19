@@ -26,12 +26,12 @@ export default async function Home({ params }: Props) {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="px-4 py-44 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
+      <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-12 sm:py-48 lg:px-8">
+        <div className="mx-auto mb-24 max-w-4xl text-center">
           <div className="mb-6 flex justify-center">
             <Bitcoin className="text-primary animate-fast-pulse h-20 w-20" />
           </div>
-          <h1 className="from-primary to-primary mb-6 bg-gradient-to-r via-yellow-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
+          <h1 className="from-primary to-secondary mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
             {t("title")}
           </h1>
           <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
@@ -55,16 +55,16 @@ export default async function Home({ params }: Props) {
       <Section
         title={t("development.title")}
         description={t("development.description")}
-        className="bg-gradient-to-r from-red-400/7 to-transparent"
+        className="from-secondary/10 bg-gradient-to-r to-transparent"
       >
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-4">
           {devResources.map((resource) => {
             const Icon = resource.icon;
             const name = resource.name[locale];
             const description = resource.description[locale];
             return (
               <Link key={resource.link} href={resource.link} locale={locale}>
-                <Card className="hover:border-primary/50 cursor-pointer text-center transition-colors">
+                <Card className="hover:border-primary/50 w-full max-w-3xs cursor-pointer text-center transition-colors">
                   <CardHeader>
                     <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
                     <CardTitle>{name}</CardTitle>
@@ -78,7 +78,9 @@ export default async function Home({ params }: Props) {
           })}
         </div>
 
-        <ExploreAllButton href="/development" text={t("exploreAll")} />
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/development" text={t("exploreAll")} />
+        </div>
       </Section>
 
       {/* Features Section */}
@@ -87,40 +89,43 @@ export default async function Home({ params }: Props) {
       <Section
         title={t("global.title")}
         description={t("global.description")}
-        className="bg-gradient-to-l from-yellow-400/10 to-transparent"
+        className="bg-gradient-to-l from-yellow-500/10 to-transparent"
       >
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {continents.map((continent: ContinentType) => {
             const name = continent.name[locale];
             return (
-              <Link
-                href={continent.link}
-                locale={locale}
-                key={continent.link}
-                className="group block"
-              >
-                <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
-                  />
-                  <CardHeader className="text-center">
-                    <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
-                      <MapPin className="text-primary h-8 w-8" />
-                    </div>
-                    <CardTitle className="text-xl"> {name}</CardTitle>
-                  </CardHeader>
-                </Card>
-              </Link>
+              <li key={continent.link} className="w-full max-w-3xs">
+                <Link
+                  href={continent.link}
+                  locale={locale}
+                  className="group block"
+                >
+                  <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
+                    />
+                    <CardHeader className="text-center">
+                      <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
+                        <MapPin className="text-primary h-8 w-8" />
+                      </div>
+                      <CardTitle className="text-xl"> {name}</CardTitle>
+                    </CardHeader>
+                  </Card>
+                </Link>
+              </li>
             );
           })}
+        </ul>
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/global" text={t("exploreAll")} />
         </div>
-        <ExploreAllButton href="/global" text={t("exploreAll")} />
       </Section>
 
       <Section
         title={t("internship.title")}
         description={t("internship.description")}
-        className="from-card to-secondary/20 bg-gradient-to-r"
+        className=""
       >
         <div className="flex flex-wrap justify-center gap-4">
           <Link href="/internship">
@@ -160,7 +165,7 @@ function Section({ children, className, title, description }: SectionProps) {
 
 function ExploreAllButton({ href, text }: { href: string; text: string }) {
   return (
-    <Link href={href} className="mt-12 flex justify-center">
+    <Link href={href} className="">
       <Button
         size="lg"
         variant="outline"
