@@ -63,11 +63,6 @@
     "retry": "다시 시도",
     "goHome": "홈으로 이동"
   },
-  "footer": {
-    "contact": "이메일",
-    "support": "후원하기",
-    "whitepaper": "비트코인 백서"
-  },
   "internship": {
     "hero": {
       "title": "인턴십 프로그램",
@@ -100,5 +95,14 @@
       "exploreCenters": "글로벌 커뮤니티",
       "developmentResources": "개발 리소스"
     }
+  },
+  "footer": {
+    "contact": "이메일",
+    "support": {
+      "title": "후원하기",
+      "onChain": "온체인",
+      "lightning": "라이트닝"
+    },
+    "whitepaper": "비트코인 백서"
   }
 }

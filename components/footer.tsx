@@ -20,10 +20,16 @@ async function Footer() {
         </div>
 
         <div className="flex flex-col items-center justify-center">
-          <span>{t("support")}: </span>
-          <span className="hover:text-primary hover:underline">
-            bitcoinspecter@getalby.com
-          </span>
+          <span>{t("support.title")}: </span>
+          <div className="flex items-center justify-center gap-2">
+            <span className="hover:text-primary cursor-pointer hover:underline">
+              {t("support.onChain")}
+            </span>
+            <span>/</span>
+            <span className="hover:text-primary cursor-pointer hover:underline">
+              {t("support.lightning")}
+            </span>
+          </div>
         </div>
         <p className="text-center">
           © {new Date().getFullYear()} Bitcoin Education Hub. Empowering

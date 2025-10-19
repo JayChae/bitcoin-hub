@@ -63,11 +63,6 @@
     "retry": "Retry",
     "goHome": "Go Home"
   },
-  "footer": {
-    "contact": "Email",
-    "support": "Support Us",
-    "whitepaper": "Bitcoin Whitepaper"
-  },
   "internship": {
     "hero": {
       "title": "Internship Program",
@@ -100,5 +95,14 @@
       "exploreCenters": "Global Communities",
       "developmentResources": "Development Resources"
     }
+  },
+  "footer": {
+    "contact": "Email",
+    "support": {
+      "title": "Support Us",
+      "onChain": "onChain",
+      "lightning": "lightning"
+    },
+    "whitepaper": "Bitcoin Whitepaper"
   }
 }
