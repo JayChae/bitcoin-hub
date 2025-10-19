@@ -20,6 +20,7 @@ const links = [
   { href: "/about", label: "About Us" },
   { href: "/global", label: "Global" },
   { href: "/development", label: "Development" },
+  { href: "/internship", label: "Internship" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
@@ -36,7 +37,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
             locale={locale}
           >
             <Bitcoin className="h-8 w-8" />
-            <span className="hidden text-xl font-bold sm:block">
+            <span className="block text-xl font-bold sm:hidden md:block">
               Bitcoin Education Hub
             </span>
           </Link>
