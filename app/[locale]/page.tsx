@@ -1,4 +1,12 @@
-import { ArrowRight, Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Bitcoin,
+  BookOpen,
+  BookText,
+  MapPin,
+  User,
+  Zap,
+} from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
@@ -84,22 +92,55 @@ export default async function Home({ params }: Props) {
         </div>
       </Section>
 
+      {/* Education Resources Section */}
+      <Section
+        title={t("education.title")}
+        description={t("education.description")}
+        className="bg-gradient-to-l from-yellow-500/10 to-transparent"
+      >
+        <ul className="flex flex-wrap justify-center gap-4">
+          {EDUCATION_RESOURCES.map((resource) => {
+            const Icon = resource.icon;
+            return (
+              <li key={resource.id}>
+                <Link href={resource.link} locale={locale}>
+                  <Card className="hover:border-primary/50 h-full w-full max-w-2xs cursor-pointer gap-4 text-center transition-colors sm:gap-6">
+                    <CardHeader>
+                      <Icon className="text-primary mx-auto mb-2 size-10 sm:size-12 lg:size-14" />
+                      <CardTitle>{t(resource.title)}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription>
+                        {t(resource.description)}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/global" text={t("exploreAll")} />
+        </div>
+      </Section>
+
       {/* Global Centers & Organizations Section */}
       <Section
         title={t("global.title")}
         description={t("global.description")}
-        className="bg-gradient-to-l from-yellow-500/10 to-transparent"
+        className="bg-gradient-to-r from-blue-500/10 to-transparent"
       >
         <ul className="grid grid-cols-2 gap-4 md:grid-cols-3">
           {CONTINENTS.map((continent) => {
             return (
-              <li key={continent.id} className="w-full max-w-3xs">
+              <li key={continent.id}>
                 <Link
                   href={continent.link}
                   locale={locale}
-                  className="group block"
+                  className="group block h-full"
                 >
-                  <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
+                  <Card className="hover:border-primary/50 relative h-full w-full max-w-3xs overflow-hidden transition-all duration-300 hover:shadow-lg">
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
                     />
@@ -107,7 +148,7 @@ export default async function Home({ params }: Props) {
                       <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
                         <MapPin className="text-primary size-6 sm:size-8 lg:size-10" />
                       </div>
-                      <CardTitle className="text-xl">
+                      <CardTitle className="text-sm sm:text-lg md:text-xl">
                         {t(continent.title)}
                       </CardTitle>
                     </CardHeader>
@@ -241,5 +282,29 @@ const CONTINENTS = [
     title: "global.continents.oceania",
     color: "from-teal-500/20 to-teal-500/5",
     link: "/global/oceania",
+  },
+] as const;
+
+const EDUCATION_RESOURCES = [
+  {
+    id: "educators",
+    icon: User,
+    title: "education.resources.educators.title",
+    description: "education.resources.educators.description",
+    link: "/education/educators",
+  },
+  {
+    id: "books",
+    icon: BookOpen,
+    title: "education.resources.books.title",
+    description: "education.resources.books.description",
+    link: "/education/books",
+  },
+  {
+    id: "materials",
+    icon: BookText,
+    title: "education.resources.materials.title",
+    description: "education.resources.materials.description",
+    link: "/education/materials",
   },
 ] as const;
