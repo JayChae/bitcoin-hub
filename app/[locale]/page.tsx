@@ -121,7 +121,7 @@ export default async function Home({ params }: Props) {
           })}
         </ul>
         <div className="mt-12 flex justify-center">
-          <ExploreAllButton href="/global" text={t("exploreAll")} />
+          <ExploreAllButton href="/education" text={t("exploreAll")} />
         </div>
       </Section>
 

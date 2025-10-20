@@ -18,8 +18,9 @@ import {
 
 const links = [
   { href: "/about", label: "About Us" },
-  { href: "/global", label: "Global" },
   { href: "/development", label: "Development" },
+  { href: "/education", label: "Education" },
+  { href: "/global", label: "Global" },
   { href: "/internship", label: "Internship" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
@@ -38,7 +39,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
           >
             <Bitcoin className="h-8 w-8" />
             <span className="block text-xl font-bold sm:hidden md:block">
-              Bitcoin Education Hub
+              Bitcoin Hub
             </span>
           </Link>
 
