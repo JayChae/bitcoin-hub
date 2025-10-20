@@ -156,7 +156,9 @@ function Section({ children, className, title, description }: SectionProps) {
       <div className="mx-auto max-w-4xl">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold">{title}</h2>
-          <p className="text-muted-foreground">{description}</p>
+          <p className="text-muted-foreground mx-auto max-w-2xl">
+            {description}
+          </p>
         </div>
         {children}
       </div>
