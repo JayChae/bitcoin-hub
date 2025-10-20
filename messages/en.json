@@ -100,8 +100,8 @@
     "contact": "Email",
     "support": {
       "title": "Support Us",
-      "onChain": "onChain",
-      "lightning": "lightning"
+      "onChain": "Onchain",
+      "lightning": "Lightning"
     },
     "whitepaper": "Bitcoin Whitepaper"
   }
