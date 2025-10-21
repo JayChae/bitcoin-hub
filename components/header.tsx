@@ -77,6 +77,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                       key={lang.code}
                       href={`/${path}`}
                       locale={lang.code as LocaleType}
+                      rel="alternate"
                     >
                       <DropdownMenuItem className="cursor-pointer">
                         {lang.label}
@@ -130,6 +131,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   locale={locale === "en" ? "ko" : "en"}
                   onClick={() => setMobileMenuOpen(false)}
                   className="hover:bg-accent text-muted-foreground block rounded-md px-4 py-3 text-sm transition-colors hover:text-black"
+                  rel="alternate"
                 >
                   {locale === "en" ? "한국어" : "English"}
                 </Link>
