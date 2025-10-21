@@ -7,15 +7,5 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "cSpell.words": [
-    "classname",
-    "bookiwi",
-    "epubjs",
-    "tanstack",
-    "tanstackrouter",
-    "sonner",
-    "supabase",
-    "kakao",
-    "epubs"
-  ]
+  "cSpell.words": ["classname", "pretendard"]
 }

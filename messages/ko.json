@@ -1,18 +1,127 @@
 {
   "landing": {
-    "title": "Bitcoin Education Hub",
-    "description": "비트코인과 라이트닝 네트워크의 원리를 깊이 이해하고, 탈중앙화 금융의 변화를 함께 만들어가는 글로벌 커뮤니티에 참여하세요.",
+    "Metadata": {
+      "title": "Bitcoin Hub",
+      "description": ""
+    },
+    "title": "Bitcoin Hub",
+    "description": "비트코인 개발 자료, 인턴십, 전 세계 커뮤니티까지. 비트코인을 배우고 연결할 수 있는 모든 것을 제공합니다.",
     "development": {
       "title": "비트코인 개발",
-      "description": "비트코인, 라이트닝 네트워크, 그리고 교육 관련 개발 자료를 탐색하세요."
+      "description": "비트코인, 라이트닝 네트워크, 그리고 교육 관련 개발 자료를 탐색하세요.",
+      "resources": {
+        "bitcoin": {
+          "title": "비트코인",
+          "description": "라이브러리, API, 유틸리티, SDK — 다양한 비트코인 개발 리소스를 탐색하세요."
+        },
+        "lightning": {
+          "title": "라이트닝 네트워크",
+          "description": "라이브러리, SDK, 모니터링, 라우팅 — 라이트닝 네트워크 개발 리소스를 탐색하세요."
+        },
+        "education": {
+          "title": "교육",
+          "description": "개발 관련 학습 자료, 튜토리얼, 강좌, 인증 프로그램, 참고서적을 만나보세요."
+        }
+      }
     },
+    "education": {
+      "title": "비트코인 교육",
+      "description": "비트코인의 철학과 기술을 깊이 있게 배우세요. 초보자부터 개발자까지, 누구나 이해할 수 있는 강의와 자료를 통해 비트코인의 원리를 탐구할 수 있습니다.",
+      "resources": {
+        "educators": {
+          "title": "교육자들",
+          "description": "비트코인 전문가와 교육자들을 만나보세요. 그들의 강의와 콘텐츠를 통해 더 깊은 통찰을 얻을 수 있습니다."
+        },
+        "books": {
+          "title": "서적",
+          "description": "비트코인을 이해하기 위한 필독서부터 심화 기술서까지 — 다양한 책을 통해 비트코인의 세계를 체계적으로 배워보세요."
+        },
+        "materials": {
+          "title": "학습 자료",
+          "description": "튜토리얼, 가이드, 비디오 강의 등 다양한 형식의 학습 자료를 통해 스스로 비트코인을 배우고 실습해보세요."
+        }
+      }
+    },
+
     "global": {
-      "title": "글로벌 센터 및 단체",
-      "description": "전 세계 대륙의 비트코인 교육 센터와 단체들을 살펴보세요."
-    }
+      "title": "글로벌 커뮤니티",
+      "description": "전 세계 대륙의 비트코인 센터, 단체, 커뮤니티를 살펴보세요.",
+      "continents": {
+        "asia": "아시아",
+        "europe": "유럽",
+        "africa": "아프리카",
+        "northAmerica": "북아메리카",
+        "southAmerica": "남아메리카",
+        "oceania": "오세아니아"
+      }
+    },
+    "internship": {
+      "title": "인턴십 프로그램",
+      "description": "비트코인의 기술과 철학을 깊이 이해하고, 실제 프로젝트를 통해 경험을 쌓는 인턴십에 참여하세요. 강의와 멘토링을 통해 비트코인 개발을 학습하고 실습을 통해 비트코인 생태계에 직접 기여하는 과정을 경험하세요.",
+      "details": "프로그램 살펴보기"
+    },
+    "exploreAll": "자세히 알아보기"
   },
   "about": {
     "title": "About Us",
     "description": "비트코인과 라이트닝 네트워크에 대한 전문가들로 구성된 팀입니다. 비트코인과 라이트닝 네트워크에 대한 전문가들로 구성된 팀입니다."
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "subtitle": "페이지 제작 중입니다",
+    "description": "비트코인 커뮤니티를 위해 멋진 웹 페이지를 제작하고 있습니다. 신규 기능과 업데이트를 기다려주세요."
+  },
+  "notFound": {
+    "title": "페이지를 찾을 수 없습니다",
+    "description": "찾으시는 페이지를 찾을 수 없습니다.",
+    "goHome": "홈으로 이동"
+  },
+  "errorPage": {
+    "title": "앗! 문제가 발생했습니다",
+    "description": "문제가 발생했습니다. 나중에 다시 시도해주세요.",
+    "retry": "다시 시도",
+    "goHome": "홈으로 이동"
+  },
+  "internship": {
+    "hero": {
+      "title": "인턴십 프로그램",
+      "description": "실무 경험과 멘토링을 통해 전 세계 비트코인 발전에 기여하세요."
+    },
+    "status": {
+      "noOpenings": "현재 참여 가능한 인턴십이 없습니다",
+      "description": "비트코인 개발에 열정적인 인재를 항상 찾고 있습니다. 곧 있을 기회를 확인하기 위해 다시 방문해 주세요!",
+      "getNotified": "알림 받기",
+      "learnAboutUs": "사이트 소개"
+    },
+    "offers": {
+      "title": "인턴십 프로그램 혜택",
+      "expertise": {
+        "title": "비트코인 전문성",
+        "description": "업계 전문가로부터 배우고 비트코인 기술과 라이트닝 네트워크에 대한 깊은 이해를 얻으세요."
+      },
+      "mentorship": {
+        "title": "멘토십",
+        "description": "비트코인 개발 분야의 경험 많은 전문가들과 함께 일하며 맞춤형 지도를 받으세요."
+      },
+      "projects": {
+        "title": "실제 프로젝트",
+        "description": "전 세계 비트코인 개발에 영향을 미치는 의미 있는 프로젝트에 기여하고 포트폴리오를 구축하세요."
+      }
+    },
+    "stayConnected": {
+      "title": "둘러보기",
+      "description": "원하는 인턴십을 찾지 못하셨나요? 리소스를 탐색하고 비트코인 개발 커뮤니티에 참여해 보세요.",
+      "exploreCenters": "글로벌 커뮤니티",
+      "developmentResources": "개발 리소스"
+    }
+  },
+  "footer": {
+    "contact": "이메일",
+    "support": {
+      "title": "후원하기",
+      "onChain": "온체인",
+      "lightning": "라이트닝"
+    },
+    "whitepaper": "비트코인 백서"
   }
 }

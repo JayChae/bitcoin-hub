@@ -1,18 +1,126 @@
 {
   "landing": {
-    "title": "Bitcoin Education Hub",
-    "description": "Your gateway to understanding Bitcoin, Lightning Network, and the future of decentralized finance. Join a global community dedicated to learning and sharing knowledge.",
+    "Metadata": {
+      "title": "Bitcoin Hub",
+      "description": ""
+    },
+    "title": "Bitcoin Hub",
+    "description": "Bitcoin development, internship, and global communities. Everything you need to explore and connect in the world of Bitcoin.",
     "development": {
       "title": "Bitcoin Development",
-      "description": "Explore development resources for Bitcoin, Lightning Network, and education."
+      "description": "Explore development resources for Bitcoin, Lightning Network, and education.",
+      "resources": {
+        "bitcoin": {
+          "title": "Bitcoin",
+          "description": "Browse key Bitcoin development resources — including libraries, APIs, utilities, and SDKs."
+        },
+        "lightning": {
+          "title": "Lightning Network",
+          "description": "Explore Lightning Network development resources — from libraries and SDKs to monitoring and routing tools."
+        },
+        "education": {
+          "title": "Education",
+          "description": "Access curated learning materials, tutorials, courses, certifications, and books for Bitcoin and Lightning Network development."
+        }
+      }
+    },
+    "education": {
+      "title": "Bitcoin Education",
+      "description": "Learn the philosophy and technology behind Bitcoin. Explore its fundamentals and mechanics through resources designed for everyone — from beginners to developers.",
+      "resources": {
+        "educators": {
+          "title": "Educators",
+          "description": "Discover leading Bitcoin educators and experts. Gain deeper insights through their courses, talks, and educational content."
+        },
+        "books": {
+          "title": "Books",
+          "description": "From essential reading for newcomers to advanced technical books — explore a curated selection to understand Bitcoin in depth."
+        },
+        "materials": {
+          "title": "Learning Materials",
+          "description": "Access tutorials, guides, and video lessons that help you learn and practice Bitcoin at your own pace."
+        }
+      }
     },
     "global": {
-      "title": "Global Centers & Organizations",
-      "description": "Explore Bitcoin education centers and organizations across all continents"
-    }
+      "title": "Global Communities",
+      "description": "Explore Bitcoin centers, organizations, and communities across all continents",
+      "continents": {
+        "asia": "Asia",
+        "europe": "Europe",
+        "africa": "Africa",
+        "northAmerica": "North America",
+        "southAmerica": "South America",
+        "oceania": "Oceania"
+      }
+    },
+    "internship": {
+      "title": "Internship Program",
+      "description": "Join internship programs to deeply understand the technology and philosophy of Bitcoin while gaining hands-on experience through real projects. Learn Bitcoin development through lectures and mentoring, and experience contributing directly to the Bitcoin ecosystem through practical work.",
+      "details": "Explore Programs"
+    },
+    "exploreAll": "Explore All"
   },
   "about": {
     "title": "About Us",
     "description": "We are a team of Bitcoin enthusiasts who are dedicated to educating people about Bitcoin and the Lightning Network."
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "subtitle": "This page is under construction",
+    "description": "We're building something amazing for the Bitcoin community. Stay tuned for exciting updates and new features."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you are looking for does not exist.",
+    "goHome": "Go Home"
+  },
+  "errorPage": {
+    "title": "Oops! Something went wrong",
+    "description": "We're sorry, but something went wrong. Please try again later.",
+    "retry": "Retry",
+    "goHome": "Go Home"
+  },
+  "internship": {
+    "hero": {
+      "title": "Internship Program",
+      "description": "Join our mission to advance Bitcoin development worldwide through hands-on experience and mentorship."
+    },
+    "status": {
+      "noOpenings": "Currently No Openings",
+      "description": "We're always looking for passionate individuals interested in Bitcoin development. Check back soon for future opportunities!",
+      "getNotified": "Get Notified",
+      "learnAboutUs": "Learn About Us"
+    },
+    "offers": {
+      "title": "What Our Internship Program Offers",
+      "expertise": {
+        "title": "Bitcoin Expertise",
+        "description": "Learn from industry experts and gain deep understanding of Bitcoin technology and Lightning Network."
+      },
+      "mentorship": {
+        "title": "Mentorship",
+        "description": "Work alongside experienced professionals in the Bitcoin development space with personalized guidance."
+      },
+      "projects": {
+        "title": "Real Projects",
+        "description": "Contribute to meaningful projects that impact Bitcoin development globally and build your portfolio."
+      }
+    },
+    "stayConnected": {
+      "title": "Stay Connected",
+      "description": "Can't find the internship you're looking for? Explore our resources and join the Bitcoin development community.",
+      "exploreCenters": "Global Communities",
+      "developmentResources": "Development Resources"
+    }
+  },
+  "footer": {
+    "contact": "Email",
+    "support": {
+      "title": "Support Us",
+      "onChain": "Onchain",
+      "lightning": "Lightning"
+    },
+    "whitepaper": "Bitcoin Whitepaper"
   }
 }

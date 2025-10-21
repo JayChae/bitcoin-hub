@@ -1,6 +1,14 @@
-import { Bitcoin, BookOpen, MapPin, Zap } from "lucide-react";
-import Link from "next/link";
-import { getTranslations } from "next-intl/server";
+import {
+  ArrowRight,
+  Bitcoin,
+  BookOpen,
+  BookText,
+  MapPin,
+  User,
+  Zap,
+} from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { ReactNode } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -10,7 +18,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { IntlType, LocaleType } from "@/types";
+import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
+import { LocaleType } from "@/types";
 
 type Props = {
   params: Promise<{ locale: LocaleType }>;
@@ -18,181 +28,283 @@ type Props = {
 
 export default async function Home({ params }: Props) {
   const { locale } = await params;
+  // Enable static rendering
+  setRequestLocale(locale);
   const t = await getTranslations("landing");
   return (
-    <div className="relative bg-gradient-to-b from-red-400/10 to-transparent">
+    <div className="relative">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto">
-          <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 flex justify-center">
-              <Bitcoin className="text-primary animate-fast-pulse h-20 w-20" />
-            </div>
-            <h1 className="from-primary to-primary mb-6 bg-gradient-to-r via-yellow-400 bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
-              {t("title")}
-            </h1>
-            <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-xl">
-              {t("description")}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/about">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                >
-                  Learn More
-                </Button>
-              </Link>
-            </div>
+      <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-48 lg:px-8">
+        <div className="mx-auto mb-24 max-w-4xl text-center">
+          <div className="mb-6 flex justify-center">
+            <Bitcoin className="text-primary h-20 w-20 animate-pulse" />
+          </div>
+          <h1 className="from-primary to-secondary mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
+            {t("title")}
+          </h1>
+          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-base sm:text-xl">
+            {t("description")}
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/about" locale={locale}>
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              >
+                Learn More
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Development Resources Section */}
-      <section className="px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">
-              {t("development.title")}
-            </h2>
-            <p className="text-muted-foreground">
-              {t("development.description")}
-            </p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {devResources.map((resource) => {
-              const Icon = resource.icon;
-              const name = resource.name[locale];
-              const description = resource.description[locale];
-              return (
-                <Link key={resource.link} href={resource.link}>
-                  <Card className="hover:border-primary/50 cursor-pointer text-center transition-colors">
+      <Section
+        title={t("development.title")}
+        description={t("development.description")}
+        className="from-secondary/10 bg-gradient-to-r to-transparent"
+      >
+        <ul className="flex flex-wrap justify-center gap-4">
+          {DEV_RESOURCES.map((resource) => {
+            const Icon = resource.icon;
+            return (
+              <li key={resource.id}>
+                <Link href={resource.link} locale={locale}>
+                  <Card className="hover:border-primary/50 h-full w-full max-w-2xs cursor-pointer gap-4 text-center transition-colors sm:gap-6">
                     <CardHeader>
-                      <Icon className="text-primary mx-auto mb-2 h-12 w-12" />
-                      <CardTitle>{name}</CardTitle>
+                      <Icon className="text-primary mx-auto mb-2 size-10 sm:size-12 lg:size-14" />
+                      <CardTitle>{t(resource.title)}</CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <CardDescription>{description}</CardDescription>
+                      <CardDescription>
+                        {t(resource.description)}
+                      </CardDescription>
                     </CardContent>
                   </Card>
                 </Link>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+              </li>
+            );
+          })}
+        </ul>
 
-      {/* Features Section */}
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/development" text={t("exploreAll")} />
+        </div>
+      </Section>
+
+      {/* Education Resources Section */}
+      <Section
+        title={t("education.title")}
+        description={t("education.description")}
+        className="bg-gradient-to-l from-yellow-500/10 to-transparent"
+      >
+        <ul className="flex flex-wrap justify-center gap-4">
+          {EDUCATION_RESOURCES.map((resource) => {
+            const Icon = resource.icon;
+            return (
+              <li key={resource.id}>
+                <Link href={resource.link} locale={locale}>
+                  <Card className="hover:border-primary/50 h-full w-full max-w-2xs cursor-pointer gap-4 text-center transition-colors sm:gap-6">
+                    <CardHeader>
+                      <Icon className="text-primary mx-auto mb-2 size-10 sm:size-12 lg:size-14" />
+                      <CardTitle>{t(resource.title)}</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription>
+                        {t(resource.description)}
+                      </CardDescription>
+                    </CardContent>
+                  </Card>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/education" text={t("exploreAll")} />
+        </div>
+      </Section>
+
       {/* Global Centers & Organizations Section */}
-      <section className="bg-secondary/20 px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-12 text-center">
-            <h2 className="mb-4 text-3xl font-bold">{t("global.title")}</h2>
-            <p className="text-muted-foreground">{t("global.description")}</p>
-          </div>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {continents.map((continent: ContinentType) => {
-              const name = continent.name[locale];
-              return (
+      <Section
+        title={t("global.title")}
+        description={t("global.description")}
+        className="bg-gradient-to-r from-blue-500/10 to-transparent"
+      >
+        <ul className="grid grid-cols-2 gap-4 md:grid-cols-3">
+          {CONTINENTS.map((continent) => {
+            return (
+              <li key={continent.id}>
                 <Link
                   href={continent.link}
-                  key={continent.link}
-                  className="group block"
+                  locale={locale}
+                  className="group block h-full"
                 >
-                  <Card className="hover:border-primary/50 relative overflow-hidden transition-all duration-300 hover:shadow-lg">
+                  <Card className="hover:border-primary/50 relative h-full w-full max-w-3xs overflow-hidden transition-all duration-300 hover:shadow-lg">
                     <div
                       className={`absolute inset-0 bg-gradient-to-br ${continent.color} opacity-0 transition-opacity duration-300 group-hover:opacity-100`}
                     />
                     <CardHeader className="text-center">
                       <div className="bg-primary/5 group-hover:bg-primary/10 mx-auto rounded-full transition-colors">
-                        <MapPin className="text-primary h-8 w-8" />
+                        <MapPin className="text-primary size-6 sm:size-8 lg:size-10" />
                       </div>
-                      <CardTitle className="text-xl"> {name}</CardTitle>
+                      <CardTitle className="text-sm sm:text-lg md:text-xl">
+                        {t(continent.title)}
+                      </CardTitle>
                     </CardHeader>
                   </Card>
                 </Link>
-              );
-            })}
-          </div>
+              </li>
+            );
+          })}
+        </ul>
+        <div className="mt-12 flex justify-center">
+          <ExploreAllButton href="/global" text={t("exploreAll")} />
         </div>
-      </section>
+      </Section>
+
+      {/* Internship Section */}
+      <Section
+        title={t("internship.title")}
+        description={t("internship.description")}
+        className=""
+      >
+        <div className="flex flex-wrap justify-center gap-4">
+          <Link href="/internship">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+            >
+              {t("internship.details")}
+            </Button>
+          </Link>
+        </div>
+      </Section>
     </div>
   );
 }
 
-type DevResourceType = {
-  name: IntlType;
-  description: IntlType;
-  icon: React.ElementType;
-  link: string;
+type SectionProps = {
+  children: ReactNode;
+  className?: string;
+  title: string;
+  description: string;
 };
 
-type ContinentType = {
-  name: IntlType;
-  color: string;
-  link: string;
-};
+function Section({ children, className, title, description }: SectionProps) {
+  return (
+    <section className={cn("px-4 py-32 sm:px-6 lg:px-8", className)}>
+      <div className="mx-auto max-w-4xl">
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold">{title}</h2>
+          <p className="text-muted-foreground mx-auto max-w-2xl">
+            {description}
+          </p>
+        </div>
+        {children}
+      </div>
+    </section>
+  );
+}
 
-const devResources: DevResourceType[] = [
+function ExploreAllButton({ href, text }: { href: string; text: string }) {
+  return (
+    <Link href={href} className="">
+      <Button
+        size="lg"
+        variant="outline"
+        className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
+      >
+        {text}
+        <ArrowRight className="h-4 w-4" />
+      </Button>
+    </Link>
+  );
+}
+
+const DEV_RESOURCES = [
   {
-    name: { en: "Bitcoin", ko: "비트코인" },
-    description: {
-      en: "Master the fundamentals of Bitcoin, blockchain technology, and peer-to-peer transactions.",
-      ko: "비트코인, 블록체인 기술, 그리고 P2P 거래의 기초를 배우세요.",
-    },
-
+    id: "bitcoin",
     icon: Bitcoin,
+    title: "development.resources.bitcoin.title",
+    description: "development.resources.bitcoin.description",
     link: "/development/bitcoin",
   },
   {
-    name: { en: "Lightning Network", ko: "라이트닝 네트워크" },
-    description: {
-      en: "Explore Layer 2 scaling solutions and instant, low-cost Bitcoin transactions.",
-      ko: "레이어 2 확장 솔루션과 인스턴트, 저렴한 비트코인 거래를 탐색하세요.",
-    },
+    id: "lightning",
     icon: Zap,
+    title: "development.resources.lightning.title",
+    description: "development.resources.lightning.description",
     link: "/development/lightning-network",
   },
   {
-    name: { en: "Education", ko: "교육" },
-    description: {
-      en: "Access curated learning materials, documentation, and development tools.",
-      ko: "학습 자료, 문서, 그리고 개발 도구에 접근하세요.",
-    },
+    id: "education",
     icon: BookOpen,
+    title: "development.resources.education.title",
+    description: "development.resources.education.description",
     link: "/development/education",
   },
-];
+] as const;
 
-const continents: ContinentType[] = [
+const CONTINENTS = [
   {
-    name: { en: "Asia", ko: "아시아" },
+    id: "asia",
+    title: "global.continents.asia",
     color: "from-red-500/20 to-red-500/5",
     link: "/global/asia",
   },
   {
-    name: { en: "Europe", ko: "유럽" },
+    id: "europe",
+    title: "global.continents.europe",
     color: "from-blue-500/20 to-blue-500/5",
     link: "/global/europe",
   },
   {
-    name: { en: "Africa", ko: "아프리카" },
+    id: "africa",
+    title: "global.continents.africa",
     color: "from-yellow-500/20 to-yellow-500/5",
     link: "/global/africa",
   },
   {
-    name: { en: "North America", ko: "북아메리카" },
+    id: "northAmerica",
+    title: "global.continents.northAmerica",
     color: "from-green-500/20 to-green-500/5",
     link: "/global/north-america",
   },
   {
-    name: { en: "South America", ko: "남아메리카" },
+    id: "southAmerica",
+    title: "global.continents.southAmerica",
     color: "from-purple-500/20 to-purple-500/5",
     link: "/global/south-america",
   },
   {
-    name: { en: "Oceania", ko: "오세아니아" },
+    id: "oceania",
+    title: "global.continents.oceania",
     color: "from-teal-500/20 to-teal-500/5",
     link: "/global/oceania",
   },
-];
+] as const;
+
+const EDUCATION_RESOURCES = [
+  {
+    id: "educators",
+    icon: User,
+    title: "education.resources.educators.title",
+    description: "education.resources.educators.description",
+    link: "/education/educators",
+  },
+  {
+    id: "books",
+    icon: BookOpen,
+    title: "education.resources.books.title",
+    description: "education.resources.books.description",
+    link: "/education/books",
+  },
+  {
+    id: "materials",
+    icon: BookText,
+    title: "education.resources.materials.title",
+    description: "education.resources.materials.description",
+    link: "/education/materials",
+  },
+] as const;
