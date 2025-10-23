@@ -52,20 +52,24 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
           selectedCategory={category}
           className="sticky top-8 mt-8"
         />
-        <div className="flex h-52 flex-1 flex-col gap-4 px-4">
+        <section className="max-w-7xl flex-1 px-2 sm:px-4 md:px-6 lg:px-8">
           <h2 className="my-6 text-2xl font-bold">
             {categoryTitles[category]}
           </h2>
-          {bitcoinDevResources[category].map((resource) => (
-            <ResourceCard
-              key={resource.name}
-              href={resource.url}
-              logo={resource.logo}
-              name={resource.name}
-              description={resource.description}
-            />
-          ))}
-        </div>
+          <ul className="grid grid-cols-2 gap-4">
+            {bitcoinDevResources[category].map((resource) => (
+              <li key={resource.name} className="h-full">
+                <ResourceCard
+                  key={resource.name}
+                  href={resource.url}
+                  logo={resource.logo}
+                  name={resource.name}
+                  description={resource.description}
+                />
+              </li>
+            ))}
+          </ul>
+        </section>
       </div>
     </div>
   );
@@ -120,12 +124,12 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group block"
+      className="group block h-full"
     >
-      <Card className="bg-card border-border hover:border-primary/50 transition-all group-hover:shadow-lg">
+      <Card className="bg-card border-border hover:border-primary/50 h-full transition-all group-hover:shadow-lg">
         <CardHeader>
-          <div className="flex items-start gap-4">
-            <div className="bg-muted relative flex size-20 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg">
+          <div className="flex flex-col items-start gap-4 lg:flex-row">
+            <div className="bg-muted relative flex size-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg sm:size-16 lg:size-20">
               <Image
                 src={logo}
                 alt={name}
