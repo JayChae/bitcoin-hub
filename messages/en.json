@@ -65,6 +65,15 @@
     "title": "About Us",
     "description": "We are a team of Bitcoin enthusiasts who are dedicated to educating people about Bitcoin and the Lightning Network."
   },
+  "development": {
+    "title": "Development Resources",
+    "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem.",
+    "resources": {
+      "bitcoin": {
+        "title": "Bitcoin"
+      }
+    }
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "This page is under construction",

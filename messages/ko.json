@@ -42,7 +42,6 @@
         }
       }
     },
-
     "global": {
       "title": "글로벌 커뮤니티",
       "description": "전 세계 대륙의 비트코인 센터, 단체, 커뮤니티를 살펴보세요.",
@@ -66,6 +65,15 @@
     "title": "About Us",
     "description": "비트코인과 라이트닝 네트워크에 대한 전문가들로 구성된 팀입니다. 비트코인과 라이트닝 네트워크에 대한 전문가들로 구성된 팀입니다."
   },
+  "development": {
+    "title": "Development Resources",
+    "description": "비트코인 생태계의 개발자, 학습자, 그리고 빌더들을 위한 비트코인, 라이트닝 네트워크, 그리고 교육 자료의 선별된 컬렉션입니다.",
+    "resources": {
+      "bitcoin": {
+        "title": "비트코인"
+      }
+    }
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "페이지 제작 중입니다",
@@ -84,7 +92,7 @@
   },
   "internship": {
     "hero": {
-      "title": "인턴십 프로그램",
+      "title": "Internship Program",
       "description": "실무 경험과 멘토링을 통해 전 세계 비트코인 발전에 기여하세요."
     },
     "status": {
