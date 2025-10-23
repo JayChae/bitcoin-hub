@@ -144,7 +144,7 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
               <Image
                 src={logo}
                 alt={name}
-                className="object-cover"
+                className="object-contain"
                 fill={true}
               />
             </div>

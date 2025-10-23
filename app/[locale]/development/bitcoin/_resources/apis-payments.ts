@@ -34,48 +34,34 @@ export const apisPaymentsEn: BitcoinDevResources["apis-payments"] = [
     description:
       "A hosted version of the open source infrastructure known as GaloyMoney originally created for the Bitcoin Beach Wallet.",
     url: "https://www.blink.sv/en/api",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/184380664?s=48&v=4",
   },
   {
     name: "ZBD For Gaming",
     description:
       "Global payments platform that enables seamless integration of real-money and bitcoin transactions into games and social networks.",
     url: "https://zebedee.io",
-    logo: "",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQH_a9L15ZIj1Q/company-logo_200_200/company-logo_200_200/0/1697569719043/zebedeeio_logo?e=1762992000&v=beta&t=G73QtFGxr2cnsG12z6_Its0yfHslXhqnPMFNhfXp4W4",
   },
   {
     name: "SatSale",
     description:
       "Lightweight, Python-based API that allows businesses and developers to integrate Bitcoin and Lightning Network payments with minimal setup.",
     url: "https://github.com/SatSale/SatSale",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/101689317?s=200&v=4",
   },
   {
     name: "BlockCypher",
     description: "Set of APIs and libraries for working with Bitcoin.",
     url: "https://www.blockcypher.com",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/7098601?s=200&v=4",
   },
   {
     name: "GaloyMoney",
     description:
       "Open source project that aims to develop the standard for Bitcoin banking originally built as the foundation for the Bitcoin Beach Wallet.",
     url: "https://github.com/GaloyMoney",
-    logo: "",
-  },
-  {
-    name: "Chainside",
-    description:
-      "RESTful API that enables businesses and developers to easily integrate Bitcoin payment functionalities into their systems.",
-    url: "https://www.chainside.net/en/home",
-    logo: "",
-  },
-  {
-    name: "BTC.com",
-    description:
-      "The BTC.com API provides tools for interacting with the Bitcoin blockchain, offering functionalities like transaction broadcasting, block data retrieval, and address queries.",
-    url: "https://explorer.btc.com/btc/adapter?type=api-doc",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/77592451?s=200&v=4",
   },
 ];
 
@@ -113,47 +99,33 @@ export const apisPaymentsKo: BitcoinDevResources["apis-payments"] = [
     description:
       "원래 Bitcoin Beach Wallet을 위해 만들어진 GaloyMoney로 알려진 오픈소스 인프라의 호스팅 버전.",
     url: "https://www.blink.sv/en/api",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/184380664?s=48&v=4",
   },
   {
     name: "ZBD For Gaming",
     description:
       "게임과 소셜 네트워크에 실물 화폐와 비트코인 거래를 원활하게 통합할 수 있는 글로벌 결제 플랫폼.",
     url: "https://zebedee.io",
-    logo: "",
+    logo: "https://media.licdn.com/dms/image/v2/D560BAQH_a9L15ZIj1Q/company-logo_200_200/company-logo_200_200/0/1697569719043/zebedeeio_logo?e=1762992000&v=beta&t=G73QtFGxr2cnsG12z6_Its0yfHslXhqnPMFNhfXp4W4",
   },
   {
     name: "SatSale",
     description:
       "최소한의 설정으로 비즈니스와 개발자들이 비트코인과 라이트닝 네트워크 결제를 통합할 수 있는 경량화된 파이썬 기반 API.",
     url: "https://github.com/SatSale/SatSale",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/101689317?s=200&v=4",
   },
   {
     name: "BlockCypher",
     description: "비트코인 작업을 위한 API와 라이브러리 세트.",
     url: "https://www.blockcypher.com",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/7098601?s=200&v=4",
   },
   {
     name: "GaloyMoney",
     description:
       "원래 Bitcoin Beach Wallet의 기반으로 구축된 비트코인 뱅킹 표준을 개발하는 것을 목표로 하는 오픈소스 프로젝트.",
     url: "https://github.com/GaloyMoney",
-    logo: "",
-  },
-  {
-    name: "Chainside",
-    description:
-      "비즈니스와 개발자들이 비트코인 결제 기능을 시스템에 쉽게 통합할 수 있도록 하는 RESTful API.",
-    url: "https://www.chainside.net/en/home",
-    logo: "",
-  },
-  {
-    name: "BTC.com",
-    description:
-      "BTC.com API는 비트코인 블록체인과 상호작용할 수 있는 도구를 제공하며, 거래 전송, 블록 데이터 검색, 주소 조회와 같은 기능을 제공합니다.",
-    url: "https://explorer.btc.com/btc/adapter?type=api-doc",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/77592451?s=200&v=4",
   },
 ];
