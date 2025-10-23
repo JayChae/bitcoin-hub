@@ -1,7 +1,7 @@
 "use client";
 
 import { Bitcoin, Languages, Menu } from "lucide-react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 import { Link } from "@/i18n/navigation";
@@ -25,12 +25,8 @@ const links = [
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const withoutLocale = pathname.split("/").slice(2).join("/");
 
-  const path = searchParams.toString()
-    ? `${withoutLocale}?${searchParams.toString()}`
-    : withoutLocale;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -82,7 +78,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   {languages.map((lang) => (
                     <Link
                       key={lang.code}
-                      href={`/${path}`}
+                      href={`/${withoutLocale}`}
                       locale={lang.code as LocaleType}
                       rel="alternate"
                     >
@@ -134,7 +130,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
               ))}
               <li className="border-border w-full border-t pt-4">
                 <Link
-                  href={`/${path}`}
+                  href={`/${withoutLocale}`}
                   locale={locale === "en" ? "ko" : "en"}
                   onClick={() => setMobileMenuOpen(false)}
                   className="hover:bg-accent text-muted-foreground block rounded-md px-4 py-3 text-sm transition-colors hover:text-black"

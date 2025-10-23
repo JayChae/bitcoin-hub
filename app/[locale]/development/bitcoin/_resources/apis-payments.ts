@@ -6,28 +6,28 @@ export const apisPayments: BitcoinDevResources["apis-payments"] = [
     description:
       "Open-source, self-hosted payment processor that allows you to accept Bitcoin payments.",
     url: "https://btcpayserver.org",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/31132886?s=200&v=4",
   },
   {
     name: "Cyphernode",
     description:
       "Open-source self-hosted API allowing you to spawn and call your encrypted overlay network of dockerized Bitcoin and crypto software projects.",
     url: "https://github.com/SatoshiPortal/cyphernode",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/21064192?s=200&v=4",
   },
   {
     name: "OpenNode",
     description:
       "Simple and powerful REST API that enables businesses and developers to seamlessly accept Bitcoin and Lightning Network payments within their applications.",
     url: "https://www.opennode.com",
-    logo: "",
+    logo: "https://opennode.com/_nuxt/img/logo-footer.500b435.svg",
   },
   {
     name: "BullBitcoin",
     description:
       "Though primarily known as a Canadian Bitcoin brokerage, BullBitcoin offers an API for automated Bitcoin purchases and integration into various applications and services.",
     url: "https://www.bullbitcoin.com",
-    logo: "",
+    logo: "https://avatars.githubusercontent.com/u/21064192?s=200&v=4",
   },
   {
     name: "Blink API",

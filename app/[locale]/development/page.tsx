@@ -61,25 +61,25 @@ export default async function DevelopmentPage({ params }: Props) {
       title: t("resources.bitcoin.items.librariesSdks.title"),
       description: t("resources.bitcoin.items.librariesSdks.description"),
       icon: CodeXml,
-      link: "/development/bitcoin?category=libraries-sdks",
+      link: "/development/bitcoin/libraries-sdks",
     },
     {
       title: t("resources.bitcoin.items.apisPayments.title"),
       description: t("resources.bitcoin.items.apisPayments.description"),
       icon: BanknoteArrowDown,
-      link: "/development/bitcoin?category=apis-payments",
+      link: "/development/bitcoin/apis-payments",
     },
     {
       title: t("resources.bitcoin.items.utilities.title"),
       description: t("resources.bitcoin.items.utilities.description"),
       icon: Pickaxe,
-      link: "/development/bitcoin?category=bitcoin-utilities",
+      link: "/development/bitcoin/utilities",
     },
     {
       title: t("resources.bitcoin.items.layer2s.title"),
       description: t("resources.bitcoin.items.layer2s.description"),
       icon: Layers2,
-      link: "/development/bitcoin?category=l2s-smart-contracts",
+      link: "/development/bitcoin/l2s-smart-contracts",
     },
   ];
 
@@ -89,13 +89,13 @@ export default async function DevelopmentPage({ params }: Props) {
       title: t("resources.lightning.items.librariesSdks.title"),
       description: t("resources.lightning.items.librariesSdks.description"),
       icon: ToolCase,
-      link: "/development/lightning?category=libraries-sdks",
+      link: "/development/lightning/libraries-sdks",
     },
     {
       title: t("resources.lightning.items.lspsEnterprise.title"),
       description: t("resources.lightning.items.lspsEnterprise.description"),
       icon: Building2,
-      link: "/development/lightning?category=lsps-enterprise",
+      link: "/development/lightning/lsps-enterprise",
     },
     {
       title: t("resources.lightning.items.dashboardsMonitoring.title"),
@@ -103,13 +103,13 @@ export default async function DevelopmentPage({ params }: Props) {
         "resources.lightning.items.dashboardsMonitoring.description",
       ),
       icon: ChartNetwork,
-      link: "/development/lightning?category=dashboards-monitoring",
+      link: "/development/lightning/dashboards-monitoring",
     },
     {
       title: t("resources.lightning.items.routingLiquidity.title"),
       description: t("resources.lightning.items.routingLiquidity.description"),
       icon: Route,
-      link: "/development/lightning?category=routing-liquidity",
+      link: "/development/lightning/routing-liquidity",
     },
   ];
 
@@ -119,25 +119,25 @@ export default async function DevelopmentPage({ params }: Props) {
       title: t("resources.education.items.guidesTutorials.title"),
       description: t("resources.education.items.guidesTutorials.description"),
       icon: FileQuestionMark,
-      link: "/development/education?category=guides-tutorials",
+      link: "/development/education/guides-tutorials",
     },
     {
       title: t("resources.education.items.classesCourses.title"),
       description: t("resources.education.items.classesCourses.description"),
       icon: School,
-      link: "/development/education?category=classes-courses",
+      link: "/development/education/classes-courses",
     },
     {
       title: t("resources.education.items.certifications.title"),
       description: t("resources.education.items.certifications.description"),
       icon: ShieldCheck,
-      link: "/development/education?category=developer-certifications",
+      link: "/development/education/developer-certifications",
     },
     {
       title: t("resources.education.items.books.title"),
       description: t("resources.education.items.books.description"),
       icon: Book,
-      link: "/development/education?category=developer-books",
+      link: "/development/education/developer-books",
     },
   ];
 

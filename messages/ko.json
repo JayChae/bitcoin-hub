@@ -4,7 +4,12 @@
       "title": "Bitcoin Hub",
       "description": ""
     },
-    "title": "Bitcoin Hub",
+    "hero": {
+      "title": "Bitcoin Hub",
+      "description": "비트코인 개발, 인턴십, 전 세계 커뮤니티까지. 비트코인을 배우고 연결할 수 있는 모든 것을 제공합니다.",
+      "button1": "자세히 알아보기",
+      "button2": "개발 리소스"
+    },
     "description": "비트코인 개발 자료, 인턴십, 전 세계 커뮤니티까지. 비트코인을 배우고 연결할 수 있는 모든 것을 제공합니다.",
     "development": {
       "title": "비트코인 개발",

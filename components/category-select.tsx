@@ -28,7 +28,7 @@ export function CategorySelect({ field, categories, placeholder }: Props) {
         {categories.map((category) => (
           <DropdownMenuItem key={category.value} asChild className="p-0">
             <Link
-              href={`/development/${field}?category=${category.value}`}
+              href={`/development/${field}/${category.value}`}
               className="hover:bg-primary/20 flex w-full cursor-pointer items-center px-4 py-3 text-base md:px-3 md:py-2 md:text-sm"
             >
               {category.label}

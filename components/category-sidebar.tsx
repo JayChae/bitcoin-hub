@@ -25,7 +25,7 @@ export function CategorySidebar({
       <nav className="flex flex-col gap-2">
         {categories.map((category) => (
           <Link
-            href={`/development/${field}?category=${category.value}`}
+            href={`/development/${field}/${category.value}`}
             key={category.value}
           >
             <Button

@@ -4,8 +4,12 @@
       "title": "Bitcoin Hub",
       "description": ""
     },
-    "title": "Bitcoin Hub",
-    "description": "Bitcoin development, internship, and global communities. Everything you need to explore and connect in the world of Bitcoin.",
+    "hero": {
+      "title": "Bitcoin Hub",
+      "description": "Bitcoin development, internship, and global communities. Everything you need to explore and connect in the world of Bitcoin.",
+      "button1": "Learn More",
+      "button2": "Development Resources"
+    },
     "development": {
       "title": "Bitcoin Development",
       "description": "Explore development resources for Bitcoin, Lightning Network, and education.",
