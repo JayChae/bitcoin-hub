@@ -30,10 +30,12 @@ export function CategorySidebar({
           >
             <Button
               key={category.value}
-              variant={
-                selectedCategory === category.value ? "default" : "ghost"
-              }
-              className="w-full justify-start text-left"
+              className={cn(
+                "hover:bg-primary/20 w-full justify-start text-left",
+                selectedCategory === category.value
+                  ? "bg-primary/50"
+                  : "bg-transparent",
+              )}
             >
               {category.label}
             </Button>

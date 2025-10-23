@@ -2,6 +2,7 @@ import { Bitcoin, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
+import { CategorySelect } from "@/components/category-select";
 import { CategorySidebar } from "@/components/category-sidebar";
 import {
   Card,
@@ -26,21 +27,19 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("development");
   return (
-    <div className="relative">
+    <div className="relative h-full">
       {/* Header */}
-      <section className="border-border relative border-b px-4 pt-8 pb-10 sm:px-6 lg:px-8">
-        <div className="container mx-auto">
-          <NavLinks />
-          <div className="flex items-center gap-4">
-            <Bitcoin className="text-primary h-12 w-12" />
-            <div>
-              <h1 className="from-primary to-primary bg-gradient-to-r via-yellow-400 bg-clip-text text-4xl font-bold text-transparent">
-                Bitcoin Development Resources
-              </h1>
-              <p className="text-muted-foreground mt-2">
-                Comprehensive tools and libraries for Bitcoin development
-              </p>
-            </div>
+      <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
+        <NavLinks />
+        <div className="hidden items-center gap-4 lg:flex">
+          <Bitcoin className="text-primary h-12 w-12" />
+          <div>
+            <h1 className="from-primary to-primary bg-gradient-to-r via-yellow-400 bg-clip-text text-3xl font-bold text-transparent">
+              Bitcoin Development Resources
+            </h1>
+            <p className="text-muted-foreground mt-2">
+              Comprehensive tools and libraries for Bitcoin development
+            </p>
           </div>
         </div>
       </section>
@@ -50,13 +49,22 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
           field="bitcoin"
           categories={bitcoinCategories}
           selectedCategory={category}
-          className="sticky top-20 mt-8 self-start"
+          className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
         />
-        <section className="max-w-7xl flex-1 px-2 sm:px-4 md:px-6 lg:px-8">
-          <h2 className="my-6 text-2xl font-bold">
-            {categoryTitles[category]}
-          </h2>
-          <ul className="grid grid-cols-2 gap-4">
+        <section className="max-w-7xl flex-1 px-4 sm:px-6 md:px-8 lg:px-10">
+          <div className="my-6 flex items-center justify-between">
+            <h2 className="text-2xl font-bold lg:text-3xl">
+              {categoryTitles[category]}
+            </h2>
+            <div className="lg:hidden">
+              <CategorySelect
+                field="bitcoin"
+                categories={bitcoinCategories}
+                placeholder="Category"
+              />
+            </div>
+          </div>
+          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
             {bitcoinDevResources[category].map((resource) => (
               <li key={resource.name} className="h-full">
                 <ResourceCard
@@ -92,7 +100,7 @@ function NavLinks() {
   ];
 
   return (
-    <nav className="flex items-center justify-end gap-4">
+    <nav className="flex items-center justify-start gap-4 lg:justify-end">
       {navLinks.map((link) => {
         const isActive = link.label === "Bitcoin";
         return (
