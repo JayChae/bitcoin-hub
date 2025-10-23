@@ -1,0 +1,48 @@
+import { Link } from "@/i18n/navigation";
+import { cn } from "@/lib/utils";
+
+const navLinks = [
+  {
+    href: "/development/bitcoin?category=libraries-sdks",
+    label: "Bitcoin",
+  },
+  {
+    href: "/development/lightning?category=libraries-sdks",
+    label: "Lightning",
+  },
+  {
+    href: "/development/education?category=guides-tutorials",
+    label: "Education",
+  },
+];
+
+type DevNavProps = {
+  className?: string;
+  activeLink: "bitcoin" | "lightning" | "education";
+};
+export function DevNav({ className, activeLink }: DevNavProps) {
+  return (
+    <nav
+      className={cn(
+        "flex items-center justify-start gap-4 lg:justify-end",
+        className,
+      )}
+    >
+      {navLinks.map((link) => {
+        const isActive = link.label === activeLink;
+        return (
+          <Link
+            key={link.href}
+            href={link.href}
+            className={cn(
+              "hover:text-primary flex size-fit items-center text-sm font-medium transition-colors",
+              isActive ? "text-primary" : "text-muted-foreground",
+            )}
+          >
+            {link.label}
+          </Link>
+        );
+      })}
+    </nav>
+  );
+}

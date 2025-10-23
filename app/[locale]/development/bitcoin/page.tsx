@@ -15,6 +15,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { BitcoinCategory, LocaleType } from "@/types";
 
+import { DevNav } from "../_components/dev-nav";
 import { bitcoinDevResources } from "./_resources";
 
 type Props = {
@@ -82,7 +83,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
     <div className="relative h-full">
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
-        <NavLinks />
+        <DevNav activeLink={"bitcoin"} />
         <div className="hidden items-center gap-4 lg:flex">
           <Bitcoin className="text-primary h-12 w-12" />
           <div>
@@ -130,43 +131,6 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
         </section>
       </div>
     </div>
-  );
-}
-
-function NavLinks() {
-  const navLinks = [
-    {
-      href: "/development/bitcoin?category=libraries-sdks",
-      label: "Bitcoin",
-    },
-    {
-      href: "/development/lightning?category=libraries-sdks",
-      label: "Lightning",
-    },
-    {
-      href: "/development/education?category=guides-tutorials",
-      label: "Education",
-    },
-  ];
-
-  return (
-    <nav className="flex items-center justify-start gap-4 lg:justify-end">
-      {navLinks.map((link) => {
-        const isActive = link.label === "Bitcoin";
-        return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={cn(
-              "hover:text-primary flex size-fit items-center text-sm font-medium transition-colors",
-              isActive ? "text-primary" : "text-muted-foreground",
-            )}
-          >
-            {link.label}
-          </Link>
-        );
-      })}
-    </nav>
   );
 }
 
