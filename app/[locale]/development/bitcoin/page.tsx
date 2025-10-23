@@ -50,7 +50,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
           field="bitcoin"
           categories={bitcoinCategories}
           selectedCategory={category}
-          className="sticky top-8 mt-8"
+          className="sticky top-20 mt-8 self-start"
         />
         <section className="max-w-7xl flex-1 px-2 sm:px-4 md:px-6 lg:px-8">
           <h2 className="my-6 text-2xl font-bold">
@@ -60,7 +60,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
             {bitcoinDevResources[category].map((resource) => (
               <li key={resource.name} className="h-full">
                 <ResourceCard
-                  key={resource.name}
+                  key={resource.url}
                   href={resource.url}
                   logo={resource.logo}
                   name={resource.name}
