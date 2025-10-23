@@ -46,16 +46,18 @@ export default function Header({ locale }: { locale: LocaleType }) {
           {/* Desktop Navigation */}
           <ul className="hidden items-center gap-6 sm:flex">
             {links.map((link) => (
-              <li
-                key={link.href}
-                className={cn(
-                  "hover:text-primary size-fit text-sm font-medium transition-colors",
-                  pathname === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground",
-                )}
-              >
-                <Link key={link.href} href={link.href} locale={locale}>
+              <li key={link.href}>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  locale={locale}
+                  className={cn(
+                    "hover:text-primary size-fit text-sm font-medium transition-colors",
+                    pathname === link.href
+                      ? "text-primary"
+                      : "text-muted-foreground",
+                  )}
+                >
                   {link.label}
                 </Link>
               </li>
