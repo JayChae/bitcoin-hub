@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -5,19 +7,22 @@ type Props = {
   description: string;
   titleClassName?: string;
   descriptionClassName?: string;
+  Icon?: ReactNode;
 };
 function Hero({
   title,
   description,
   titleClassName,
   descriptionClassName,
+  Icon,
 }: Props) {
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl text-center">
+      <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-6 text-center">
+        {Icon}
         <h1
           className={cn(
-            "from-primary to-primary mb-6 bg-gradient-to-r via-yellow-400/90 bg-clip-text text-4xl font-bold text-transparent md:text-5xl",
+            "from-primary to-primary bg-gradient-to-r via-yellow-400/90 bg-clip-text text-4xl font-bold text-transparent md:text-5xl",
             titleClassName,
           )}
         >
