@@ -1,25 +1,46 @@
-import { BitcoinDevResources } from "@/types";
+import { BitcoinDevResources, LocaleType } from "@/types";
 
-import { apisPayments } from "./apis-payments";
-import { explorersAnalytics } from "./explorers-analytics";
-import { hardwareWallets } from "./hardware-wallets";
-import { l2sSmartContracts } from "./l2s-smart-contracts";
-import { librariesSdks } from "./libraries-sdks";
-import { nodeHardware } from "./node-hardware";
-import { nodeSoftware } from "./node-software";
-import { research } from "./research";
-import { softwareWallets } from "./software-wallets";
-import { utilities } from "./utilities";
+import { apisPaymentsEn, apisPaymentsKo } from "./apis-payments";
+import {
+  explorersAnalyticsEn,
+  explorersAnalyticsKo,
+} from "./explorers-analytics";
+import { hardwareWalletsEn, hardwareWalletsKo } from "./hardware-wallets";
+import {
+  l2sSmartContractsEn,
+  l2sSmartContractsKo,
+} from "./l2s-smart-contracts";
+import { librariesSdksEn, librariesSdksKo } from "./libraries-sdks";
+import { nodeHardwareEn, nodeHardwareKo } from "./node-hardware";
+import { nodeSoftwareEn, nodeSoftwareKo } from "./node-software";
+import { researchEn, researchKo } from "./research";
+import { softwareWalletsEn, softwareWalletsKo } from "./software-wallets";
+import { utilitiesEn, utilitiesKo } from "./utilities";
 
-export const bitcoinDevResources: BitcoinDevResources = {
-  "libraries-sdks": librariesSdks,
-  "apis-payments": apisPayments,
-  "l2s-smart-contracts": l2sSmartContracts,
-  "node-software": nodeSoftware,
-  "node-hardware": nodeHardware,
-  "explorers-analytics": explorersAnalytics,
-  utilities,
-  "software-wallets": softwareWallets,
-  "hardware-wallets": hardwareWallets,
-  research,
-};
+export const bitcoinDevResources: { [key in LocaleType]: BitcoinDevResources } =
+  {
+    en: {
+      "libraries-sdks": librariesSdksEn,
+      "apis-payments": apisPaymentsEn,
+      "l2s-smart-contracts": l2sSmartContractsEn,
+      "node-software": nodeSoftwareEn,
+      "node-hardware": nodeHardwareEn,
+      "explorers-analytics": explorersAnalyticsEn,
+      utilities: utilitiesEn,
+      "software-wallets": softwareWalletsEn,
+      "hardware-wallets": hardwareWalletsEn,
+      research: researchEn,
+    },
+    ko: {
+      "libraries-sdks": librariesSdksKo,
+      "apis-payments": apisPaymentsKo,
+      "l2s-smart-contracts": l2sSmartContractsKo,
+      "node-software": nodeSoftwareKo,
+      "node-hardware": nodeHardwareKo,
+      "explorers-analytics": explorersAnalyticsKo,
+      utilities: utilitiesKo,
+      "software-wallets": softwareWalletsKo,
+      "hardware-wallets": hardwareWalletsKo,
+      research: researchKo,
+    },
+  };

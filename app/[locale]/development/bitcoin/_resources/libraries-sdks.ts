@@ -1,6 +1,6 @@
 import { BitcoinDevResources } from "@/types";
 
-export const librariesSdks: BitcoinDevResources["libraries-sdks"] = [
+export const librariesSdksEn: BitcoinDevResources["libraries-sdks"] = [
   {
     name: "Bitcoin Core",
     description:
@@ -121,6 +121,132 @@ export const librariesSdks: BitcoinDevResources["libraries-sdks"] = [
     name: "Civkit",
     description:
       "Platform offering a blueprint for building a censorship-resistant and permissionless global marketplace, integrating Nostr's design and the Lightning Network's architecture.",
+    url: "https://civkit.github.io",
+    logo: "",
+  },
+];
+
+export const librariesSdksKo: BitcoinDevResources["libraries-sdks"] = [
+  {
+    name: "Bitcoin Core",
+    description:
+      "비트코인 네트워크를 위한 오리지널이자 가장 널리 사용되는 소프트웨어 클라이언트로, C++로 작성되어 트랜잭션 처리와 분산형 블록체인 관리를 위한 높은 보안성, 신뢰성 및 안정성을 제공합니다.",
+    url: "https://bitcoincore.org",
+    logo: "",
+  },
+  {
+    name: "Bitcoin Dev Kit (BDK)",
+    description:
+      "비트코인 개발자를 위한 Rust 기반 라이브러리로, 비트코인 지갑 및 기타 비트코인 애플리케이션 구축을 위한 고수준 API를 제공하는 것을 목표로 합니다.",
+    url: "https://bitcoindevkit.org",
+    logo: "",
+  },
+  {
+    name: "python-bitcoinlib",
+    description:
+      "비트코인 개발을 위한 포괄적인 도구와 API 세트를 제공하는 Python 라이브러리입니다.",
+    url: "https://github.com/petertodd/python-bitcoinlib",
+    logo: "",
+  },
+  {
+    name: "NBitcoin",
+    description:
+      ".NET 프레임워크를 위한 C#로 작성된 포괄적인 비트코인 라이브러리입니다.",
+    url: "https://www.nuget.org/packages/NBitcoin",
+    logo: "",
+  },
+  {
+    name: "BitcoinJS",
+    description:
+      "비트코인 프로토콜을 위한 JavaScript 라이브러리로, 비트코인 기반 클라이언트 사이드 애플리케이션 구축에 이상적입니다.",
+    url: "https://github.com/bitcoinjs/bitcoinjs-lib",
+    logo: "",
+  },
+  {
+    name: "Bitcore",
+    description:
+      "JavaScript로 작성된 비트코인 애플리케이션을 위한 풀 스택 라이브러리입니다.",
+    url: "https://github.com/bitpay/bitcore",
+    logo: "",
+  },
+  {
+    name: "bitcoinj",
+    description:
+      "비트코인 애플리케이션을 위한 Java 기반 라이브러리로, 특히 경량 클라이언트에 잘 맞습니다.",
+    url: "https://bitcoinj.org/",
+    logo: "",
+  },
+  {
+    name: "Gocoin",
+    description:
+      "Go 언어로 작성된 포괄적인 비트코인 솔루션으로, 별도의 클라이언트(p2p 노드)와 결정적 지갑, 유용한 도구 세트를 포함한 안전하고 고성능 아키텍처를 특징으로 합니다.",
+    url: "https://gocoin.pl/gocoin_index.html",
+    logo: "",
+  },
+  {
+    name: "embit",
+    description:
+      "비트코인과 라이트닝 프로토콜 조작을 위해 설계된 최소주의적 Python 라이브러리로, 사용 편의성과 확장성을 목표로 합니다.",
+    url: "https://embit.rocks",
+    logo: "",
+  },
+  {
+    name: "bitcoin-s",
+    description:
+      "비트코인 애플리케이션과 플랫폼 구축을 위한 강력한 API를 포함한 도구와 기능을 제공하는 Scala 기반 비트코인 라이브러리입니다.",
+    url: "https://github.com/bitcoin-s/bitcoin-s",
+    logo: "",
+  },
+  {
+    name: "BDK-flutter",
+    description: "위 Bitcoin Development Kit를 위한 Flutter 라이브러리입니다.",
+    url: "https://github.com/LtbLightning/bdk-flutter",
+    logo: "",
+  },
+  {
+    name: "Wasabi Wallet SDK",
+    description:
+      "CoinJoin과 같은 개인정보 보호 기능을 포함한 지갑 구축을 도와주는 라이브러리입니다.",
+    url: "https://wasabiwallet.io",
+    logo: "",
+  },
+  {
+    name: "Frost Dev Kit",
+    description:
+      "Taproot와 Schnorr 서명을 사용하여 하위 레벨 걱정 없이 복잡한 멀티시그를 구축할 수 있게 해주는 라이브러리입니다.",
+    url: "https://github.com/FrostDevKit",
+    logo: "",
+  },
+  {
+    name: "Payjoin Dev Kit",
+    description:
+      "더 큰 유연성을 가능하게 하는 지원 모듈과 함께 완전하고 완전히 독립적인 Payjoin 구현입니다.",
+    url: "https://payjoindevkit.org",
+    logo: "",
+  },
+  {
+    name: "Liquid Wallet Kit",
+    description:
+      "Liquid 지갑 개발을 위한 모든 필요한 빌딩 블록을 제공하는 것을 목표로 하는 Liquid 지갑을 위한 Rust 크레이트 모음입니다.",
+    url: "https://github.com/Blockstream/lwk",
+    logo: "",
+  },
+  {
+    name: "Mutiny Node",
+    description: "Mutiny 웹 프런트엔드를 구동하는 노드를 위한 SDK입니다.",
+    url: "https://github.com/MutinyWallet/mutiny-node",
+    logo: "",
+  },
+  {
+    name: "Robosats",
+    description: "간단하고 사적인 비트코인 거래소입니다.",
+    url: "https://github.com/RoboSats/robosats",
+    logo: "",
+  },
+  {
+    name: "Civkit",
+    description:
+      "Nostr의 디자인과 Lightning Network의 아키텍처를 통합한 검열 저항성과 무허가 글로벌 마켓플레이스 구축을 위한 청사진을 제공하는 플랫폼입니다.",
     url: "https://civkit.github.io",
     logo: "",
   },

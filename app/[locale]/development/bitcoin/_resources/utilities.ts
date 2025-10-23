@@ -1,6 +1,6 @@
 import { BitcoinDevResources } from "@/types";
 
-export const utilities: BitcoinDevResources["utilities"] = [
+export const utilitiesEn: BitcoinDevResources["utilities"] = [
   {
     name: "libwally-core",
     description:
@@ -144,6 +144,154 @@ export const utilities: BitcoinDevResources["utilities"] = [
   {
     name: "GroupHug",
     description: "A batching service that does not require coordination.",
+    url: "https://github.com/Peach2Peach/grouphug",
+    logo: "",
+  },
+];
+
+export const utilitiesKo: BitcoinDevResources["utilities"] = [
+  {
+    name: "libwally-core",
+    description:
+      "비트코인 지갑을 위한 유용한 기본 요소들의 크로스 플랫폼, 크로스 언어 컬렉션.",
+    url: "https://github.com/ElementsProject/libwally-core",
+    logo: "",
+  },
+  {
+    name: "LibreTX",
+    description:
+      "비트코인 트랜잭션을 조작하고 구성하기 위한 도구 모음집을 제공하는 GitHub 저장소.",
+    url: "https://github.com/coinsurenz/LibreTX",
+    logo: "",
+  },
+  {
+    name: "Bull Bitcoin Fee Multiple",
+    description:
+      "현재 비트코인 수수료가 과거 가격에 비해 얼마나 비싼지 쉽게 파악할 수 있는 대시보드.",
+    url: "https://feemultiple.bullbitcoin.com/chart/index",
+    logo: "",
+  },
+  {
+    name: "Tapsim",
+    description:
+      "비트코인 Tapscript 트랜잭션을 디버깅하기 위한 Go로 구축된 도구로, 비트코인 스크립트 기본 요소를 사용하고 스크립트가 실행될 때 VM 상태를 시각화할 수 있게 해줍니다.",
+    url: "https://github.com/halseth/tapsim",
+    logo: "",
+  },
+  {
+    name: "Mule Tools",
+    description:
+      "비트코인 트랜잭션을 더 유연하고 기능적으로 만들기 위한 도구들을 포함하는 GitHub 저장소.",
+    url: "https://github.com/MuleTools/MuleTools",
+    logo: "",
+  },
+  {
+    name: "Miniscript",
+    description:
+      "구조적이고 컴포지셔널한 방식으로 비트코인 스크립트를 작성하기 위한 스크립팅 언어.",
+    url: "https://bitcoin.sipa.be/miniscript",
+    logo: "",
+  },
+  {
+    name: "Miniscript Playground",
+    description:
+      "Miniscript로 작성된 비트코인 스크립트를 테스트할 수 있는 브라우저 기반 컴파일러.",
+    url: "https://bitcoindevkit.org/bdk-cli/playground",
+    logo: "",
+  },
+  {
+    name: "Minsc",
+    description:
+      "Miniscript Policy 언어를 기반으로 비트코인 스크립트 지출 조건을 표현하기 위한 고수준 스크립팅 언어로, 변수, 함수, 중위 표기법 등의 추가 기능과 구문 설탕을 포함합니다.",
+    url: "https://min.sc",
+    logo: "",
+  },
+  {
+    name: "Bitcoin Core Config Generator",
+    description:
+      "사용자들이 비트코인 코어 노드를 위한 사용자 정의 구성 파일을 쉽게 만들 수 있도록 설계된 Jameson Lopp가 만든 대화형 도구.",
+    url: "https://jlopp.github.io/bitcoin-core-config-generator",
+    logo: "",
+  },
+  {
+    name: "Bitcoin Forge",
+    description:
+      "트랜잭션 위조나 스크립트 조작과 같은 비트코인과 관련된 저수준 작업을 위한 오프라인 도구 모음.",
+    url: "https://improvein.github.io/bitcoin-forge",
+    logo: "",
+  },
+  {
+    name: "Bitcoin Playground",
+    description:
+      "사용자들이 비트코인 스크립트와 트랜잭션을 실험할 수 있는 온라인 대화형 플랫폼.",
+    url: "https://nioctib.tech",
+    logo: "",
+  },
+  {
+    name: "BitcoinBinary.org",
+    description:
+      "다양한 비트코인 프로젝트의 무결성과 보안을 강화하기 위한 목적으로 재현 가능한 빌드 증명을 위한 저장소.",
+    url: "https://bitcoinbinary.org",
+    logo: "",
+  },
+  {
+    name: "Bitcoin Simulator",
+    description:
+      "교육 목적으로 비트코인 트랜잭션을 시뮬레이션하기 위해 설계된 웹 기반 플랫폼.",
+    url: "https://www.bitcoinsimulator.tk",
+    logo: "",
+  },
+  {
+    name: "Smart Vaults",
+    description:
+      "서명자 발견, 정책 저장 및 PSBT를 위해 nostr를 사용하는 지출 정책 및 제안 실행을 위한 비트코인 다중 커스터디 프로토콜.",
+    url: "https://github.com/smartvaults/smartvaults",
+    logo: "",
+  },
+  {
+    name: "nix-bitcoin",
+    description:
+      "보안을 강조하여 완전한 기능을 갖춘 비트코인 노드를 쉽게 설치하기 위한 Nix 패키지와 NixOS 모듈들의 컬렉션.",
+    url: "https://github.com/fort-nix/nix-bitcoin",
+    logo: "",
+  },
+  {
+    name: "PSBT.io",
+    description:
+      "IFTTT와 유사한 자동화된 비트코인 트랜잭션 브로드캐스팅을 제공하는 플랫폼으로, 비트코인 트랜잭션 관리 및 실행 프로세스를 간소화합니다.",
+    url: "https://psbt.io",
+    logo: "",
+  },
+  {
+    name: "Script Explorer",
+    description: "비트코인 스크립트를 탐색하고 이해하기 위한 웹 기반 도구.",
+    url: "https://paulkernfeld.com/bse",
+    logo: "",
+  },
+  {
+    name: "Mempool.space",
+    description:
+      "밈풀, 트랜잭션 및 블록의 시각적 표현을 제공하는 비트코인 블록체인 탐색기.",
+    url: "https://mempool.space",
+    logo: "",
+  },
+  {
+    name: "Dojo",
+    description:
+      "Samourai Wallet에서 개발하고 GitHub에서 호스팅되는 종단간 비트코인 지갑 백킹 서버.",
+    url: "https://github.com/Samourai-Wallet/samourai-dojo",
+    logo: "",
+  },
+  {
+    name: "Bitcoin Simulator",
+    description:
+      "비트코인이 실제로 어떻게 작동하는지 보여주는 현실적인 블록체인 시뮬레이터.",
+    url: "https://bitcoinsimulator.duckdns.org/blockchain?chain=public",
+    logo: "",
+  },
+  {
+    name: "GroupHug",
+    description: "조정이 필요하지 않은 배치 서비스.",
     url: "https://github.com/Peach2Peach/grouphug",
     logo: "",
   },

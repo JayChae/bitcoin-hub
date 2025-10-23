@@ -72,7 +72,7 @@ export default async function BitcoinPage({ params }: Props) {
     <div className="relative h-full">
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
-        <DevNav activeLink={"bitcoin"} />
+        <DevNav activeLink="bitcoin" />
         <div className="hidden items-center gap-4 lg:flex">
           <Bitcoin className="text-primary h-12 w-12" />
           <div>
@@ -105,7 +105,7 @@ export default async function BitcoinPage({ params }: Props) {
             </div>
           </div>
           <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {bitcoinDevResources[category].map((resource) => (
+            {bitcoinDevResources[locale][category]?.map((resource) => (
               <li key={resource.name} className="h-full">
                 <ResourceCard
                   key={resource.url}

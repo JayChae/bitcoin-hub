@@ -1,5 +1,6 @@
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { DevelopmentResourceField } from "@/types";
 
 const navLinks = [
   {
@@ -18,7 +19,7 @@ const navLinks = [
 
 type DevNavProps = {
   className?: string;
-  activeLink: "bitcoin" | "lightning" | "education";
+  activeLink: DevelopmentResourceField;
 };
 export function DevNav({ className, activeLink }: DevNavProps) {
   return (
@@ -29,7 +30,7 @@ export function DevNav({ className, activeLink }: DevNavProps) {
       )}
     >
       {navLinks.map((link) => {
-        const isActive = link.label === activeLink;
+        const isActive = String(link.label).toLowerCase() === activeLink;
         return (
           <Link
             key={link.href}
