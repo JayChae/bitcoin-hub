@@ -142,6 +142,10 @@
       }
     }
   },
+  "developmentBitcoin": {
+    "title": "Bitcoin Development Resources",
+    "description": "비트코인 개발을 위한 다양한 도구와 라이브러리를 탐색하세요."
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "페이지 제작 중입니다",

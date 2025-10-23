@@ -1,5 +1,6 @@
 import { Bitcoin, ExternalLink } from "lucide-react";
 import Image from "next/image";
+import { redirect } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { CategorySelect } from "@/components/category-select";
@@ -22,10 +23,53 @@ type Props = {
 };
 export default async function BitcoinPage({ params, searchParams }: Props) {
   const { locale } = await params;
-  const { category } = (await searchParams) ?? { category: "libraries-sdks" };
+  const searchParamsResolved = await searchParams;
+
+  // searchParam이 없으면 기본 category로 리다이렉트
+  if (!searchParamsResolved?.category) {
+    redirect(`/${locale}/development/bitcoin?category=libraries-sdks`);
+  }
+
+  const { category } = searchParamsResolved;
   // Enable static rendering
   setRequestLocale(locale);
-  const t = await getTranslations("development");
+  const t = await getTranslations("developmentBitcoin");
+
+  const bitcoinCategories: BitcoinCategories = [
+    {
+      label: categoryTitles["libraries-sdks"],
+      value: "libraries-sdks",
+    },
+    {
+      label: categoryTitles["apis-payments"],
+      value: "apis-payments",
+    },
+    {
+      label: categoryTitles["l2s-smart-contracts"],
+      value: "l2s-smart-contracts",
+    },
+    {
+      label: categoryTitles["node-software"],
+      value: "node-software",
+    },
+    {
+      label: categoryTitles["node-hardware"],
+      value: "node-hardware",
+    },
+    {
+      label: categoryTitles["explorers-analytics"],
+      value: "explorers-analytics",
+    },
+    {
+      label: categoryTitles["utilities"],
+      value: "utilities",
+    },
+    {
+      label: categoryTitles["wallets"],
+      value: "wallets",
+    },
+  ];
+
   return (
     <div className="relative h-full">
       {/* Header */}
@@ -35,11 +79,9 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
           <Bitcoin className="text-primary h-12 w-12" />
           <div>
             <h1 className="from-primary to-primary bg-gradient-to-r via-yellow-400 bg-clip-text text-3xl font-bold text-transparent">
-              Bitcoin Development Resources
+              {t("title")}
             </h1>
-            <p className="text-muted-foreground mt-2">
-              Comprehensive tools and libraries for Bitcoin development
-            </p>
+            <p className="text-muted-foreground mt-2">{t("description")}</p>
           </div>
         </div>
       </section>
@@ -177,37 +219,3 @@ type BitcoinCategories = {
   label: string;
   value: BitcoinCategory;
 }[];
-const bitcoinCategories: BitcoinCategories = [
-  {
-    label: categoryTitles["libraries-sdks"],
-    value: "libraries-sdks",
-  },
-  {
-    label: categoryTitles["apis-payments"],
-    value: "apis-payments",
-  },
-  {
-    label: categoryTitles["l2s-smart-contracts"],
-    value: "l2s-smart-contracts",
-  },
-  {
-    label: categoryTitles["node-software"],
-    value: "node-software",
-  },
-  {
-    label: categoryTitles["node-hardware"],
-    value: "node-hardware",
-  },
-  {
-    label: categoryTitles["explorers-analytics"],
-    value: "explorers-analytics",
-  },
-  {
-    label: categoryTitles["utilities"],
-    value: "utilities",
-  },
-  {
-    label: categoryTitles["wallets"],
-    value: "wallets",
-  },
-];

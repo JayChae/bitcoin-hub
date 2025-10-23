@@ -1,7 +1,7 @@
 "use client";
 
 import { Bitcoin, Languages, Menu } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 import { Link } from "@/i18n/navigation";
@@ -25,7 +25,12 @@ const links = [
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
-  const path = pathname.split("/").slice(2).join("/");
+  const searchParams = useSearchParams();
+  const withoutLocale = pathname.split("/").slice(2).join("/");
+
+  const path = searchParams.toString()
+    ? `${withoutLocale}?${searchParams.toString()}`
+    : withoutLocale;
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

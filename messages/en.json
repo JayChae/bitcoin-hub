@@ -142,6 +142,10 @@
       }
     }
   },
+  "developmentBitcoin": {
+    "title": "Bitcoin Development Resources",
+    "description": "Comprehensive tools and libraries for Bitcoin development"
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "This page is under construction",
