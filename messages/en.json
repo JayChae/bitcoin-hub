@@ -154,7 +154,8 @@
       "nodeSoftware": "Node Software",
       "nodeHardware": "Node Hardware",
       "explorersAnalytics": "Explorers & Analytics",
-      "wallets": "Wallets",
+      "softwareWallets": "Software Wallets",
+      "hardwareWallets": "Hardware Wallets",
       "research": "Research"
     }
   },

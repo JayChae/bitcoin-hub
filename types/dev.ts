@@ -8,7 +8,8 @@ export type BitcoinCategory =
   | "node-hardware"
   | "explorers-analytics"
   | "utilities"
-  | "wallets"
+  | "software-wallets"
+  | "hardware-wallets"
   | "research";
 
 export type LightningCategory =

@@ -154,8 +154,9 @@
       "l2sSmartContracts": "레이어 2 & 스마트 컨트랙트",
       "nodeSoftware": "소프트웨어 노드",
       "nodeHardware": "하드웨어 노드",
-      "explorersAnalytics": "탐험가 & 분석",
-      "wallets": "지갑",
+      "explorersAnalytics": "탐색기 & 분석",
+      "softwareWallets": "소프트웨어 지갑",
+      "hardwareWallets": "하드웨어 지갑",
       "research": "연구"
     }
   },

@@ -15,7 +15,7 @@ import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { BitcoinCategory, LocaleType } from "@/types";
 
-import { bitcoinDevResources } from "./resources";
+import { bitcoinDevResources } from "./_resources";
 
 type Props = {
   params: Promise<{ locale: LocaleType }>;
@@ -65,8 +65,12 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
       value: "utilities",
     },
     {
-      label: t(categoryTitles["wallets"]),
-      value: "wallets",
+      label: t(categoryTitles["software-wallets"]),
+      value: "software-wallets",
+    },
+    {
+      label: t(categoryTitles["hardware-wallets"]),
+      value: "hardware-wallets",
     },
     {
       label: t(categoryTitles["research"]),
@@ -98,7 +102,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
         />
         <section className="max-w-7xl flex-1 px-4 sm:px-6 md:px-8 lg:px-10">
-          <div className="my-6 flex items-center justify-between">
+          <div className="my-8 flex items-center justify-between">
             <h2 className="text-xl font-bold sm:text-2xl lg:text-3xl">
               {t(categoryTitles[category])}
             </h2>
@@ -110,7 +114,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
               />
             </div>
           </div>
-          <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {bitcoinDevResources[category].map((resource) => (
               <li key={resource.name} className="h-full">
                 <ResourceCard
@@ -215,7 +219,8 @@ const categoryTitles: Record<BitcoinCategory, string> = {
   "node-hardware": "categories.nodeHardware",
   "explorers-analytics": "categories.explorersAnalytics",
   utilities: "categories.utilities",
-  wallets: "categories.wallets",
+  "software-wallets": "categories.softwareWallets",
+  "hardware-wallets": "categories.hardwareWallets",
   research: "categories.research",
 };
 
