@@ -37,36 +37,40 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
 
   const bitcoinCategories: BitcoinCategories = [
     {
-      label: categoryTitles["libraries-sdks"],
+      label: t(categoryTitles["libraries-sdks"]),
       value: "libraries-sdks",
     },
     {
-      label: categoryTitles["apis-payments"],
+      label: t(categoryTitles["apis-payments"]),
       value: "apis-payments",
     },
     {
-      label: categoryTitles["l2s-smart-contracts"],
+      label: t(categoryTitles["l2s-smart-contracts"]),
       value: "l2s-smart-contracts",
     },
     {
-      label: categoryTitles["node-software"],
+      label: t(categoryTitles["node-software"]),
       value: "node-software",
     },
     {
-      label: categoryTitles["node-hardware"],
+      label: t(categoryTitles["node-hardware"]),
       value: "node-hardware",
     },
     {
-      label: categoryTitles["explorers-analytics"],
+      label: t(categoryTitles["explorers-analytics"]),
       value: "explorers-analytics",
     },
     {
-      label: categoryTitles["utilities"],
+      label: t(categoryTitles["utilities"]),
       value: "utilities",
     },
     {
-      label: categoryTitles["wallets"],
+      label: t(categoryTitles["wallets"]),
       value: "wallets",
+    },
+    {
+      label: t(categoryTitles["research"]),
+      value: "research",
     },
   ];
 
@@ -87,7 +91,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
       </section>
       <div className="flex">
         <CategorySidebar
-          title="Categories"
+          title={t("categories.title")}
           field="bitcoin"
           categories={bitcoinCategories}
           selectedCategory={category}
@@ -96,13 +100,13 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
         <section className="max-w-7xl flex-1 px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="my-6 flex items-center justify-between">
             <h2 className="text-xl font-bold sm:text-2xl lg:text-3xl">
-              {categoryTitles[category]}
+              {t(categoryTitles[category])}
             </h2>
             <div className="lg:hidden">
               <CategorySelect
                 field="bitcoin"
                 categories={bitcoinCategories}
-                placeholder="Category"
+                placeholder={t("categories.title")}
               />
             </div>
           </div>
@@ -204,15 +208,15 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
 }
 
 const categoryTitles: Record<BitcoinCategory, string> = {
-  "libraries-sdks": "Libraries & SDKs",
-  "apis-payments": "APIs & Payments",
-  "l2s-smart-contracts": "L2s & Smart Contracts",
-  "node-software": "Node Software",
-  "node-hardware": "Node Hardware",
-  "explorers-analytics": "Explorers & Analytics",
-  utilities: "Utilities",
-  wallets: "Wallets",
-  research: "Research",
+  "libraries-sdks": "categories.librariesSdks",
+  "apis-payments": "categories.apisPayments",
+  "l2s-smart-contracts": "categories.l2sSmartContracts",
+  "node-software": "categories.nodeSoftware",
+  "node-hardware": "categories.nodeHardware",
+  "explorers-analytics": "categories.explorersAnalytics",
+  utilities: "categories.utilities",
+  wallets: "categories.wallets",
+  research: "categories.research",
 };
 
 type BitcoinCategories = {

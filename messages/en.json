@@ -144,7 +144,19 @@
   },
   "developmentBitcoin": {
     "title": "Bitcoin Development Resources",
-    "description": "Comprehensive tools and libraries for Bitcoin development"
+    "description": "Comprehensive tools and libraries for Bitcoin development",
+    "categories": {
+      "title": "Categories",
+      "librariesSdks": "Libraries & SDKs",
+      "apisPayments": "APIs & Payments",
+      "utilities": "Utilities",
+      "l2sSmartContracts": "Layer 2s & Smart Contracts",
+      "nodeSoftware": "Node Software",
+      "nodeHardware": "Node Hardware",
+      "explorersAnalytics": "Explorers & Analytics",
+      "wallets": "Wallets",
+      "research": "Research"
+    }
   },
   "comingSoon": {
     "title": "Coming Soon",

@@ -144,7 +144,20 @@
   },
   "developmentBitcoin": {
     "title": "Bitcoin Development Resources",
-    "description": "비트코인 개발을 위한 다양한 도구와 라이브러리를 탐색하세요."
+    "description": "비트코인 개발을 위한 다양한 도구와 라이브러리를 탐색하세요.",
+
+    "categories": {
+      "title": "카테고리",
+      "librariesSdks": "라이브러리 & SDK",
+      "apisPayments": "API & 결제",
+      "utilities": "유틸리티",
+      "l2sSmartContracts": "레이어 2 & 스마트 컨트랙트",
+      "nodeSoftware": "소프트웨어 노드",
+      "nodeHardware": "하드웨어 노드",
+      "explorersAnalytics": "탐험가 & 분석",
+      "wallets": "지갑",
+      "research": "연구"
+    }
   },
   "comingSoon": {
     "title": "Coming Soon",
