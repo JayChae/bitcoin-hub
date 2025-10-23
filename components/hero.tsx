@@ -8,6 +8,7 @@ type Props = {
   titleClassName?: string;
   descriptionClassName?: string;
   Icon?: ReactNode;
+  children?: ReactNode;
 };
 function Hero({
   title,
@@ -15,6 +16,7 @@ function Hero({
   titleClassName,
   descriptionClassName,
   Icon,
+  children,
 }: Props) {
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-8">
@@ -36,6 +38,7 @@ function Hero({
         >
           {description}
         </p>
+        {children}
       </div>
     </section>
   );

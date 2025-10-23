@@ -68,6 +68,11 @@
   "development": {
     "title": "Development Resources",
     "description": "비트코인 개발자, 학습자, 빌더들을 위한 선별된 비트코인, 라이트닝 네트워크, 그리고 교육 자료를 탐색하세요.",
+    "developmentLinks": {
+      "bitcoin": "비트코인",
+      "lightning": "라이트닝",
+      "education": "교육"
+    },
     "resources": {
       "bitcoin": {
         "sectionTitle": "Bitcoin Resources",

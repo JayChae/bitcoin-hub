@@ -41,6 +41,17 @@ export default async function DevelopmentPage({ params }: Props) {
   // Enable static rendering
   setRequestLocale(locale);
   const t = await getTranslations("development");
+  const developmentLinks: DevelopmentLink[] = [
+    { href: "/development/bitcoin", label: t("developmentLinks.bitcoin") },
+    {
+      href: "/development/lightning",
+      label: t("developmentLinks.lightning"),
+    },
+    {
+      href: "/development/education",
+      label: t("developmentLinks.education"),
+    },
+  ];
   // Bitcoin resources with translations
   const bitcoinResources: Resource[] = [
     {
@@ -133,7 +144,12 @@ export default async function DevelopmentPage({ params }: Props) {
         title={t("title")}
         description={t("description")}
         Icon={<Code className="text-primary size-10 sm:size-16" />}
-      />
+      >
+        <DevelopmentLinks
+          className="mt-12"
+          developmentLinks={developmentLinks}
+        />
+      </Hero>
 
       {/* Bitcoin Resources Section */}
       <Section
@@ -231,9 +247,42 @@ function Section({
   );
 }
 
+type DevelopmentLinksProps = {
+  className?: string;
+  developmentLinks: DevelopmentLink[];
+};
+function DevelopmentLinks({
+  className,
+  developmentLinks,
+}: DevelopmentLinksProps) {
+  return (
+    <ul className={cn("flex flex-wrap justify-center gap-4", className)}>
+      {developmentLinks.map((developmentLink) => (
+        <li key={developmentLink.href}>
+          <Link href={developmentLink.href}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
+            >
+              {developmentLink.label}
+              <ArrowRight className="ml-1 size-4" />
+            </Button>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 type Resource = {
   title: string;
   description: string;
   icon: LucideIcon;
   link: string;
+};
+
+type DevelopmentLink = {
+  href: string;
+  label: string;
 };

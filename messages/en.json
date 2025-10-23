@@ -68,6 +68,11 @@
   "development": {
     "title": "Development Resources",
     "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem.",
+    "developmentLinks": {
+      "bitcoin": "Bitcoin",
+      "lightning": "Lightning",
+      "education": "Education"
+    },
     "resources": {
       "bitcoin": {
         "sectionTitle": "Bitcoin Resources",
