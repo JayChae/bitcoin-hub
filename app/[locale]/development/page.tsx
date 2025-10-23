@@ -235,10 +235,11 @@ function Section({
           <Link href={buttonLink}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground"
+              variant="outline"
+              className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
             >
               {buttonText}
-              <ArrowRight className="ml-2 size-5" />
+              <ArrowRight className="ml-1 size-4" />
             </Button>
           </Link>
         </div>
