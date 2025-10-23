@@ -27,7 +27,7 @@ export function CategorySelect({ field, categories, placeholder }: Props) {
           <SelectItem
             key={category.value}
             value={category.value}
-            className="cursor-pointer"
+            className="cursor-pointer overflow-hidden text-ellipsis whitespace-nowrap"
           >
             {category.label}
           </SelectItem>
