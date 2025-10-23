@@ -225,7 +225,7 @@ function Section({
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-xs sm:text-sm">
+                    <CardDescription className="line-clamp-2 text-xs sm:text-sm">
                       {resource.description}
                     </CardDescription>
                   </CardContent>

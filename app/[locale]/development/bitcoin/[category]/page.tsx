@@ -155,7 +155,9 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
                 </CardTitle>
                 <ExternalLink className="text-muted-foreground group-hover:text-primary h-4 w-4 transition-colors" />
               </div>
-              <CardDescription className="mt-2">{description}</CardDescription>
+              <CardDescription className="mt-2 line-clamp-3">
+                {description}
+              </CardDescription>
             </div>
           </div>
         </CardHeader>
