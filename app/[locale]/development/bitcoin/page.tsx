@@ -53,7 +53,7 @@ export default async function BitcoinPage({ params, searchParams }: Props) {
         />
         <section className="max-w-7xl flex-1 px-4 sm:px-6 md:px-8 lg:px-10">
           <div className="my-6 flex items-center justify-between">
-            <h2 className="text-2xl font-bold lg:text-3xl">
+            <h2 className="text-xl font-bold sm:text-2xl lg:text-3xl">
               {categoryTitles[category]}
             </h2>
             <div className="lg:hidden">
