@@ -12,7 +12,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
-import { cn } from "@/lib/utils";
 import { BitcoinCategory, LocaleType } from "@/types";
 
 import { DevNav } from "../_components/dev-nav";
