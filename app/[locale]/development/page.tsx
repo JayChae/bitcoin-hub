@@ -42,13 +42,16 @@ export default async function DevelopmentPage({ params }: Props) {
   setRequestLocale(locale);
   const t = await getTranslations("development");
   const developmentLinks: DevelopmentLink[] = [
-    { href: "/development/bitcoin", label: t("developmentLinks.bitcoin") },
     {
-      href: "/development/lightning",
+      href: "/development/bitcoin?category=libraries-sdks",
+      label: t("developmentLinks.bitcoin"),
+    },
+    {
+      href: "/development/lightning?category=libraries-sdks",
       label: t("developmentLinks.lightning"),
     },
     {
-      href: "/development/education",
+      href: "/development/education?category=guides-tutorials",
       label: t("developmentLinks.education"),
     },
   ];
@@ -76,7 +79,7 @@ export default async function DevelopmentPage({ params }: Props) {
       title: t("resources.bitcoin.items.layer2s.title"),
       description: t("resources.bitcoin.items.layer2s.description"),
       icon: Layers2,
-      link: "/development/bitcoin?category=layer-2s-smart-contracts",
+      link: "/development/bitcoin?category=l2s-smart-contracts",
     },
   ];
 

@@ -228,21 +228,21 @@ const DEV_RESOURCES = [
     icon: Bitcoin,
     title: "development.resources.bitcoin.title",
     description: "development.resources.bitcoin.description",
-    link: "/development/bitcoin",
+    link: "/development/bitcoin?category=libraries-sdks",
   },
   {
     id: "lightning",
     icon: Zap,
     title: "development.resources.lightning.title",
     description: "development.resources.lightning.description",
-    link: "/development/lightning-network",
+    link: "/development/lightning?category=libraries-sdks",
   },
   {
     id: "education",
     icon: BookOpen,
     title: "development.resources.education.title",
     description: "development.resources.education.description",
-    link: "/development/education",
+    link: "/development/education?category=guides-tutorials",
   },
 ] as const;
 
