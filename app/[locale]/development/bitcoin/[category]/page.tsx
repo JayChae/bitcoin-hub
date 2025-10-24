@@ -72,14 +72,16 @@ export default async function BitcoinPage({ params }: Props) {
     <div className="relative h-full">
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
-        <DevNav activeLink="bitcoin" />
-        <div className="hidden items-center gap-4 lg:flex">
-          <Bitcoin className="text-primary h-12 w-12" />
-          <div>
-            <h1 className="from-primary to-primary bg-gradient-to-r via-yellow-400 bg-clip-text text-3xl font-bold text-transparent">
-              {t("title")}
-            </h1>
-            <p className="text-muted-foreground mt-2">{t("description")}</p>
+        <div className="container mx-auto">
+          <DevNav activeLink="bitcoin" />
+          <div className="hidden items-center gap-4 lg:flex">
+            <Bitcoin className="text-primary h-12 w-12" />
+            <div>
+              <h1 className="from-primary to-primary bg-gradient-to-r via-yellow-400 bg-clip-text text-3xl font-bold text-transparent">
+                {t("title")}
+              </h1>
+              <p className="text-muted-foreground mt-2">{t("description")}</p>
+            </div>
           </div>
         </div>
       </section>
