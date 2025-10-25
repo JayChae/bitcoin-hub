@@ -4,8 +4,12 @@
       "title": "Bitcoin Hub",
       "description": ""
     },
-    "title": "Bitcoin Hub",
-    "description": "Bitcoin development, internship, and global communities. Everything you need to explore and connect in the world of Bitcoin.",
+    "hero": {
+      "title": "Bitcoin Hub",
+      "description": "Bitcoin development, internship, and global communities. Everything you need to explore and connect in the world of Bitcoin.",
+      "button1": "Learn More",
+      "button2": "Development Resources"
+    },
     "development": {
       "title": "Bitcoin Development",
       "description": "Explore development resources for Bitcoin, Lightning Network, and education.",
@@ -64,6 +68,100 @@
   "about": {
     "title": "About Us",
     "description": "We are a team of Bitcoin enthusiasts who are dedicated to educating people about Bitcoin and the Lightning Network."
+  },
+  "development": {
+    "title": "Development Resources",
+    "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem.",
+    "developmentLinks": {
+      "bitcoin": "Bitcoin",
+      "lightning": "Lightning",
+      "education": "Education"
+    },
+    "resources": {
+      "bitcoin": {
+        "sectionTitle": "Bitcoin Resources",
+        "exploreAll": "Explore All",
+        "items": {
+          "librariesSdks": {
+            "title": "Libraries",
+            "description": "Software libraries and development kits providing foundational code for building Bitcoin applications."
+          },
+          "apisPayments": {
+            "title": "APIs & Payments",
+            "description": "Tools and platforms for easy integration of Bitcoin payments in applications."
+          },
+          "utilities": {
+            "title": "Utilities",
+            "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification."
+          },
+          "layer2s": {
+            "title": "Layer 2s",
+            "description": "Technologies enabling extended functionalities like smart contracts and second-layer solutions on the Bitcoin network."
+          }
+        }
+      },
+      "lightning": {
+        "sectionTitle": "Lightning Resources",
+        "exploreAll": "Explore All",
+        "items": {
+          "librariesSdks": {
+            "title": "Libraries",
+            "description": "Libraries and development kits for building Lightning Network applications."
+          },
+          "lspsEnterprise": {
+            "title": "LSPs",
+            "description": "Enterprise-grade tools and services for businesses leveraging the Lightning Network."
+          },
+          "dashboardsMonitoring": {
+            "title": "Monitoring",
+            "description": "Web-based and text-based interfaces for managing and monitoring Lightning Network nodes."
+          },
+          "routingLiquidity": {
+            "title": "Routing",
+            "description": "Tools and services focused on managing payment routing and Lightning channel liquidity."
+          }
+        }
+      },
+      "education": {
+        "sectionTitle": "Education Resources",
+        "exploreAll": "Explore All",
+        "items": {
+          "guidesTutorials": {
+            "title": "Tutorials",
+            "description": "Text or video-based educational materials related to Bitcoin and Lightning Network development."
+          },
+          "classesCourses": {
+            "title": "Classes",
+            "description": "Online or in-person formal educational programs for Bitcoin and Lightning Network development."
+          },
+          "certifications": {
+            "title": "Certifications",
+            "description": "Programs that issue certifications validating Bitcoin and Lightning Network development skills."
+          },
+          "books": {
+            "title": "Books",
+            "description": "Published books covering Bitcoin and Lightning Network development."
+          }
+        }
+      }
+    }
+  },
+  "developmentBitcoin": {
+    "title": "Bitcoin Development Resources",
+    "description": "Comprehensive tools and libraries for Bitcoin development",
+    "categories": {
+      "title": "Categories",
+      "librariesSdks": "Libraries & SDKs",
+      "apisPayments": "APIs & Payments",
+      "utilities": "Utilities",
+      "l2sSmartContracts": "Layer 2s & Smart Contracts",
+      "nodeSoftware": "Node Software",
+      "nodeHardware": "Node Hardware",
+      "explorersAnalytics": "Explorers & Analytics",
+      "softwareWallets": "Software Wallets",
+      "hardwareWallets": "Hardware Wallets",
+      "research": "Research"
+    }
   },
   "comingSoon": {
     "title": "Coming Soon",

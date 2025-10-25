@@ -25,7 +25,8 @@ const links = [
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
-  const path = pathname.split("/").slice(2).join("/");
+  const withoutLocale = pathname.split("/").slice(2).join("/");
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -46,16 +47,18 @@ export default function Header({ locale }: { locale: LocaleType }) {
           {/* Desktop Navigation */}
           <ul className="hidden items-center gap-6 sm:flex">
             {links.map((link) => (
-              <li
-                key={link.href}
-                className={cn(
-                  "hover:text-primary size-fit text-sm font-medium transition-colors",
-                  pathname === link.href
-                    ? "text-primary"
-                    : "text-muted-foreground",
-                )}
-              >
-                <Link key={link.href} href={link.href} locale={locale}>
+              <li key={link.href}>
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  locale={locale}
+                  className={cn(
+                    "hover:text-primary size-fit text-sm font-medium transition-colors",
+                    pathname === link.href
+                      ? "text-primary"
+                      : "text-muted-foreground",
+                  )}
+                >
                   {link.label}
                 </Link>
               </li>
@@ -75,7 +78,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   {languages.map((lang) => (
                     <Link
                       key={lang.code}
-                      href={`/${path}`}
+                      href={`/${withoutLocale}`}
                       locale={lang.code as LocaleType}
                       rel="alternate"
                     >
@@ -127,7 +130,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
               ))}
               <li className="border-border w-full border-t pt-4">
                 <Link
-                  href={`/${path}`}
+                  href={`/${withoutLocale}`}
                   locale={locale === "en" ? "ko" : "en"}
                   onClick={() => setMobileMenuOpen(false)}
                   className="hover:bg-accent text-muted-foreground block rounded-md px-4 py-3 text-sm transition-colors hover:text-black"

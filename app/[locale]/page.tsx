@@ -40,10 +40,10 @@ export default async function Home({ params }: Props) {
             <Bitcoin className="text-primary h-20 w-20 animate-pulse" />
           </div>
           <h1 className="from-primary to-secondary mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
-            {t("title")}
+            {t("hero.title")}
           </h1>
           <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-base sm:text-xl">
-            {t("description")}
+            {t("hero.description")}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/about" locale={locale}>
@@ -51,7 +51,18 @@ export default async function Home({ params }: Props) {
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
               >
-                Learn More
+                {t("hero.button1")}
+              </Button>
+            </Link>
+
+            <Link href="/development" className="">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
+              >
+                {t("hero.button2")}
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -228,21 +239,21 @@ const DEV_RESOURCES = [
     icon: Bitcoin,
     title: "development.resources.bitcoin.title",
     description: "development.resources.bitcoin.description",
-    link: "/development/bitcoin",
+    link: "/development/bitcoin/libraries-sdks",
   },
   {
     id: "lightning",
     icon: Zap,
     title: "development.resources.lightning.title",
     description: "development.resources.lightning.description",
-    link: "/development/lightning-network",
+    link: "/development/lightning/libraries-sdks",
   },
   {
     id: "education",
     icon: BookOpen,
     title: "development.resources.education.title",
     description: "development.resources.education.description",
-    link: "/development/education",
+    link: "/development/education/guides-tutorials",
   },
 ] as const;
 
