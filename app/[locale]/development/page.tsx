@@ -43,15 +43,15 @@ export default async function DevelopmentPage({ params }: Props) {
   const t = await getTranslations("development");
   const developmentLinks: DevelopmentLink[] = [
     {
-      href: "/development/bitcoin?category=libraries-sdks",
+      href: "/development/bitcoin/libraries-sdks",
       label: t("developmentLinks.bitcoin"),
     },
     {
-      href: "/development/lightning?category=libraries-sdks",
+      href: "/development/lightning/libraries-sdks",
       label: t("developmentLinks.lightning"),
     },
     {
-      href: "/development/education?category=guides-tutorials",
+      href: "/development/education/guides-tutorials",
       label: t("developmentLinks.education"),
     },
   ];

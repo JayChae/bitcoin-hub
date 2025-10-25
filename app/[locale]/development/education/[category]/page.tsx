@@ -57,7 +57,7 @@ export default async function LightningPage({ params }: Props) {
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
         <div className="container mx-auto">
-          <DevNav activeLink="lightning" />
+          <DevNav activeLink="education" />
           <div className="hidden items-center gap-4 lg:flex">
             <Bitcoin className="text-primary h-12 w-12" />
             <div>
