@@ -63,42 +63,41 @@ export const hardwareWalletsKo: BitcoinDevResources["hardware-wallets"] = [
   {
     name: "CKBunker for Cold Card",
     description:
-      "하드웨어 보안 모듈(HSM) 모드에서 Coldcard 하드웨어 지갑과 함께 사용하도록 설계된 소프트웨어 도구입니다. 비트코인 트랜잭션의 자동화된 규칙 기반 서명을 가능하게 하여, 수동 확인 없이 Coldcard가 트랜잭션에 서명할 수 있도록 합니다.",
+      "하드웨어 보안 모듈(HSM) 모드에서 Coldcard 하드웨어 지갑과 함께 사용하도록 설계된 소프트웨어 도구입니다. 비트코인 트랜잭션의 자동화된 규칙 기반 서명을 가능하게 하여, 수동 확인 없이 Coldcard가 트랜잭션에 서명 제공.",
     url: "https://ckbunker.com",
     logo: "https://avatars.githubusercontent.com/u/34548271?s=200&v=4",
   },
   {
     name: "Trezor",
     description:
-      "최초의 하드웨어 지갑 중 하나로, 비트코인을 포함한 다양한 암호화폐를 저장하고 관리할 수 있는 안전하고 사용자 친화적인 방법을 제공합니다.",
+      "최초의 하드웨어 지갑 중 하나로, 비트코인을 포함한 다양한 암호화폐를 저장하고 관리할 수 있는 안전하고 사용자 친화적인 방법을 제공한다.",
     url: "https://trezor.io",
     logo: "https://pbs.twimg.com/profile_images/1876994745022529536/5FD_cxXO_400x400.jpg",
   },
   {
     name: "Foundation Devices",
     description:
-      "비트코인과 탈중앙화 인터넷을 위한 오픈소스 하드웨어 제품을 전문으로 하며, 하드웨어 지갑과 노드를 포함합니다.",
+      "비트코인과 탈중앙화 인터넷을 위한 오픈소스 하드웨어 제품을 전문으로 하며, 하드웨어 지갑과 노드.",
     url: "https://foundationdevices.com",
     logo: "https://avatars.githubusercontent.com/u/68249620?s=200&v=4",
   },
   {
     name: "Seed Signer",
     description:
-      "사용자가 비트코인 시드 문구를 안전하게 생성하고 저장할 수 있도록 하는 DIY 오픈소스 하드웨어 지갑 솔루션입니다.",
+      "사용자가 비트코인 시드 문구를 안전하게 생성하고 저장할 수 있도록 하는 DIY 오픈소스 하드웨어 지갑 솔루션.",
     url: "https://seedsigner.com",
     logo: "https://seedsigner.com/wp-content/uploads/2021/12/Frame-6.png",
   },
   {
     name: "BitBox",
     description:
-      "비트코인 전용 버전을 제공하는 미니멀한 하드웨어 지갑으로, 사용자가 비트코인 자산을 안전하게 저장하고 관리할 수 있도록 보안과 단순성을 강조합니다.",
+      "비트코인 전용 버전을 제공하는 미니멀한 하드웨어 지갑으로, 사용자가 비트코인 자산을 안전하게 저장하고 관리할 수 있도록 보안과 단순성을 강조.",
     url: "https://bitbox.swiss",
     logo: "https://avatars.githubusercontent.com/u/12703801?s=200&v=4",
   },
   {
     name: "Bitkey",
-    description:
-      "앱, 하드웨어, 복구 도구가 포함된 자체 보관 비트코인 지갑입니다.",
+    description: "앱, 하드웨어, 복구 도구가 포함된 자체 보관 비트코인 지갑.",
     url: "https://bitkey.world",
     logo: "https://media.licdn.com/dms/image/v2/D560BAQEpBnVYD6iL1w/company-logo_200_200/B56ZU.Qo_gGQAI-/0/1740506304762/bitkey_official_logo?e=1762992000&v=beta&t=y7Y60m-rXECTlVSbSBvs2ANjQdapkairB7uodIPKY2c",
   },

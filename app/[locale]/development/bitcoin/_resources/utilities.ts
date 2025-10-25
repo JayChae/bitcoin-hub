@@ -153,7 +153,7 @@ export const utilitiesKo: BitcoinDevResources["utilities"] = [
   {
     name: "Tapsim",
     description:
-      "비트코인 Tapscript 트랜잭션을 디버깅하기 위한 Go로 구축된 도구로, 비트코인 스크립트 기본 요소를 사용하고 스크립트가 실행될 때 VM 상태를 시각화할 수 있게 해줍니다.",
+      "비트코인 Tapscript 트랜잭션을 디버깅하기 위한 Go로 구축된 도구로, 비트코인 스크립트 기본 요소를 사용하고 스크립트가 실행될 때 VM 상태를 시각화.",
     url: "https://github.com/halseth/tapsim",
     logo: "https://placehold.co/80x80?text=Tapsim",
   },
@@ -174,7 +174,7 @@ export const utilitiesKo: BitcoinDevResources["utilities"] = [
   {
     name: "Minsc",
     description:
-      "Miniscript Policy 언어를 기반으로 비트코인 스크립트 지출 조건을 표현하기 위한 고수준 스크립팅 언어로, 변수, 함수, 중위 표기법 등의 추가 기능과 구문 설탕을 포함합니다.",
+      "Miniscript Policy 언어를 기반으로 비트코인 스크립트 지출 조건을 표현하기 위한 고수준 스크립팅 언어로, 변수, 함수, 중위 표기법 등의 추가 기능과 구문 설탕을 포함한다.",
     url: "https://min.sc",
     logo: "https://placehold.co/80x80?text=Minsc",
   },
@@ -216,7 +216,7 @@ export const utilitiesKo: BitcoinDevResources["utilities"] = [
   {
     name: "PSBT.io",
     description:
-      "IFTTT와 유사한 자동화된 비트코인 트랜잭션 브로드캐스팅을 제공하는 플랫폼으로, 비트코인 트랜잭션 관리 및 실행 프로세스를 간소화합니다.",
+      "IFTTT와 유사한 자동화된 비트코인 트랜잭션 브로드캐스팅을 제공하는 플랫폼으로, 비트코인 트랜잭션 관리 및 실행 프로세스를 간소화한다.",
     url: "https://psbt.io",
     logo: "https://psbt.io/assets/twoo-d232e1e26b57e4bf8f5d0f4be7ed4d110562c38c7fb8b8f01372406ec0cbbe0e.webp",
   },

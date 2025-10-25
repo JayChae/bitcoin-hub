@@ -111,28 +111,28 @@ export const l2sSmartContractsKo: BitcoinDevResources["l2s-smart-contracts"] = [
   {
     name: "Simplicity",
     description:
-      "스마트 계약을 위해 설계된 블록체인 프로그래밍 언어로, 비트코인 생태계에서 사용할 수 있습니다.",
+      "스마트 계약을 위해 설계된 블록체인 프로그래밍 언어로, 비트코인 생태계에서 사용할 수 있다.",
     url: "https://github.com/BlockstreamResearch/simplicity",
     logo: "https://avatars.githubusercontent.com/u/126093814?s=200&v=4",
   },
   {
     name: "Liquid",
     description:
-      "거래자와 거래소용 사이드체인 기반 결제 네트워크로, 더 빠른 비트코인 거래를 촉진하고 추가 디지털 자산 발행을 가능하게 합니다.",
+      "거래자와 거래소용 사이드체인 기반 결제 네트워크로, 더 빠른 비트코인 거래를 촉진하고 추가 디지털 자산 발행을 가능하게 한다.",
     url: "https://blockstream.com/liquid",
     logo: "https://avatars.githubusercontent.com/u/7424983?s=200&v=4",
   },
   {
     name: "RGB",
     description:
-      "비트코인의 베이스 레이어를 변경하지 않고 비트코인 블록체인 위에서 디지털 자산과 토큰의 발행 및 전송을 가능하게 합니다.",
+      "비트코인의 베이스 레이어를 변경하지 않고 비트코인 블록체인 위에서 디지털 자산과 토큰의 발행 및 전송을 가능하게 한다.",
     url: "https://rgb.tech",
     logo: "https://avatars.githubusercontent.com/u/39915942?s=200&v=4",
   },
   {
     name: "RSK",
     description:
-      "비트코인의 해시파워로 보호되는 이더리움의 기능을 미러링하는 사이드체인으로, 비트코인의 보안 모델을 활용하면서 스마트 계약과 dApp을 지원합니다.",
+      "비트코인의 해시파워로 보호되는 이더리움의 기능을 미러링하는 사이드체인으로, 비트코인의 보안 모델을 활용하면서 스마트 계약과 dApp을 지원.",
     url: "https://rootstock.io",
     logo: "https://avatars.githubusercontent.com/u/28455056?s=200&v=4",
   },
@@ -160,14 +160,14 @@ export const l2sSmartContractsKo: BitcoinDevResources["l2s-smart-contracts"] = [
   {
     name: "Validity Rollups on Bitcoin",
     description:
-      "비트코인을 위한 스케일러빌리티 솔루션으로, 트랜잭션 실행은 오프체인으로 이동되지만 데이터와 유효성 증명은 온체인에 저장됩니다.",
+      "비트코인을 위한 스케일러빌리티 솔루션으로, 트랜잭션 실행은 오프체인으로 이동되지만 데이터와 유효성 증명은 온체인에 저장.",
     url: "https://bitcoinrollups.org",
     logo: "https://placehold.co/80x80?text=VRB",
   },
   {
     name: "Enigma Network",
     description:
-      "비트코인을 위한 스케일러빌리티 솔루션으로, 트랜잭션 관리 및 처리를 위한 병렬 시스템을 생성하여 비트코인이 현재 아키텍처보다 더 많은 양의 트랜잭션을 더 빠르고 효율적으로 처리할 수 있도록 합니다.",
+      "비트코인을 위한 스케일러빌리티 솔루션으로, 트랜잭션 관리 및 처리를 위한 병렬 시스템을 생성하여 비트코인이 현재 아키텍처보다 더 많은 양의 트랜잭션을 더 빠르고 효율적으로 처리.",
     url: "https://blog.bitfinex.com/education/what-is-the-enigma-network",
     logo: "https://placehold.co/80x80?text=Enigma",
   },
@@ -181,7 +181,7 @@ export const l2sSmartContractsKo: BitcoinDevResources["l2s-smart-contracts"] = [
   {
     name: "Fedimint",
     description:
-      "연합 Chaumian 민트를 활용하여 비트코인의 프라이버시와 스케일러빌리티를 향상시키도록 설계된 오픈소스 프로토콜로, 협력적 보관과 증가된 트랜잭션 익명성을 허용합니다.",
+      "연합 Chaumian 민트를 활용하여 비트코인의 프라이버시와 스케일러빌리티를 향상시키도록 설계된 오픈소스 프로토콜로, 협력적 보관과 증가된 트랜잭션 익명성을 허용.",
     url: "https://fedimint.org",
     logo: "https://avatars.githubusercontent.com/u/84478549?s=200&v=4",
   },

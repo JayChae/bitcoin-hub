@@ -42,7 +42,7 @@ export const nodeHardwareKo: BitcoinDevResources["node-hardware"] = [
   {
     name: "MyNode",
     description:
-      "사용하기 쉽고 기능이 풍부한 비트코인과 라이트닝 네트워크 노드로, 최소한의 설정으로 비트코인 네트워크에 참여하고 활동할 수 있게 해줍니다.",
+      "사용하기 쉽고 기능이 풍부한 비트코인과 라이트닝 네트워크 노드로, 최소한의 설정으로 비트코인 네트워크에 참여하고 활동할 수 있게 한다.",
     url: "https://mynodebtc.com",
     logo: "https://avatars.githubusercontent.com/u/50158688?v=4",
   },
@@ -56,7 +56,7 @@ export const nodeHardwareKo: BitcoinDevResources["node-hardware"] = [
   {
     name: "Umbrel",
     description:
-      "사용자 친화적이고 개인적인 비트코인과 라이트닝 노드로, 개인이 자체 분산 금융 서비스를 쉽게 실행하고 관리할 수 있게 해줍니다.",
+      "사용자 친화적이고 개인적인 비트코인과 라이트닝 노드로, 개인이 자체 분산 금융 서비스를 쉽게 실행하고 관리할 수 있게 한다.",
     url: "https://umbrel.com",
     logo: "https://avatars.githubusercontent.com/u/59408891?s=200&v=4",
   },

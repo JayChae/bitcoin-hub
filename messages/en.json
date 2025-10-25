@@ -83,7 +83,7 @@
         "exploreAll": "Explore All",
         "items": {
           "librariesSdks": {
-            "title": "Libraries & SDKs",
+            "title": "Libraries",
             "description": "Software libraries and development kits providing foundational code for building Bitcoin applications."
           },
           "apisPayments": {
@@ -91,11 +91,11 @@
             "description": "Tools and platforms for easy integration of Bitcoin payments in applications."
           },
           "utilities": {
-            "title": "Bitcoin Utilities",
+            "title": "Utilities",
             "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification."
           },
           "layer2s": {
-            "title": "Layer 2s & Smart Contracts",
+            "title": "Layer 2s",
             "description": "Technologies enabling extended functionalities like smart contracts and second-layer solutions on the Bitcoin network."
           }
         }
@@ -105,19 +105,19 @@
         "exploreAll": "Explore All",
         "items": {
           "librariesSdks": {
-            "title": "Libraries & SDKs",
+            "title": "Libraries",
             "description": "Libraries and development kits for building Lightning Network applications."
           },
           "lspsEnterprise": {
-            "title": "LSPs & Enterprise",
+            "title": "LSPs",
             "description": "Enterprise-grade tools and services for businesses leveraging the Lightning Network."
           },
           "dashboardsMonitoring": {
-            "title": "Dashboards & Monitoring",
+            "title": "Monitoring",
             "description": "Web-based and text-based interfaces for managing and monitoring Lightning Network nodes."
           },
           "routingLiquidity": {
-            "title": "Routing & Liquidity",
+            "title": "Routing",
             "description": "Tools and services focused on managing payment routing and Lightning channel liquidity."
           }
         }
@@ -127,19 +127,19 @@
         "exploreAll": "Explore All",
         "items": {
           "guidesTutorials": {
-            "title": "Guides & Tutorials",
+            "title": "Tutorials",
             "description": "Text or video-based educational materials related to Bitcoin and Lightning Network development."
           },
           "classesCourses": {
-            "title": "Classes & Courses",
+            "title": "Classes",
             "description": "Online or in-person formal educational programs for Bitcoin and Lightning Network development."
           },
           "certifications": {
-            "title": "Developer Certifications",
+            "title": "Certifications",
             "description": "Programs that issue certifications validating Bitcoin and Lightning Network development skills."
           },
           "books": {
-            "title": "Developer Books",
+            "title": "Books",
             "description": "Published books covering Bitcoin and Lightning Network development."
           }
         }

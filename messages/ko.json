@@ -84,7 +84,7 @@
         "exploreAll": "모두 둘러보기",
         "items": {
           "librariesSdks": {
-            "title": "라이브러리 & SDK",
+            "title": "라이브러리",
             "description": "비트코인 애플리케이션을 구축하기 위한 기초 코드를 제공하는 소프트웨어 라이브러리와 개발 도구 키트입니다."
           },
           "apisPayments": {
@@ -92,11 +92,11 @@
             "description": "애플리케이션에서 비트코인 결제를 쉽게 통합할 수 있는 도구와 플랫폼입니다."
           },
           "utilities": {
-            "title": "비트코인 유틸리티",
+            "title": "유틸리티",
             "description": "트랜잭션 시뮬레이션, 스크립트 탐색, 블록체인 시각화, 코드 무결성 검증 등 다양한 도구 모음입니다."
           },
           "layer2s": {
-            "title": "레이어 2 & 스마트 컨트랙트",
+            "title": "레이어 2",
             "description": "비트코인 네트워크 위에서 스마트 컨트랙트와 세컨드 레이어 솔루션과 같은 확장된 기능을 가능하게 하는 기술입니다."
           }
         }
@@ -106,19 +106,19 @@
         "exploreAll": "모두 둘러보기",
         "items": {
           "librariesSdks": {
-            "title": "라이브러리 & SDK",
+            "title": "라이브러리",
             "description": "라이트닝 네트워크 애플리케이션을 구축하기 위한 라이브러리와 개발 도구 키트입니다."
           },
           "lspsEnterprise": {
-            "title": "LSP & 엔터프라이즈",
+            "title": "LSP",
             "description": "라이트닝 네트워크를 활용하려는 기업을 위한 엔터프라이즈급 도구와 서비스입니다."
           },
           "dashboardsMonitoring": {
-            "title": "대시보드 & 모니터링",
+            "title": "모니터링",
             "description": "라이트닝 네트워크 노드의 관리 및 모니터링을 위한 웹 기반 및 텍스트 기반 인터페이스입니다."
           },
           "routingLiquidity": {
-            "title": "라우팅 & 유동성",
+            "title": "라우팅",
             "description": "결제 라우팅 관리와 라이트닝 채널의 유동성 관리에 중점을 둔 도구와 서비스입니다."
           }
         }
@@ -128,7 +128,7 @@
         "exploreAll": "모두 둘러보기",
         "items": {
           "guidesTutorials": {
-            "title": "가이드 & 튜토리얼",
+            "title": "튜토리얼",
             "description": "비트코인 및 라이트닝 네트워크 개발과 관련된 텍스트 또는 비디오 기반 교육 자료입니다."
           },
           "classesCourses": {
@@ -136,11 +136,11 @@
             "description": "비트코인 및 라이트닝 네트워크 개발의 온라인 또는 오프라인 정규 교육 프로그램입니다."
           },
           "certifications": {
-            "title": "개발자 인증",
+            "title": "인증",
             "description": "비트코인 및 라이트닝 네트워크 개발 능력을 검증하는 인증을 발급하는 프로그램입니다."
           },
           "books": {
-            "title": "개발자 서적",
+            "title": "서적",
             "description": "비트코인 및 라이트닝 네트워크 개발을 다루고 있는 출판 서적입니다."
           }
         }
@@ -156,7 +156,7 @@
       "librariesSdks": "라이브러리 & SDK",
       "apisPayments": "API & 결제",
       "utilities": "유틸리티",
-      "l2sSmartContracts": "레이어 2 & 스마트 컨트랙트",
+      "l2sSmartContracts": "레이어 2",
       "nodeSoftware": "소프트웨어 노드",
       "nodeHardware": "하드웨어 노드",
       "explorersAnalytics": "탐색기 & 분석",

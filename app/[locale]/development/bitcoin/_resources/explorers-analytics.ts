@@ -56,7 +56,7 @@ export const explorersAnalyticsKo: BitcoinDevResources["explorers-analytics"] =
     {
       name: "Neo4j",
       description:
-        "연결된 데이터를 저장하고 쿼리하기 위해 설계된 그래프 데이터베이스 관리 시스템으로, 성능, 유연성, 복잡한 관계의 직관적인 모델링을 강조합니다.",
+        "연결된 데이터를 저장하고 쿼리하기 위해 설계된 그래프 데이터베이스 관리 시스템으로, 성능, 유연성, 복잡한 관계의 직관적인 모델링.",
       url: "https://learnmeabitcoin.com/neo4j",
       logo: "https://placehold.co/80x80?text=Neo4j",
     },

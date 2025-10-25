@@ -90,7 +90,7 @@ export const apisPaymentsKo: BitcoinDevResources["apis-payments"] = [
   {
     name: "BullBitcoin",
     description:
-      "주로 캐나다 비트코인 중개업체로 알려져 있지만, BullBitcoin은 자동화된 비트코인 구매 및 다양한 애플리케이션과 서비스에 통합할 수 있는 API를 제공합니다.",
+      "주로 캐나다 비트코인 중개업체로 알려져 있지만, BullBitcoin은 자동화된 비트코인 구매 및 다양한 애플리케이션과 서비스에 통합할 수 있는 API.",
     url: "https://www.bullbitcoin.com",
     logo: "https://avatars.githubusercontent.com/u/21064192?s=200&v=4",
   },
