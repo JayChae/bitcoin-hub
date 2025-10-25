@@ -4,15 +4,15 @@ import { DevelopmentResourceField } from "@/types";
 
 const navLinks = [
   {
-    href: "/development/bitcoin?category=libraries-sdks",
+    href: "/development/bitcoin/libraries-sdks",
     label: "Bitcoin",
   },
   {
-    href: "/development/lightning?category=libraries-sdks",
+    href: "/development/lightning/libraries-sdks",
     label: "Lightning",
   },
   {
-    href: "/development/education?category=guides-tutorials",
+    href: "/development/education/guides-tutorials",
     label: "Education",
   },
 ];
