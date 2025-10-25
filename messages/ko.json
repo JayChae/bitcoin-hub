@@ -165,6 +165,20 @@
       "research": "연구"
     }
   },
+  "developmentLightning": {
+    "title": "Lightning Development Resources",
+    "description": "라이트닝 네트워크 개발을 위한 다양한 도구와 라이브러리를 탐색하세요.",
+    "categories": {
+      "title": "카테고리",
+      "librariesSdks": "라이브러리 & SDK",
+      "apisPayments": "API & 결제",
+      "lspsEnterprise": "LSPs & 엔터프라이즈",
+      "dashboardsMonitoring": "대시보드",
+      "routingLiquidity": "라우팅 & 유동성",
+      "wallets": "지갑",
+      "research": "연구"
+    }
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "페이지 제작 중입니다",

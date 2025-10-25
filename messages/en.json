@@ -163,6 +163,20 @@
       "research": "Research"
     }
   },
+  "developmentLightning": {
+    "title": "Lightning Development Resources",
+    "description": "Comprehensive tools and libraries for Lightning Network development",
+    "categories": {
+      "title": "Categories",
+      "librariesSdks": "Libraries & SDKs",
+      "apisPayments": "APIs & Payments",
+      "lspsEnterprise": "LSPs & Enterprise",
+      "dashboardsMonitoring": "Monitoring",
+      "routingLiquidity": "Routing & Liquidity",
+      "wallets": "Wallets",
+      "research": "Research"
+    }
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "This page is under construction",

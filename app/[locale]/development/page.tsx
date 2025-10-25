@@ -158,7 +158,7 @@ export default async function DevelopmentPage({ params }: Props) {
       <Section
         title={t("resources.bitcoin.sectionTitle")}
         resources={bitcoinResources}
-        buttonLink="/development/bitcoin"
+        buttonLink="/development/bitcoin/libraries-sdks"
         buttonText={t("resources.bitcoin.exploreAll")}
         icon={Bitcoin}
         className="from-secondary/10 bg-gradient-to-r to-transparent"
@@ -168,7 +168,7 @@ export default async function DevelopmentPage({ params }: Props) {
       <Section
         title={t("resources.lightning.sectionTitle")}
         resources={lightningResources}
-        buttonLink="/development/lightning"
+        buttonLink="/development/lightning/libraries-sdks"
         buttonText={t("resources.lightning.exploreAll")}
         icon={Zap}
         className="bg-gradient-to-l from-yellow-500/10 to-transparent"
@@ -178,7 +178,7 @@ export default async function DevelopmentPage({ params }: Props) {
       <Section
         title={t("resources.education.sectionTitle")}
         resources={educationResources}
-        buttonLink="/development/education"
+        buttonLink="/development/education/guides-tutorials"
         buttonText={t("resources.education.exploreAll")}
         icon={BookOpen}
         className="bg-gradient-to-r from-teal-500/10 to-transparent"

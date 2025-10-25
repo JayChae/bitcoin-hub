@@ -14,9 +14,12 @@ export type BitcoinCategory =
 
 export type LightningCategory =
   | "libraries-sdks"
+  | "apis-payments"
   | "lsps-enterprise"
   | "dashboards-monitoring"
-  | "routing-liquidity";
+  | "routing-liquidity"
+  | "wallets"
+  | "research";
 export type EducationCategory =
   | "guides-tutorials"
   | "classes-courses"
@@ -37,4 +40,8 @@ export type DevResource = {
 
 export type BitcoinDevResources = {
   [key in BitcoinCategory]: DevResource[];
+};
+
+export type LightningDevResources = {
+  [key in LightningCategory]: DevResource[];
 };
