@@ -35,7 +35,7 @@ export default async function Home({ params }: Props) {
     <div className="relative">
       {/* Hero Section */}
       <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-48 lg:px-8">
-        <div className="mx-auto mb-24 max-w-4xl text-center">
+        <div className="mx-auto mb-16 max-w-4xl text-center sm:mb-0">
           <div className="mb-6 flex justify-center">
             <Bitcoin className="text-primary h-20 w-20 animate-pulse" />
           </div>
