@@ -43,15 +43,15 @@ export default async function DevelopmentPage({ params }: Props) {
   const t = await getTranslations("development");
   const developmentLinks: DevelopmentLink[] = [
     {
-      href: "/development/bitcoin?category=libraries-sdks",
+      href: "/development/bitcoin/libraries-sdks",
       label: t("developmentLinks.bitcoin"),
     },
     {
-      href: "/development/lightning?category=libraries-sdks",
+      href: "/development/lightning/libraries-sdks",
       label: t("developmentLinks.lightning"),
     },
     {
-      href: "/development/education?category=guides-tutorials",
+      href: "/development/education/guides-tutorials",
       label: t("developmentLinks.education"),
     },
   ];
@@ -131,13 +131,13 @@ export default async function DevelopmentPage({ params }: Props) {
       title: t("resources.education.items.certifications.title"),
       description: t("resources.education.items.certifications.description"),
       icon: ShieldCheck,
-      link: "/development/education/developer-certifications",
+      link: "/development/education/certifications",
     },
     {
       title: t("resources.education.items.books.title"),
       description: t("resources.education.items.books.description"),
       icon: Book,
-      link: "/development/education/developer-books",
+      link: "/development/education/books",
     },
   ];
 

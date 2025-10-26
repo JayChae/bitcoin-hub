@@ -177,6 +177,19 @@
       "research": "Research"
     }
   },
+  "developmentEducation": {
+    "title": "Education Resources",
+    "description": "Comprehensive tools and libraries for education",
+    "categories": {
+      "title": "Categories",
+      "guidesTutorials": "Guides & Tutorials",
+      "notesDocs": "Notes & Docs",
+      "books": "Books",
+      "classesCourses": "Courses",
+      "trainingPrograms": "Training Programs",
+      "certifications": "Certifications"
+    }
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "This page is under construction",

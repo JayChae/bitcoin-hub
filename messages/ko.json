@@ -179,6 +179,19 @@
       "research": "연구"
     }
   },
+  "developmentEducation": {
+    "title": "Education Resources",
+    "description": "비트코인 및 라이트닝 네트워크 개발을 위한 다양한 도구와 라이브러리를 탐색하세요.",
+    "categories": {
+      "title": "카테고리",
+      "guidesTutorials": "가이드 & 튜토리얼",
+      "notesDocs": "문서",
+      "books": "서적",
+      "classesCourses": "수업 & 코스",
+      "trainingPrograms": "훈련 프로그램",
+      "certifications": "인증"
+    }
+  },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "페이지 제작 중입니다",

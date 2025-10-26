@@ -22,9 +22,11 @@ export type LightningCategory =
   | "research";
 export type EducationCategory =
   | "guides-tutorials"
+  | "notes-docs"
+  | "books"
   | "classes-courses"
-  | "developer-certifications"
-  | "developer-books";
+  | "training-programs"
+  | "certifications";
 
 export type DevelopmentResourceCategory =
   | BitcoinCategory
@@ -44,4 +46,8 @@ export type BitcoinDevResources = {
 
 export type LightningDevResources = {
   [key in LightningCategory]: DevResource[];
+};
+
+export type EducationDevResources = {
+  [key in EducationCategory]: DevResource[];
 };
