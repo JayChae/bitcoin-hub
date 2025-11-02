@@ -6,7 +6,7 @@
     },
     "hero": {
       "title": "Bitcoin Hub",
-      "description": "Bitcoin development, internship, and global communities. Everything you need to explore and connect in the world of Bitcoin.",
+      "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea",
       "button1": "Learn More",
       "button2": "Development Resources"
     },
@@ -64,10 +64,6 @@
       "details": "Explore Programs"
     },
     "exploreAll": "Explore All"
-  },
-  "about": {
-    "title": "About Us",
-    "description": "We are a team of Bitcoin enthusiasts who are dedicated to educating people about Bitcoin and the Lightning Network."
   },
   "development": {
     "title": "Development Resources",
@@ -247,5 +243,51 @@
       "lightning": "Lightning"
     },
     "whitepaper": "Bitcoin Whitepaper"
+  },
+  "about": {
+    "vision": {
+      "title": "VISION",
+      "description": "Advancing the Bitcoin environment in Korea\nthrough proper Bitcoiner education"
+    },
+    "mission": {
+      "title": "MISSION",
+      "items": [
+        "Aggregation of scattered information",
+        "Professional Bitcoin education",
+        "Proper Bitcoin education",
+        "Cultivating Bitcoin developers and educators"
+      ]
+    },
+    "whyUs": {
+      "title": "WHY US",
+      "items": [
+        "Choose the level of education you need, as much as you need.",
+        "Direct mentoring from Bitcoin protocol developers.",
+        "Providing a broad perspective to the Korean community through diverse Bitcoin web resources."
+      ]
+    },
+    "programs": {
+      "title": "PROGRAM OVERVIEW",
+      "internship": "Developer Internship",
+      "education": "Education Program",
+      "educationLevel": "Level 1 - Level 4",
+      "reading": "Reading Club",
+      "conference": "Bitcoin Onni Conference"
+    },
+    "team": {
+      "title": "TEAM",
+      "members": {
+        "specter": "Specter",
+        "calvin": "Calvin"
+      }
+    },
+    "sponsor": {
+      "title": "SPONSOR",
+      "comingSoon": "Coming soon..."
+    },
+    "partnership": {
+      "title": "PARTNERSHIP",
+      "comingSoon": "Coming soon..."
+    }
   }
 }
