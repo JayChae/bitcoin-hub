@@ -65,52 +65,6 @@
     },
     "exploreAll": "Explore All"
   },
-  "about": {
-    "title": "About Us",
-    "description": "Advancing Korea's Bitcoin environment through proper Bitcoin education",
-    "vision": {
-      "title": "Vision",
-      "content": "Advancing Korea's Bitcoin environment through proper Bitcoin education"
-    },
-    "mission": {
-      "title": "Mission",
-      "items": [
-        "Comprehensive collection of scattered information",
-        "Professional Bitcoin education",
-        "Proper Bitcoin education",
-        "Training Bitcoin developers and educators"
-      ]
-    },
-    "whyUs": {
-      "title": "Why Us",
-      "items": [
-        "Choose and attend the level of education you need, as much as you need.",
-        "Direct mentoring by Bitcoin protocol developers.",
-        "Providing diverse Bitcoin webpage information to broaden the Korean community's perspective."
-      ]
-    },
-    "programs": {
-      "title": "Program Overview",
-      "items": [
-        "Developer Internship",
-        "Education programs from Level 1 to Level 4",
-        "Reading Club",
-        "Bitcoin Onni Conference"
-      ]
-    },
-    "team": {
-      "title": "Team",
-      "members": ["Specter", "Calvin"]
-    },
-    "sponsor": {
-      "title": "Sponsor",
-      "description": "Coming soon."
-    },
-    "partnership": {
-      "title": "Partnership",
-      "description": "Coming soon."
-    }
-  },
   "development": {
     "title": "Development Resources",
     "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem.",
@@ -289,5 +243,51 @@
       "lightning": "Lightning"
     },
     "whitepaper": "Bitcoin Whitepaper"
+  },
+  "about": {
+    "vision": {
+      "title": "VISION",
+      "description": "Advancing the Bitcoin environment in Korea\nthrough proper Bitcoiner education"
+    },
+    "mission": {
+      "title": "MISSION",
+      "items": [
+        "Aggregation of scattered information",
+        "Professional Bitcoin education",
+        "Proper Bitcoin education",
+        "Cultivating Bitcoin developers and educators"
+      ]
+    },
+    "whyUs": {
+      "title": "WHY US",
+      "items": [
+        "Choose the level of education you need, as much as you need.",
+        "Direct mentoring from Bitcoin protocol developers.",
+        "Providing a broad perspective to the Korean community through diverse Bitcoin web resources."
+      ]
+    },
+    "programs": {
+      "title": "PROGRAM OVERVIEW",
+      "internship": "Developer Internship",
+      "education": "Education Program",
+      "educationLevel": "Level 1 - Level 4",
+      "reading": "Reading Club",
+      "conference": "Bitcoin Onni Conference"
+    },
+    "team": {
+      "title": "TEAM",
+      "members": {
+        "specter": "Specter",
+        "calvin": "Calvin"
+      }
+    },
+    "sponsor": {
+      "title": "SPONSOR",
+      "comingSoon": "Coming soon..."
+    },
+    "partnership": {
+      "title": "PARTNERSHIP",
+      "comingSoon": "Coming soon..."
+    }
   }
 }
