@@ -3,6 +3,7 @@ import {
   Bitcoin,
   BookOpen,
   BookText,
+  Globe,
   MapPin,
   User,
   Zap,
@@ -34,7 +35,7 @@ export default async function Home({ params }: Props) {
   return (
     <div className="relative">
       {/* Hero Section */}
-      <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-48 lg:px-8">
+      {/* <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-48 lg:px-8">
         <div className="mx-auto mb-16 max-w-4xl text-center sm:mb-0">
           <div className="mb-6 flex justify-center">
             <Bitcoin className="text-primary h-20 w-20 animate-pulse" />
@@ -67,7 +68,12 @@ export default async function Home({ params }: Props) {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
+      <Hero
+        description={t("hero.description")}
+        button1={t("hero.button1")}
+        button2={t("hero.button2")}
+      />
 
       {/* Development Resources Section */}
       <Section
@@ -192,6 +198,132 @@ export default async function Home({ params }: Props) {
         </div>
       </Section>
     </div>
+  );
+}
+
+type HeroProps = {
+  description: string;
+  button1: string;
+  button2: string;
+};
+
+function Hero({ description, button1, button2 }: HeroProps) {
+  return (
+    <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
+      <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
+        <div className="grid h-full items-center gap-8 py-12 lg:grid-cols-12">
+          {/* Left - Main Content */}
+          <div className="space-y-10 lg:col-span-7">
+            <div className="flex flex-col items-center justify-center gap-6 lg:items-start">
+              {/* Title and Mobile Visual Element */}
+              <div className="flex items-center justify-center gap-4 lg:block">
+                <h1 className="text-5xl leading-[0.9] font-black tracking-tighter sm:text-7xl lg:text-8xl xl:text-9xl">
+                  BITCOIN
+                  <br />
+                  <span className="from-primary to-secondary bg-gradient-to-r bg-clip-text font-bold text-transparent">
+                    EDUCATION
+                  </span>
+                  <br />
+                  HUB
+                </h1>
+
+                {/* Mobile Visual Element */}
+                <div className="relative flex-shrink-0 lg:hidden">
+                  <div className="relative aspect-square w-30 md:w-36">
+                    {/* Background Shapes */}
+                    <div className="bg-primary/10 absolute inset-0 rotate-12" />
+                    <div className="bg-secondary/10 absolute inset-0 translate-x-2 translate-y-2 -rotate-6" />
+
+                    {/* Main Icon */}
+                    <div className="bg-background border-foreground absolute inset-2 flex items-center justify-center border-2">
+                      <Bitcoin className="text-primary h-12 w-12 md:h-16 md:w-16" />
+                    </div>
+
+                    {/* Floating Elements */}
+                    <div className="bg-secondary border-foreground absolute -top-2 -right-2 rotate-12 border p-2">
+                      <Zap className="text-background h-3 w-3 md:h-4 md:w-4" />
+                    </div>
+                    <div className="bg-primary border-foreground absolute -bottom-2 -left-2 -rotate-12 border p-2">
+                      <Globe className="text-background h-3 w-3 md:h-4 md:w-4" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <p className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-xl">
+                {description}
+              </p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
+              <Link href="/about">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  {button1}
+                </Button>
+              </Link>
+              {/* <Link href="/development">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="hover:bg-foreground hover:text-background h-14 rounded-none border-2 px-8 text-base font-bold"
+                >
+                  {button2}
+                </Button>
+              </Link> */}
+
+              <ExploreAllButton href="/development" text={button2} />
+            </div>
+
+            {/* Stats */}
+            {/* <div className="grid max-w-xl grid-cols-3 gap-8 pt-8">
+              <div>
+                <div className="text-primary text-4xl font-black">130+</div>
+                <div className="text-muted-foreground mt-1 text-sm font-medium">
+                  글로벌 네트워크
+                </div>
+              </div>
+              <div>
+                <div className="text-secondary text-4xl font-black">50K+</div>
+                <div className="text-muted-foreground mt-1 text-sm font-medium">
+                  개발 자료
+                </div>
+              </div>
+              <div>
+                <div className="text-primary text-4xl font-black">6</div>
+                <div className="text-muted-foreground mt-1 text-sm font-medium">
+                  대륙
+                </div>
+              </div>
+            </div> */}
+          </div>
+
+          {/* Right - Visual Element */}
+          <div className="relative hidden lg:col-span-5 lg:block">
+            <div className="relative mx-auto aspect-square max-w-md">
+              {/* Background Shapes */}
+              <div className="bg-primary/10 absolute inset-0 rotate-12" />
+              <div className="bg-secondary/10 absolute inset-0 translate-x-4 translate-y-4 -rotate-6" />
+
+              {/* Main Icon */}
+              <div className="bg-background border-foreground absolute inset-8 flex items-center justify-center border-4">
+                <Bitcoin className="text-primary h-32 w-32" />
+              </div>
+
+              {/* Floating Elements */}
+              <div className="bg-secondary border-foreground absolute -top-4 -right-4 rotate-12 border-2 p-4">
+                <Zap className="text-background h-8 w-8" />
+              </div>
+              <div className="bg-primary border-foreground absolute -bottom-4 -left-4 -rotate-12 border-2 p-4">
+                <Globe className="text-background h-8 w-8" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
