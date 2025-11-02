@@ -226,28 +226,6 @@ function Hero({ description, button1, button2 }: HeroProps) {
                   <br />
                   HUB
                 </h1>
-
-                {/* Mobile Visual Element */}
-                <div className="relative flex-shrink-0 lg:hidden">
-                  <div className="relative aspect-square w-30 md:w-36">
-                    {/* Background Shapes */}
-                    <div className="bg-primary/10 absolute inset-0 rotate-12" />
-                    <div className="bg-secondary/10 absolute inset-0 translate-x-2 translate-y-2 -rotate-6" />
-
-                    {/* Main Icon */}
-                    <div className="bg-background border-foreground absolute inset-2 flex items-center justify-center border-2">
-                      <Bitcoin className="text-primary h-12 w-12 md:h-16 md:w-16" />
-                    </div>
-
-                    {/* Floating Elements */}
-                    <div className="bg-secondary border-foreground absolute -top-2 -right-2 rotate-12 border p-2">
-                      <Zap className="text-background h-3 w-3 md:h-4 md:w-4" />
-                    </div>
-                    <div className="bg-primary border-foreground absolute -bottom-2 -left-2 -rotate-12 border p-2">
-                      <Globe className="text-background h-3 w-3 md:h-4 md:w-4" />
-                    </div>
-                  </div>
-                </div>
               </div>
 
               <p className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-xl">
