@@ -1,65 +1,40 @@
-import { BookOpen, Code2, GraduationCap, Users } from "lucide-react";
+import {
+  Bitcoin,
+  BookOpen,
+  Code2,
+  GraduationCap,
+  Users,
+  Zap,
+} from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+
+import SupportModal from "@/components/support-modals";
+import IntroSection from "@/components/ui/intro-section";
 
 export default async function AboutPage() {
   const t = await getTranslations("about");
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Vision Section */}
-      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16 md:py-20">
-        <h2 className="text-primary mb-3 text-xs font-semibold sm:mb-4 sm:text-sm">
-          {t("vision.title")}
-        </h2>
-        <p className="text-2xl leading-relaxed font-light whitespace-pre-line text-white sm:text-3xl md:text-4xl">
-          {t("vision.description")}
-        </p>
-      </section>
-
-      {/* Mission Section */}
-      <section className="bg-zinc-950 px-4 py-12 sm:px-6 sm:py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
-            {t("mission.title")}
-          </h2>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
-            {(t.raw("mission.items") as string[]).map((item, index) => (
-              <div
-                key={index}
-                className="rounded-lg border border-zinc-800 bg-zinc-900 p-5 sm:p-6"
-              >
-                <p className="text-base text-gray-300 sm:text-lg">{item}</p>
-              </div>
-            ))}
-          </div>
+      {/* Intro Section */}
+      <IntroSection>
+        <div className="space-y-4 sm:space-y-6">
+          <h1 className="text-4xl font-black tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+            BIT
+            <span className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-transparent">
+              OMUN
+            </span>
+          </h1>
+          <p className="mx-auto max-w-2xl text-base leading-relaxed font-light text-gray-300 sm:text-lg md:text-xl">
+            {t("intro")}
+          </p>
         </div>
-      </section>
-
-      {/* Why Us Section */}
-      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
-            {t("whyUs.title")}
-          </h2>
-          <div className="space-y-4 sm:space-y-6">
-            {(t.raw("whyUs.items") as string[]).map((item, index) => (
-              <div
-                key={index}
-                className="border-primary rounded-lg border-l-4 bg-zinc-900 py-4 pl-4 sm:pl-6"
-              >
-                <p className="text-sm text-gray-200 sm:text-lg md:text-xl">
-                  {item}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </IntroSection>
 
       {/* Program Overview Section */}
-      <section className="bg-zinc-950 px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("programs.title")}
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
@@ -105,13 +80,13 @@ export default async function AboutPage() {
       {/* Team Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("team.title")}
           </h2>
           <div className="flex gap-6 md:gap-12">
             <div className="text-center">
               <div className="relative mb-3 size-24 rounded-full sm:mb-4 sm:size-28 md:size-32">
-                <Image src="/images/specter.png" alt="Specter" fill />
+                <Image src="/images/specter.webp" alt="Specter" fill />
               </div>
               <h3 className="text-lg font-semibold text-white sm:text-xl">
                 {t("team.members.specter")}
@@ -119,7 +94,7 @@ export default async function AboutPage() {
             </div>
             <div className="text-center">
               <div className="relative mb-3 size-24 rounded-full sm:mb-4 sm:size-28 md:size-32">
-                <Image src="/images/calvin.png" alt="Calvin" fill />
+                <Image src="/images/calvin.webp" alt="Calvin" fill />
               </div>
               <h3 className="text-lg font-semibold text-white sm:text-xl">
                 {t("team.members.calvin")}
@@ -130,9 +105,9 @@ export default async function AboutPage() {
       </section>
 
       {/* Sponsor Section */}
-      <section className="bg-zinc-950 px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("sponsor.title")}
           </h2>
           <div className="text-center text-gray-500">
@@ -144,7 +119,7 @@ export default async function AboutPage() {
       {/* Partnership Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("partnership.title")}
           </h2>
           <div className="text-center text-gray-500">
@@ -152,6 +127,62 @@ export default async function AboutPage() {
               {t("partnership.comingSoon")}
             </p>
           </div>
+        </div>
+      </section>
+      {/* support section */}
+      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
+            {t("support.title")}
+          </h2>
+
+          <div className="mx-auto max-w-3xl">
+            {/* Support Cards */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+              <SupportModal
+                type="onchain"
+                trigger={
+                  <button
+                    type="button"
+                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                  >
+                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Bitcoin className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    </div>
+                    <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
+                      {t("support.onchain")}
+                    </h3>
+                    <p className="text-xs text-gray-400 sm:text-sm">
+                      Bitcoin Address
+                    </p>
+                  </button>
+                }
+              />
+              <SupportModal
+                type="lightning"
+                trigger={
+                  <button
+                    type="button"
+                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                  >
+                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Zap className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    </div>
+                    <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
+                      {t("support.lightning")}
+                    </h3>
+                    <p className="text-xs text-gray-400 sm:text-sm">
+                      Lightning Address
+                    </p>
+                  </button>
+                }
+              />
+            </div>
+          </div>
+          {/* Description */}
+          <p className="mt-8 text-center text-sm leading-relaxed text-gray-400 sm:mb-10 sm:text-base">
+            {t("support.description")}
+          </p>
         </div>
       </section>
     </div>

@@ -3,7 +3,6 @@ import {
   Bitcoin,
   BookOpen,
   BookText,
-  Globe,
   MapPin,
   User,
   Zap,
@@ -19,6 +18,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -34,41 +34,6 @@ export default async function Home({ params }: Props) {
   const t = await getTranslations("landing");
   return (
     <div className="relative">
-      {/* Hero Section */}
-      {/* <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-48 lg:px-8">
-        <div className="mx-auto mb-16 max-w-4xl text-center sm:mb-0">
-          <div className="mb-6 flex justify-center">
-            <Bitcoin className="text-primary h-20 w-20 animate-pulse" />
-          </div>
-          <h1 className="from-primary to-secondary mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
-            {t("hero.title")}
-          </h1>
-          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-base sm:text-xl">
-            {t("hero.description")}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/about" locale={locale}>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                {t("hero.button1")}
-              </Button>
-            </Link>
-
-            <Link href="/development" className="">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
-              >
-                {t("hero.button2")}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section> */}
       <Hero
         description={t("hero.description")}
         button1={t("hero.button1")}
@@ -218,17 +183,14 @@ function Hero({ description, button1, button2 }: HeroProps) {
               {/* Title and Mobile Visual Element */}
               <div className="flex items-center justify-center gap-4 lg:block">
                 <h1 className="text-5xl leading-[0.9] font-black tracking-tighter sm:text-7xl lg:text-8xl xl:text-9xl">
-                  BITCOIN
-                  <br />
+                  BIT
                   <span className="from-primary to-secondary bg-gradient-to-r bg-clip-text font-bold text-transparent">
-                    EDUCATION
+                    OMUN
                   </span>
-                  <br />
-                  HUB
                 </h1>
               </div>
 
-              <p className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-xl">
+              <p className="text-muted-foreground text-sm leading-relaxed sm:text-lg md:text-xl">
                 {description}
               </p>
             </div>
@@ -242,40 +204,8 @@ function Hero({ description, button1, button2 }: HeroProps) {
                   {button1}
                 </Button>
               </Link>
-              {/* <Link href="/development">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="hover:bg-foreground hover:text-background h-14 rounded-none border-2 px-8 text-base font-bold"
-                >
-                  {button2}
-                </Button>
-              </Link> */}
-
               <ExploreAllButton href="/development" text={button2} />
             </div>
-
-            {/* Stats */}
-            {/* <div className="grid max-w-xl grid-cols-3 gap-8 pt-8">
-              <div>
-                <div className="text-primary text-4xl font-black">130+</div>
-                <div className="text-muted-foreground mt-1 text-sm font-medium">
-                  글로벌 네트워크
-                </div>
-              </div>
-              <div>
-                <div className="text-secondary text-4xl font-black">50K+</div>
-                <div className="text-muted-foreground mt-1 text-sm font-medium">
-                  개발 자료
-                </div>
-              </div>
-              <div>
-                <div className="text-primary text-4xl font-black">6</div>
-                <div className="text-muted-foreground mt-1 text-sm font-medium">
-                  대륙
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Right - Visual Element */}
@@ -287,7 +217,8 @@ function Hero({ description, button1, button2 }: HeroProps) {
 
               {/* Main Icon */}
               <div className="bg-background border-foreground absolute inset-8 flex items-center justify-center border-4">
-                <Bitcoin className="text-primary h-32 w-32" />
+                {/* <Bitcoin className="text-primary h-32 w-32" /> */}
+                <Logo width={128} height={128} />
               </div>
 
               {/* Floating Elements */}
@@ -295,7 +226,7 @@ function Hero({ description, button1, button2 }: HeroProps) {
                 <Zap className="text-background h-8 w-8" />
               </div>
               <div className="bg-primary border-foreground absolute -bottom-4 -left-4 -rotate-12 border-2 p-4">
-                <Globe className="text-background h-8 w-8" />
+                <Bitcoin className="text-background h-8 w-8" />
               </div>
             </div>
           </div>
@@ -345,18 +276,18 @@ function ExploreAllButton({ href, text }: { href: string; text: string }) {
 
 const DEV_RESOURCES = [
   {
-    id: "bitcoin",
+    id: "layer1",
     icon: Bitcoin,
-    title: "development.resources.bitcoin.title",
-    description: "development.resources.bitcoin.description",
-    link: "/development/bitcoin/libraries-sdks",
+    title: "development.resources.layer1.title",
+    description: "development.resources.layer1.description",
+    link: "/development/layer1/libraries-sdks",
   },
   {
-    id: "lightning",
+    id: "layer2",
     icon: Zap,
-    title: "development.resources.lightning.title",
-    description: "development.resources.lightning.description",
-    link: "/development/lightning/libraries-sdks",
+    title: "development.resources.layer2.title",
+    description: "development.resources.layer2.description",
+    link: "/development/layer2/libraries-sdks",
   },
   {
     id: "education",

@@ -11,48 +11,48 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
-import { EducationCategory, LocaleType } from "@/types";
+import { Layer2Category, LocaleType } from "@/types";
 
 import { DevNav } from "../../_components/dev-nav";
-import { educationDevResources } from "../_resources";
+import { layer2DevResources } from "../_resources";
 
 type Props = {
-  params: Promise<{ locale: LocaleType; category: EducationCategory }>;
+  params: Promise<{ locale: LocaleType; category: Layer2Category }>;
 };
-export default async function EducationPage({ params }: Props) {
+export default async function Layer2Page({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering
   setRequestLocale(locale);
-  const t = await getTranslations("developmentEducation");
+  const t = await getTranslations("developmentLayer2");
 
-  const educationCategories: EducationCategories = [
+  const layer2Categories: Layer2Categories = [
     {
-      label: t(categoryTitles["guides-tutorials"]),
-      value: "guides-tutorials",
+      label: t(categoryTitles["libraries-sdks"]),
+      value: "libraries-sdks",
     },
     {
-      label: t(categoryTitles["notes-docs"]),
-      value: "notes-docs",
+      label: t(categoryTitles["apis-payments"]),
+      value: "apis-payments",
     },
     {
-      label: t(categoryTitles["books"]),
-      value: "books",
+      label: t(categoryTitles["lsps-enterprise"]),
+      value: "lsps-enterprise",
     },
     {
-      label: t(categoryTitles["classes-courses"]),
-      value: "classes-courses",
+      label: t(categoryTitles["dashboards-monitoring"]),
+      value: "dashboards-monitoring",
     },
     {
-      label: t(categoryTitles["training-programs"]),
-      value: "training-programs",
+      label: t(categoryTitles["routing-liquidity"]),
+      value: "routing-liquidity",
     },
     {
-      label: t(categoryTitles["mining"]),
-      value: "mining",
+      label: t(categoryTitles["wallets"]),
+      value: "wallets",
     },
     {
-      label: t(categoryTitles["certifications"]),
-      value: "certifications",
+      label: t(categoryTitles["research"]),
+      value: "research",
     },
   ];
 
@@ -61,7 +61,7 @@ export default async function EducationPage({ params }: Props) {
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
         <div className="container mx-auto">
-          <DevNav activeLink="education" />
+          <DevNav activeLink="layer2" />
           <div className="hidden items-center gap-4 lg:flex">
             <Bitcoin className="text-primary h-12 w-12" />
             <div>
@@ -76,8 +76,8 @@ export default async function EducationPage({ params }: Props) {
       <div className="flex">
         <CategorySidebar
           title={t("categories.title")}
-          field="education"
-          categories={educationCategories}
+          field="layer2"
+          categories={layer2Categories}
           selectedCategory={category}
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
         />
@@ -88,34 +88,25 @@ export default async function EducationPage({ params }: Props) {
             </h2>
             <div className="lg:hidden">
               <CategorySelect
-                field="education"
-                categories={educationCategories}
+                field="layer2"
+                categories={layer2Categories}
                 placeholder={t("categories.title")}
               />
             </div>
           </div>
-          {educationDevResources[locale][category]?.length > 0 ? (
-            <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-              {educationDevResources[locale][category].map((resource) => (
-                <li key={resource.name} className="h-full">
-                  <ResourceCard
-                    key={resource.url}
-                    href={resource.url}
-                    logo={resource.logo}
-                    name={resource.name}
-                    description={resource.description}
-                  />
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <div className="text-muted-foreground flex flex-col items-center justify-center py-16 text-center">
-              <h3 className="mb-2 text-xl font-semibold">
-                {t("emptyState.title")}
-              </h3>
-              <p>{t("emptyState.description")}</p>
-            </div>
-          )}
+          <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            {layer2DevResources[locale][category]?.map((resource) => (
+              <li key={resource.name} className="h-full">
+                <ResourceCard
+                  key={resource.url}
+                  href={resource.url}
+                  logo={resource.logo}
+                  name={resource.name}
+                  description={resource.description}
+                />
+              </li>
+            ))}
+          </ul>
         </section>
       </div>
     </div>
@@ -165,17 +156,17 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
   );
 }
 
-const categoryTitles: Record<EducationCategory, string> = {
-  "guides-tutorials": "categories.guidesTutorials",
-  "notes-docs": "categories.notesDocs",
-  books: "categories.books",
-  "classes-courses": "categories.classesCourses",
-  "training-programs": "categories.trainingPrograms",
-  certifications: "categories.certifications",
-  mining: "categories.mining",
+const categoryTitles: Record<Layer2Category, string> = {
+  "libraries-sdks": "categories.librariesSdks",
+  "lsps-enterprise": "categories.lspsEnterprise",
+  "dashboards-monitoring": "categories.dashboardsMonitoring",
+  "routing-liquidity": "categories.routingLiquidity",
+  "apis-payments": "categories.apisPayments",
+  research: "categories.research",
+  wallets: "categories.wallets",
 };
 
-type EducationCategories = {
+type Layer2Categories = {
   label: string;
-  value: EducationCategory;
+  value: Layer2Category;
 }[];

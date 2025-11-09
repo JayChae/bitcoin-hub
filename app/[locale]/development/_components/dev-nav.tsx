@@ -4,17 +4,17 @@ import { DevelopmentResourceField } from "@/types";
 
 const navLinks = [
   {
-    href: "/development/bitcoin/libraries-sdks",
-    label: "Bitcoin",
+    href: "/development/layer1/libraries-sdks",
+    label: "Layer1",
   },
   {
-    href: "/development/lightning/libraries-sdks",
-    label: "Lightning",
+    href: "/development/layer2/libraries-sdks",
+    label: "Layer2",
   },
-  {
-    href: "/development/education/guides-tutorials",
-    label: "Education",
-  },
+  // {
+  //   href: "/development/education/guides-tutorials",
+  //   label: "Education",
+  // },
 ];
 
 type DevNavProps = {

@@ -1,11 +1,11 @@
 {
   "landing": {
     "Metadata": {
-      "title": "Bitcoin Hub",
-      "description": ""
+      "title": "Bitomun",
+      "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea"
     },
     "hero": {
-      "title": "Bitcoin Hub",
+      "title": "Bitomun",
       "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea",
       "button1": "Learn More",
       "button2": "Development Resources"
@@ -14,13 +14,13 @@
       "title": "Bitcoin Development",
       "description": "Explore development resources for Bitcoin, Lightning Network, and education.",
       "resources": {
-        "bitcoin": {
-          "title": "Bitcoin",
-          "description": "Browse key Bitcoin development resources — including libraries, APIs, utilities, and SDKs."
+        "layer1": {
+          "title": "Layer1",
+          "description": "Browse key Layer1 development resources — including libraries, APIs, utilities, and SDKs."
         },
-        "lightning": {
-          "title": "Lightning Network",
-          "description": "Explore Lightning Network development resources — from libraries and SDKs to monitoring and routing tools."
+        "layer2": {
+          "title": "Layer2",
+          "description": "Explore Layer2 development resources — from libraries and SDKs to monitoring and routing tools."
         },
         "education": {
           "title": "Education",
@@ -69,13 +69,13 @@
     "title": "Development Resources",
     "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem.",
     "developmentLinks": {
-      "bitcoin": "Bitcoin",
-      "lightning": "Lightning",
+      "layer1": "Layer1",
+      "layer2": "Layer2",
       "education": "Education"
     },
     "resources": {
-      "bitcoin": {
-        "sectionTitle": "Bitcoin Resources",
+      "layer1": {
+        "sectionTitle": "Layer1 Resources",
         "exploreAll": "Explore All",
         "items": {
           "librariesSdks": {
@@ -96,8 +96,8 @@
           }
         }
       },
-      "lightning": {
-        "sectionTitle": "Lightning Resources",
+      "layer2": {
+        "sectionTitle": "Layer2 Resources",
         "exploreAll": "Explore All",
         "items": {
           "librariesSdks": {
@@ -142,9 +142,9 @@
       }
     }
   },
-  "developmentBitcoin": {
-    "title": "Bitcoin Development Resources",
-    "description": "Comprehensive tools and libraries for Bitcoin development",
+  "developmentLayer1": {
+    "title": "Layer1 Development Resources",
+    "description": "Comprehensive tools and libraries for Layer1 development",
     "categories": {
       "title": "Categories",
       "librariesSdks": "Libraries & SDKs",
@@ -156,12 +156,23 @@
       "explorersAnalytics": "Explorers & Analytics",
       "softwareWallets": "Software Wallets",
       "hardwareWallets": "Hardware Wallets",
-      "research": "Research"
+      "research": "Research",
+      "mining": "Mining"
+    },
+    "subcategories": {
+      "onchain": "Onchain",
+      "lightning": "Lightning",
+      "airgap": "Airgap Wallets",
+      "connected": "Connected Wallets"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this category are being prepared. Check back soon!"
     }
   },
-  "developmentLightning": {
-    "title": "Lightning Development Resources",
-    "description": "Comprehensive tools and libraries for Lightning Network development",
+  "developmentLayer2": {
+    "title": "Layer2 Development Resources",
+    "description": "Comprehensive tools and libraries for Layer2 development",
     "categories": {
       "title": "Categories",
       "librariesSdks": "Libraries & SDKs",
@@ -183,7 +194,12 @@
       "books": "Books",
       "classesCourses": "Courses",
       "trainingPrograms": "Training Programs",
-      "certifications": "Certifications"
+      "certifications": "Certifications",
+      "mining": "Mining"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this category are being prepared. Check back soon!"
     }
   },
   "comingSoon": {
@@ -239,33 +255,13 @@
     "contact": "Email",
     "support": {
       "title": "Support Us",
-      "onChain": "Onchain",
+      "onchain": "Onchain",
       "lightning": "Lightning"
     },
     "whitepaper": "Bitcoin Whitepaper"
   },
   "about": {
-    "vision": {
-      "title": "VISION",
-      "description": "Advancing the Bitcoin environment in Korea\nthrough proper Bitcoiner education"
-    },
-    "mission": {
-      "title": "MISSION",
-      "items": [
-        "Aggregation of scattered information",
-        "Professional Bitcoin education",
-        "Proper Bitcoin education",
-        "Cultivating Bitcoin developers and educators"
-      ]
-    },
-    "whyUs": {
-      "title": "WHY US",
-      "items": [
-        "Choose the level of education you need, as much as you need.",
-        "Direct mentoring from Bitcoin protocol developers.",
-        "Providing a broad perspective to the Korean community through diverse Bitcoin web resources."
-      ]
-    },
+    "intro": "key that opens the door to Bitcoin as a new field of study.",
     "programs": {
       "title": "PROGRAM OVERVIEW",
       "internship": "Developer Internship",
@@ -288,6 +284,28 @@
     "partnership": {
       "title": "PARTNERSHIP",
       "comingSoon": "Coming soon..."
+    },
+    "support": {
+      "title": "SUPPORT",
+      "description": "All funds are used for developer training, material translation and management, and free events.",
+      "onchain": "Onchain",
+      "lightning": "Lightning"
+    }
+  },
+  "supportModal": {
+    "onchain": {
+      "title": "Onchain Support",
+      "description": "All funds are used for developer training, material translation and management, and free events."
+    },
+    "lightning": {
+      "title": "Lightning Support",
+      "description": "All funds are used for developer training, material translation and management, and free events."
+    }
+  },
+  "action": {
+    "clipboard": {
+      "copy": "Copy",
+      "copied": "Copied!"
     }
   }
 }

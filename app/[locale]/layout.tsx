@@ -28,6 +28,9 @@ export default async function Layout({
 
   return (
     <html lang={locale} className="size-full overflow-y-scroll">
+      <head>
+        <link rel="preload" href="/images/icon.webp" as="image" />
+      </head>
       <body
         className={`relative size-full antialiased ${pretendardFont.className}`}
       >
@@ -52,12 +55,12 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "landing.Metadata" });
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
     title: t("title"),
     description: t("description"),
-    icons: "/images/bitcoin.svg",
+    icons: "/images/icon.webp",
   };
 }
 

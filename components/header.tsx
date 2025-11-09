@@ -1,6 +1,6 @@
 "use client";
 
-import { Bitcoin, Languages, Menu } from "lucide-react";
+import { Languages, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -15,6 +15,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import Logo from "./ui/logo";
 
 const links = [
   { href: "/about", label: "About Us" },
@@ -35,12 +36,12 @@ export default function Header({ locale }: { locale: LocaleType }) {
         <nav className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors"
+            className="flex items-center gap-2 text-white transition-colors"
             locale={locale}
           >
-            <Bitcoin className="h-8 w-8" />
+            <Logo width={32} height={32} />
             <span className="block text-xl font-bold sm:hidden md:block">
-              Bitcoin Hub
+              Bitomun
             </span>
           </Link>
 
@@ -54,7 +55,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   locale={locale}
                   className={cn(
                     "hover:text-primary size-fit text-sm font-medium transition-colors",
-                    pathname === link.href
+                    `/${withoutLocale}` === link.href
                       ? "text-primary"
                       : "text-muted-foreground",
                   )}
@@ -119,7 +120,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                     locale={locale}
                     className={cn(
                       "hover:bg-accent block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black",
-                      pathname === link.href
+                      `/${withoutLocale}` === link.href
                         ? "text-primary"
                         : "text-muted-foreground",
                     )}

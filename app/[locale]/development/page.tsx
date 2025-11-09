@@ -6,7 +6,6 @@ import {
   BookOpen,
   Building2,
   ChartNetwork,
-  Code,
   CodeXml,
   FileQuestionMark,
   Layers2,
@@ -20,7 +19,6 @@ import {
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -29,6 +27,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import IntroSection from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -43,146 +42,148 @@ export default async function DevelopmentPage({ params }: Props) {
   const t = await getTranslations("development");
   const developmentLinks: DevelopmentLink[] = [
     {
-      href: "/development/bitcoin/libraries-sdks",
-      label: t("developmentLinks.bitcoin"),
+      href: "/development/layer1/libraries-sdks",
+      label: t("developmentLinks.layer1"),
     },
     {
-      href: "/development/lightning/libraries-sdks",
-      label: t("developmentLinks.lightning"),
+      href: "/development/layer2/libraries-sdks",
+      label: t("developmentLinks.layer2"),
     },
-    {
-      href: "/development/education/guides-tutorials",
-      label: t("developmentLinks.education"),
-    },
+    // {
+    //   href: "/development/education/guides-tutorials",
+    //   label: t("developmentLinks.education"),
+    // },
   ];
-  // Bitcoin resources with translations
-  const bitcoinResources: Resource[] = [
+  // Layer1 resources with translations
+  const layer1Resources: Resource[] = [
     {
-      title: t("resources.bitcoin.items.librariesSdks.title"),
-      description: t("resources.bitcoin.items.librariesSdks.description"),
+      title: t("resources.layer1.items.librariesSdks.title"),
+      description: t("resources.layer1.items.librariesSdks.description"),
       icon: CodeXml,
-      link: "/development/bitcoin/libraries-sdks",
+      link: "/development/layer1/libraries-sdks",
     },
     {
-      title: t("resources.bitcoin.items.apisPayments.title"),
-      description: t("resources.bitcoin.items.apisPayments.description"),
+      title: t("resources.layer1.items.apisPayments.title"),
+      description: t("resources.layer1.items.apisPayments.description"),
       icon: BanknoteArrowDown,
-      link: "/development/bitcoin/apis-payments",
+      link: "/development/layer1/apis-payments",
     },
     {
-      title: t("resources.bitcoin.items.utilities.title"),
-      description: t("resources.bitcoin.items.utilities.description"),
+      title: t("resources.layer1.items.utilities.title"),
+      description: t("resources.layer1.items.utilities.description"),
       icon: Pickaxe,
-      link: "/development/bitcoin/utilities",
+      link: "/development/layer1/utilities",
     },
     {
-      title: t("resources.bitcoin.items.layer2s.title"),
-      description: t("resources.bitcoin.items.layer2s.description"),
+      title: t("resources.layer1.items.layer2s.title"),
+      description: t("resources.layer1.items.layer2s.description"),
       icon: Layers2,
-      link: "/development/bitcoin/l2s-smart-contracts",
+      link: "/development/layer1/l2s-smart-contracts",
     },
   ];
 
-  // Lightning resources with translations
-  const lightningResources: Resource[] = [
+  // Layer2 resources with translations
+  const layer2Resources: Resource[] = [
     {
-      title: t("resources.lightning.items.librariesSdks.title"),
-      description: t("resources.lightning.items.librariesSdks.description"),
+      title: t("resources.layer2.items.librariesSdks.title"),
+      description: t("resources.layer2.items.librariesSdks.description"),
       icon: ToolCase,
-      link: "/development/lightning/libraries-sdks",
+      link: "/development/layer2/libraries-sdks",
     },
     {
-      title: t("resources.lightning.items.lspsEnterprise.title"),
-      description: t("resources.lightning.items.lspsEnterprise.description"),
+      title: t("resources.layer2.items.lspsEnterprise.title"),
+      description: t("resources.layer2.items.lspsEnterprise.description"),
       icon: Building2,
-      link: "/development/lightning/lsps-enterprise",
+      link: "/development/layer2/lsps-enterprise",
     },
     {
-      title: t("resources.lightning.items.dashboardsMonitoring.title"),
-      description: t(
-        "resources.lightning.items.dashboardsMonitoring.description",
-      ),
+      title: t("resources.layer2.items.dashboardsMonitoring.title"),
+      description: t("resources.layer2.items.dashboardsMonitoring.description"),
       icon: ChartNetwork,
-      link: "/development/lightning/dashboards-monitoring",
+      link: "/development/layer2/dashboards-monitoring",
     },
     {
-      title: t("resources.lightning.items.routingLiquidity.title"),
-      description: t("resources.lightning.items.routingLiquidity.description"),
+      title: t("resources.layer2.items.routingLiquidity.title"),
+      description: t("resources.layer2.items.routingLiquidity.description"),
       icon: Route,
-      link: "/development/lightning/routing-liquidity",
+      link: "/development/layer2/routing-liquidity",
     },
   ];
 
   // Education resources with translations
-  const educationResources: Resource[] = [
-    {
-      title: t("resources.education.items.guidesTutorials.title"),
-      description: t("resources.education.items.guidesTutorials.description"),
-      icon: FileQuestionMark,
-      link: "/development/education/guides-tutorials",
-    },
-    {
-      title: t("resources.education.items.classesCourses.title"),
-      description: t("resources.education.items.classesCourses.description"),
-      icon: School,
-      link: "/development/education/classes-courses",
-    },
-    {
-      title: t("resources.education.items.certifications.title"),
-      description: t("resources.education.items.certifications.description"),
-      icon: ShieldCheck,
-      link: "/development/education/certifications",
-    },
-    {
-      title: t("resources.education.items.books.title"),
-      description: t("resources.education.items.books.description"),
-      icon: Book,
-      link: "/development/education/books",
-    },
-  ];
+  // const educationResources: Resource[] = [
+  //   {
+  //     title: t("resources.education.items.guidesTutorials.title"),
+  //     description: t("resources.education.items.guidesTutorials.description"),
+  //     icon: FileQuestionMark,
+  //     link: "/development/education/guides-tutorials",
+  //   },
+  //   {
+  //     title: t("resources.education.items.classesCourses.title"),
+  //     description: t("resources.education.items.classesCourses.description"),
+  //     icon: School,
+  //     link: "/development/education/classes-courses",
+  //   },
+  //   {
+  //     title: t("resources.education.items.certifications.title"),
+  //     description: t("resources.education.items.certifications.description"),
+  //     icon: ShieldCheck,
+  //     link: "/development/education/certifications",
+  //   },
+  //   {
+  //     title: t("resources.education.items.books.title"),
+  //     description: t("resources.education.items.books.description"),
+  //     icon: Book,
+  //     link: "/development/education/books",
+  //   },
+  // ];
 
   return (
     <div className="relative">
-      <Hero
-        title={t("title")}
-        description={t("description")}
-        Icon={<Code className="text-primary size-10 sm:size-16" />}
-      >
-        <DevelopmentLinks
-          className="mt-12"
-          developmentLinks={developmentLinks}
-        />
-      </Hero>
+      <IntroSection>
+        <div className="space-y-6">
+          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            {t("title")}
+          </h1>
+          <p className="text-muted-foreground text-base sm:text-lg">
+            {t("description")}
+          </p>
+          <DevelopmentLinks
+            className="mt-12"
+            developmentLinks={developmentLinks}
+          />
+        </div>
+      </IntroSection>
 
-      {/* Bitcoin Resources Section */}
+      {/* Layer1 Resources Section */}
       <Section
-        title={t("resources.bitcoin.sectionTitle")}
-        resources={bitcoinResources}
-        buttonLink="/development/bitcoin/libraries-sdks"
-        buttonText={t("resources.bitcoin.exploreAll")}
+        title={t("resources.layer1.sectionTitle")}
+        resources={layer1Resources}
+        buttonLink="/development/layer1/libraries-sdks"
+        buttonText={t("resources.layer1.exploreAll")}
         icon={Bitcoin}
         className="from-secondary/10 bg-gradient-to-r to-transparent"
       />
 
-      {/* Lightning Resources Section */}
+      {/* Layer2 Resources Section */}
       <Section
-        title={t("resources.lightning.sectionTitle")}
-        resources={lightningResources}
-        buttonLink="/development/lightning/libraries-sdks"
-        buttonText={t("resources.lightning.exploreAll")}
+        title={t("resources.layer2.sectionTitle")}
+        resources={layer2Resources}
+        buttonLink="/development/layer2/libraries-sdks"
+        buttonText={t("resources.layer2.exploreAll")}
         icon={Zap}
         className="bg-gradient-to-l from-yellow-500/10 to-transparent"
       />
 
       {/* Education Resources Section */}
-      <Section
+      {/* <Section
         title={t("resources.education.sectionTitle")}
         resources={educationResources}
         buttonLink="/development/education/guides-tutorials"
         buttonText={t("resources.education.exploreAll")}
         icon={BookOpen}
         className="bg-gradient-to-r from-teal-500/10 to-transparent"
-      />
+      /> */}
     </div>
   );
 }
@@ -218,13 +219,13 @@ function Section({
             return (
               <Link href={resource.link} key={resource.link}>
                 <Card className="bg-card border-border hover:border-primary/50 h-full transition-colors">
-                  <CardHeader>
+                  <CardHeader className="flex flex-col items-center text-center">
                     <Icon className="text-primary mb-2 size-8 sm:size-10" />
                     <CardTitle className="text-sm sm:text-lg">
                       {resource.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="text-center">
                     <CardDescription className="line-clamp-2 text-xs sm:text-sm">
                       {resource.description}
                     </CardDescription>
@@ -242,7 +243,6 @@ function Section({
               className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
             >
               {buttonText}
-              <ArrowRight className="ml-1 size-4" />
             </Button>
           </Link>
         </div>

@@ -3,13 +3,15 @@ import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 
+import SupportModal from "./support-modals";
+
 async function Footer() {
   const t = await getTranslations("footer");
 
   return (
     <footer className="border-border border-t px-4 py-6 sm:px-6 lg:px-8">
       <div className="text-muted-foreground flex w-full flex-col items-center justify-evenly gap-4 text-sm lg:flex-row">
-        <div className="flex flex-col items-center justify-center">
+        {/* <div className="flex flex-col items-center justify-center">
           <span>{t("contact")}: </span>
           <a
             href="mailto:bitcoinspecter@gmail.com"
@@ -17,18 +19,28 @@ async function Footer() {
           >
             bitcoinspecter@gmail.com
           </a>
-        </div>
+        </div> */}
 
         <div className="flex flex-col items-center justify-center">
           <span>{t("support.title")}: </span>
           <div className="flex items-center justify-center gap-2">
-            <span className="hover:text-primary cursor-pointer hover:underline">
-              {t("support.onChain")}
-            </span>
+            <SupportModal
+              type="onchain"
+              trigger={
+                <span className="hover:text-primary cursor-pointer hover:underline">
+                  {t("support.onchain")}
+                </span>
+              }
+            />
             <span>/</span>
-            <span className="hover:text-primary cursor-pointer hover:underline">
-              {t("support.lightning")}
-            </span>
+            <SupportModal
+              type="lightning"
+              trigger={
+                <span className="hover:text-primary cursor-pointer hover:underline">
+                  {t("support.lightning")}
+                </span>
+              }
+            />
           </div>
         </div>
         <p className="text-center">

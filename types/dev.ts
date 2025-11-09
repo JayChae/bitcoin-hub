@@ -1,6 +1,6 @@
-export type DevelopmentResourceField = "bitcoin" | "lightning" | "education";
+export type DevelopmentResourceField = "layer1" | "layer2" | "education";
 
-export type BitcoinCategory =
+export type Layer1Category =
   | "libraries-sdks"
   | "apis-payments"
   | "l2s-smart-contracts"
@@ -10,9 +10,10 @@ export type BitcoinCategory =
   | "utilities"
   | "software-wallets"
   | "hardware-wallets"
-  | "research";
+  | "research"
+  | "mining";
 
-export type LightningCategory =
+export type Layer2Category =
   | "libraries-sdks"
   | "apis-payments"
   | "lsps-enterprise"
@@ -26,26 +27,31 @@ export type EducationCategory =
   | "books"
   | "classes-courses"
   | "training-programs"
-  | "certifications";
+  | "certifications"
+  | "mining";
 
 export type DevelopmentResourceCategory =
-  | BitcoinCategory
-  | LightningCategory
+  | Layer1Category
+  | Layer2Category
   | EducationCategory;
+
+export type SoftwareWalletSubcategory = "onchain" | "lightning";
+export type HardwareWalletSubcategory = "airgap" | "connected";
 
 export type DevResource = {
   name: string;
   description: string;
   url: string;
   logo: string;
+  subcategory?: SoftwareWalletSubcategory | HardwareWalletSubcategory;
 };
 
-export type BitcoinDevResources = {
-  [key in BitcoinCategory]: DevResource[];
+export type Layer1DevResources = {
+  [key in Layer1Category]: DevResource[];
 };
 
-export type LightningDevResources = {
-  [key in LightningCategory]: DevResource[];
+export type Layer2DevResources = {
+  [key in Layer2Category]: DevResource[];
 };
 
 export type EducationDevResources = {
