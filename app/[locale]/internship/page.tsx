@@ -90,7 +90,7 @@ export default async function InternshipPage({ params }: Props) {
                   key={offer.id}
                   className="bg-card border-border hover:border-primary/50 transition-colors"
                 >
-                  <CardHeader>
+                  <CardHeader className="flex flex-col items-center justify-center">
                     <Icon className="text-primary mb-2 h-12 w-12" />
                     <CardTitle>{t(offer.titleKey)}</CardTitle>
                   </CardHeader>
