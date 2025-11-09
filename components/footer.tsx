@@ -9,7 +9,7 @@ async function Footer() {
   return (
     <footer className="border-border border-t px-4 py-6 sm:px-6 lg:px-8">
       <div className="text-muted-foreground flex w-full flex-col items-center justify-evenly gap-4 text-sm lg:flex-row">
-        <div className="flex flex-col items-center justify-center">
+        {/* <div className="flex flex-col items-center justify-center">
           <span>{t("contact")}: </span>
           <a
             href="mailto:bitcoinspecter@gmail.com"
@@ -17,7 +17,7 @@ async function Footer() {
           >
             bitcoinspecter@gmail.com
           </a>
-        </div>
+        </div> */}
 
         <div className="flex flex-col items-center justify-center">
           <span>{t("support.title")}: </span>
