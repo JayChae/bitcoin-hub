@@ -1,7 +1,6 @@
 "use client";
 
 import { Languages, Menu } from "lucide-react";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -56,7 +55,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   locale={locale}
                   className={cn(
                     "hover:text-primary size-fit text-sm font-medium transition-colors",
-                    pathname === link.href
+                    `/${withoutLocale}` === link.href
                       ? "text-primary"
                       : "text-muted-foreground",
                   )}
@@ -121,7 +120,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
                     locale={locale}
                     className={cn(
                       "hover:bg-accent block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black",
-                      pathname === link.href
+                      `/${withoutLocale}` === link.href
                         ? "text-primary"
                         : "text-muted-foreground",
                     )}

@@ -20,7 +20,6 @@ import {
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -29,6 +28,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import IntroSection from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -143,16 +143,20 @@ export default async function DevelopmentPage({ params }: Props) {
 
   return (
     <div className="relative">
-      <Hero
-        title={t("title")}
-        description={t("description")}
-        Icon={<Code className="text-primary size-10 sm:size-16" />}
-      >
-        <DevelopmentLinks
-          className="mt-12"
-          developmentLinks={developmentLinks}
-        />
-      </Hero>
+      <IntroSection>
+        <div className="space-y-6">
+          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            {t("title")}
+          </h1>
+          <p className="text-muted-foreground text-base sm:text-lg">
+            {t("description")}
+          </p>
+          <DevelopmentLinks
+            className="mt-12"
+            developmentLinks={developmentLinks}
+          />
+        </div>
+      </IntroSection>
 
       {/* Bitcoin Resources Section */}
       <Section

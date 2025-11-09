@@ -245,27 +245,7 @@
     "whitepaper": "Bitcoin Whitepaper"
   },
   "about": {
-    "vision": {
-      "title": "VISION",
-      "description": "Advancing the Bitcoin environment in Korea\nthrough proper Bitcoiner education"
-    },
-    "mission": {
-      "title": "MISSION",
-      "items": [
-        "Aggregation of scattered information",
-        "Professional Bitcoin education",
-        "Proper Bitcoin education",
-        "Cultivating Bitcoin developers and educators"
-      ]
-    },
-    "whyUs": {
-      "title": "WHY US",
-      "items": [
-        "Choose the level of education you need, as much as you need.",
-        "Direct mentoring from Bitcoin protocol developers.",
-        "Providing a broad perspective to the Korean community through diverse Bitcoin web resources."
-      ]
-    },
+    "intro": "key that opens the door to Bitcoin as a new field of study.",
     "programs": {
       "title": "PROGRAM OVERVIEW",
       "internship": "Developer Internship",

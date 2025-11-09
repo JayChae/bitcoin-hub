@@ -1,7 +1,6 @@
 import { Bitcoin, Briefcase, Clock, Mail, Users } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import Hero from "@/components/hero";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import IntroSection from "@/components/ui/intro-section";
 import { Link } from "@/i18n/navigation";
 import { LocaleType } from "@/types";
 
@@ -24,7 +24,16 @@ export default async function InternshipPage({ params }: Props) {
 
   return (
     <div>
-      <Hero title={t("hero.title")} description={t("hero.description")} />
+      <IntroSection>
+        <div className="space-y-6">
+          <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
+            {t("hero.title")}
+          </h1>
+          <p className="text-muted-foreground text-lg sm:text-xl">
+            {t("hero.description")}
+          </p>
+        </div>
+      </IntroSection>
 
       {/* Current Status */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">

@@ -3,7 +3,6 @@ import {
   Bitcoin,
   BookOpen,
   BookText,
-  Globe,
   MapPin,
   User,
   Zap,
