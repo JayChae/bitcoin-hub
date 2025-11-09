@@ -33,11 +33,15 @@ export type DevelopmentResourceCategory =
   | LightningCategory
   | EducationCategory;
 
+export type SoftwareWalletSubcategory = "onchain" | "lightning";
+export type HardwareWalletSubcategory = "airgap" | "connected";
+
 export type DevResource = {
   name: string;
   description: string;
   url: string;
   logo: string;
+  subcategory?: SoftwareWalletSubcategory | HardwareWalletSubcategory;
 };
 
 export type BitcoinDevResources = {

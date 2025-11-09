@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
-import { BitcoinCategory, LocaleType } from "@/types";
+import { BitcoinCategory, DevResource, LocaleType } from "@/types";
 
 import { DevNav } from "../../_components/dev-nav";
 import { bitcoinDevResources } from "../_resources";
@@ -106,21 +106,93 @@ export default async function BitcoinPage({ params }: Props) {
               />
             </div>
           </div>
-          <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {bitcoinDevResources[locale][category]?.map((resource) => (
-              <li key={resource.name} className="h-full">
-                <ResourceCard
-                  key={resource.url}
-                  href={resource.url}
-                  logo={resource.logo}
-                  name={resource.name}
-                  description={resource.description}
-                />
-              </li>
-            ))}
-          </ul>
+          <ResourceList
+            resources={bitcoinDevResources[locale][category]}
+            category={category}
+            t={t}
+          />
         </section>
       </div>
+    </div>
+  );
+}
+
+type ResourceListProps = {
+  resources?: DevResource[];
+  category: BitcoinCategory;
+  t: (key: string) => string;
+};
+
+function ResourceList({ resources, category, t }: ResourceListProps) {
+  if (!resources) return null;
+
+  // Check if this category has subcategories
+  const hasSubcategories =
+    category === "software-wallets" || category === "hardware-wallets";
+
+  if (!hasSubcategories) {
+    return (
+      <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+        {resources.map((resource) => (
+          <li key={resource.name} className="h-full">
+            <ResourceCard
+              href={resource.url}
+              logo={resource.logo}
+              name={resource.name}
+              description={resource.description}
+            />
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  // Group resources by subcategory
+  const groupedResources = resources.reduce(
+    (acc, resource) => {
+      const subcategory = resource.subcategory || "other";
+      if (!acc[subcategory]) {
+        acc[subcategory] = [];
+      }
+      acc[subcategory].push(resource);
+      return acc;
+    },
+    {} as Record<string, DevResource[]>,
+  );
+
+  // Define subcategory order
+  const subcategoryOrder =
+    category === "software-wallets"
+      ? ["onchain", "lightning"]
+      : ["airgap", "connected"];
+
+  return (
+    <div className="mb-8 space-y-12">
+      {subcategoryOrder.map((subcategoryKey) => {
+        const subcategoryResources = groupedResources[subcategoryKey];
+        if (!subcategoryResources || subcategoryResources.length === 0)
+          return null;
+
+        return (
+          <div key={subcategoryKey}>
+            <h3 className="mb-6 text-lg font-semibold sm:text-xl">
+              {t(`subcategories.${subcategoryKey}`)}
+            </h3>
+            <ul className="grid grid-cols-1 gap-8 sm:grid-cols-2">
+              {subcategoryResources.map((resource) => (
+                <li key={resource.name} className="h-full">
+                  <ResourceCard
+                    href={resource.url}
+                    logo={resource.logo}
+                    name={resource.name}
+                    description={resource.description}
+                  />
+                </li>
+              ))}
+            </ul>
+          </div>
+        );
+      })}
     </div>
   );
 }

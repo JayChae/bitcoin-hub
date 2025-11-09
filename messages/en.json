@@ -157,6 +157,12 @@
       "softwareWallets": "Software Wallets",
       "hardwareWallets": "Hardware Wallets",
       "research": "Research"
+    },
+    "subcategories": {
+      "onchain": "Onchain",
+      "lightning": "Lightning",
+      "airgap": "Airgap Wallets",
+      "connected": "Connected Wallets"
     }
   },
   "developmentLightning": {

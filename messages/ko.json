@@ -159,6 +159,12 @@
       "softwareWallets": "소프트웨어 지갑",
       "hardwareWallets": "하드웨어 지갑",
       "research": "연구"
+    },
+    "subcategories": {
+      "onchain": "온체인",
+      "lightning": "라이트닝",
+      "airgap": "에어갭 지갑",
+      "connected": "연결형 지갑"
     }
   },
   "developmentLightning": {
