@@ -77,7 +77,7 @@
     "resources": {
       "bitcoin": {
         "sectionTitle": "Bitcoin Resources",
-        "exploreAll": "모두 둘러보기",
+        "exploreAll": "더보기 +6",
         "items": {
           "librariesSdks": {
             "title": "라이브러리",
@@ -99,7 +99,7 @@
       },
       "lightning": {
         "sectionTitle": "Lightning Resources",
-        "exploreAll": "모두 둘러보기",
+        "exploreAll": "더보기 +3",
         "items": {
           "librariesSdks": {
             "title": "라이브러리",
@@ -121,7 +121,7 @@
       },
       "education": {
         "sectionTitle": "Education Resources",
-        "exploreAll": "모두 둘러보기",
+        "exploreAll": "더보기 +2",
         "items": {
           "guidesTutorials": {
             "title": "튜토리얼",

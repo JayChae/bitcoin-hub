@@ -6,7 +6,6 @@ import {
   BookOpen,
   Building2,
   ChartNetwork,
-  Code,
   CodeXml,
   FileQuestionMark,
   Layers2,
@@ -222,13 +221,13 @@ function Section({
             return (
               <Link href={resource.link} key={resource.link}>
                 <Card className="bg-card border-border hover:border-primary/50 h-full transition-colors">
-                  <CardHeader>
+                  <CardHeader className="flex flex-col items-center text-center">
                     <Icon className="text-primary mb-2 size-8 sm:size-10" />
                     <CardTitle className="text-sm sm:text-lg">
                       {resource.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="text-center">
                     <CardDescription className="line-clamp-2 text-xs sm:text-sm">
                       {resource.description}
                     </CardDescription>
@@ -246,7 +245,6 @@ function Section({
               className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
             >
               {buttonText}
-              <ArrowRight className="ml-1 size-4" />
             </Button>
           </Link>
         </div>
