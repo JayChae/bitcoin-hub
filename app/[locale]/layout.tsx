@@ -28,6 +28,9 @@ export default async function Layout({
 
   return (
     <html lang={locale} className="size-full overflow-y-scroll">
+      <head>
+        <link rel="preload" href="/images/icon.webp" as="image" />
+      </head>
       <body
         className={`relative size-full antialiased ${pretendardFont.className}`}
       >
