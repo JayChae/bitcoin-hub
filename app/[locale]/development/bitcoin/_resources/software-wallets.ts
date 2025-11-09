@@ -58,13 +58,6 @@ export const softwareWalletsEn: BitcoinDevResources["software-wallets"] = [
     logo: "https://avatars.githubusercontent.com/u/170895068?s=200&v=4",
   },
   {
-    name: "Wallet of Satoshi",
-    description:
-      "User-friendly and accessible Lightning Network wallet that allows for instant, fee-minimal Bitcoin transactions, aiming to provide a simple interface for entering into the world of Bitcoin and Lightning payments.",
-    url: "https://www.walletofsatoshi.com",
-    logo: "https://pbs.twimg.com/profile_images/1711296158021431296/bs1nK5N4_400x400.png",
-  },
-  {
     name: "Muun Wallet",
     description:
       "Mobile Bitcoin and Lightning wallet aiming for simplicity and ease of use, featuring seamless Lightning Network integration for fast and low-fee transactions.",
@@ -178,13 +171,6 @@ export const softwareWalletsKo: BitcoinDevResources["software-wallets"] = [
       "개인정보 보호에 중점을 둔 비트코인 지갑으로, 향상된 익명성을 위한 CoinJoin 기술을 통합한다.",
     url: "https://wasabiwallet.io/",
     logo: "https://avatars.githubusercontent.com/u/170895068?s=200&v=4",
-  },
-  {
-    name: "Wallet of Satoshi",
-    description:
-      "사용자 친화적이고 접근하기 쉬운 라이트닝 네트워크 지갑으로, 즉시적이고 수수료가 최소화된 비트코인 트랜잭션을 가능하게 하며, 비트코인과 라이트닝 결제의 세계에 진입할 수 있도록 단순한 인터페이스를 제공.",
-    url: "https://www.walletofsatoshi.com",
-    logo: "https://pbs.twimg.com/profile_images/1711296158021431296/bs1nK5N4_400x400.png",
   },
   {
     name: "Muun Wallet",
