@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types";
+import { Layer2DevResources } from "@/types";
 
-export const researchEn: LightningDevResources["research"] = [
+export const researchEn: Layer2DevResources["research"] = [
   {
     name: "Lightning Splice",
     description:
@@ -38,7 +38,7 @@ export const researchEn: LightningDevResources["research"] = [
   },
 ];
 
-export const researchKo: LightningDevResources["research"] = [
+export const researchKo: Layer2DevResources["research"] = [
   {
     name: "Lightning Splice",
     description:

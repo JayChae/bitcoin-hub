@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types";
+import { Layer2DevResources } from "@/types";
 
-export const walletsEn: LightningDevResources["wallets"] = [
+export const walletsEn: Layer2DevResources["wallets"] = [
   {
     name: "Wallet of Satoshi",
     description:
@@ -45,7 +45,7 @@ export const walletsEn: LightningDevResources["wallets"] = [
   },
 ];
 
-export const walletsKo: LightningDevResources["wallets"] = [
+export const walletsKo: Layer2DevResources["wallets"] = [
   {
     name: "Wallet of Satoshi",
     description:

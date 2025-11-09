@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const apisPaymentsEn: BitcoinDevResources["apis-payments"] = [
+export const apisPaymentsEn: Layer1DevResources["apis-payments"] = [
   {
     name: "BTCPay Server",
     description:
@@ -65,7 +65,7 @@ export const apisPaymentsEn: BitcoinDevResources["apis-payments"] = [
   },
 ];
 
-export const apisPaymentsKo: BitcoinDevResources["apis-payments"] = [
+export const apisPaymentsKo: Layer1DevResources["apis-payments"] = [
   {
     name: "BTCPay Server",
     description:

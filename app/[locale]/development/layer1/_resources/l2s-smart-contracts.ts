@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const l2sSmartContractsEn: BitcoinDevResources["l2s-smart-contracts"] = [
+export const l2sSmartContractsEn: Layer1DevResources["l2s-smart-contracts"] = [
   {
     name: "Bitcoin Layers",
     description:
@@ -94,7 +94,7 @@ export const l2sSmartContractsEn: BitcoinDevResources["l2s-smart-contracts"] = [
   },
 ];
 
-export const l2sSmartContractsKo: BitcoinDevResources["l2s-smart-contracts"] = [
+export const l2sSmartContractsKo: Layer1DevResources["l2s-smart-contracts"] = [
   {
     name: "Bitcoin Layers",
     description: "비트코인 레이어 2 프로젝트를 소개하는 데 전용된 웹사이트.",

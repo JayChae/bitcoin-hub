@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types/dev";
+import { Layer2DevResources } from "@/types/dev";
 
-export const routingLiquidityEn: LightningDevResources["routing-liquidity"] = [
+export const routingLiquidityEn: Layer2DevResources["routing-liquidity"] = [
   {
     name: "Lightning Loop",
     description:
@@ -45,7 +45,7 @@ export const routingLiquidityEn: LightningDevResources["routing-liquidity"] = [
   },
 ];
 
-export const routingLiquidityKo: LightningDevResources["routing-liquidity"] = [
+export const routingLiquidityKo: Layer2DevResources["routing-liquidity"] = [
   {
     name: "Lightning Loop",
     description:

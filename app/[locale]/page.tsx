@@ -276,18 +276,18 @@ function ExploreAllButton({ href, text }: { href: string; text: string }) {
 
 const DEV_RESOURCES = [
   {
-    id: "bitcoin",
+    id: "layer1",
     icon: Bitcoin,
-    title: "development.resources.bitcoin.title",
-    description: "development.resources.bitcoin.description",
-    link: "/development/bitcoin/libraries-sdks",
+    title: "development.resources.layer1.title",
+    description: "development.resources.layer1.description",
+    link: "/development/layer1/libraries-sdks",
   },
   {
-    id: "lightning",
+    id: "layer2",
     icon: Zap,
-    title: "development.resources.lightning.title",
-    description: "development.resources.lightning.description",
-    link: "/development/lightning/libraries-sdks",
+    title: "development.resources.layer2.title",
+    description: "development.resources.layer2.description",
+    link: "/development/layer2/libraries-sdks",
   },
   {
     id: "education",

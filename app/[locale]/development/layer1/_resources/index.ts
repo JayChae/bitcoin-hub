@@ -1,4 +1,4 @@
-import { BitcoinDevResources, LocaleType } from "@/types";
+import { Layer1DevResources, LocaleType } from "@/types";
 
 import { apisPaymentsEn, apisPaymentsKo } from "./apis-payments";
 import {
@@ -17,7 +17,7 @@ import { researchEn, researchKo } from "./research";
 import { softwareWalletsEn, softwareWalletsKo } from "./software-wallets";
 import { utilitiesEn, utilitiesKo } from "./utilities";
 
-export const bitcoinDevResources: { [key in LocaleType]: BitcoinDevResources } =
+export const layer1DevResources: { [key in LocaleType]: Layer1DevResources } =
   {
     en: {
       "libraries-sdks": librariesSdksEn,

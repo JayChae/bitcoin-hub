@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const utilitiesEn: BitcoinDevResources["utilities"] = [
+export const utilitiesEn: Layer1DevResources["utilities"] = [
   {
     name: "libwally-core",
     description:
@@ -128,7 +128,7 @@ export const utilitiesEn: BitcoinDevResources["utilities"] = [
   },
 ];
 
-export const utilitiesKo: BitcoinDevResources["utilities"] = [
+export const utilitiesKo: Layer1DevResources["utilities"] = [
   {
     name: "libwally-core",
     description:

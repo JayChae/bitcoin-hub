@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const librariesSdksEn: BitcoinDevResources["libraries-sdks"] = [
+export const librariesSdksEn: Layer1DevResources["libraries-sdks"] = [
   {
     name: "Bitcoin Core",
     description:
@@ -126,7 +126,7 @@ export const librariesSdksEn: BitcoinDevResources["libraries-sdks"] = [
   },
 ];
 
-export const librariesSdksKo: BitcoinDevResources["libraries-sdks"] = [
+export const librariesSdksKo: Layer1DevResources["libraries-sdks"] = [
   {
     name: "Bitcoin Core",
     description:

@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types";
+import { Layer2DevResources } from "@/types";
 
-export const lspsEnterpriseEn: LightningDevResources["lsps-enterprise"] = [
+export const lspsEnterpriseEn: Layer2DevResources["lsps-enterprise"] = [
   {
     name: "Greenlight",
     description:
@@ -71,7 +71,7 @@ export const lspsEnterpriseEn: LightningDevResources["lsps-enterprise"] = [
   },
 ];
 
-export const lspsEnterpriseKo: LightningDevResources["lsps-enterprise"] = [
+export const lspsEnterpriseKo: Layer2DevResources["lsps-enterprise"] = [
   {
     name: "Greenlight",
     description:

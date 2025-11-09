@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types";
+import { Layer2DevResources } from "@/types";
 
-export const apisPaymentsEn: LightningDevResources["apis-payments"] = [
+export const apisPaymentsEn: Layer2DevResources["apis-payments"] = [
   {
     name: "OpenNode",
     description:
@@ -108,7 +108,7 @@ export const apisPaymentsEn: LightningDevResources["apis-payments"] = [
   },
 ];
 
-export const apisPaymentsKo: LightningDevResources["apis-payments"] = [
+export const apisPaymentsKo: Layer2DevResources["apis-payments"] = [
   {
     name: "OpenNode",
     description:

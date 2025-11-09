@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const explorersAnalyticsEn: BitcoinDevResources["explorers-analytics"] =
+export const explorersAnalyticsEn: Layer1DevResources["explorers-analytics"] =
   [
     {
       name: "Esplora",
@@ -31,7 +31,7 @@ export const explorersAnalyticsEn: BitcoinDevResources["explorers-analytics"] =
     },
   ];
 
-export const explorersAnalyticsKo: BitcoinDevResources["explorers-analytics"] =
+export const explorersAnalyticsKo: Layer1DevResources["explorers-analytics"] =
   [
     {
       name: "Esplora",

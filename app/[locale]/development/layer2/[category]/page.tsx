@@ -11,21 +11,21 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
-import { LightningCategory, LocaleType } from "@/types";
+import { Layer2Category, LocaleType } from "@/types";
 
 import { DevNav } from "../../_components/dev-nav";
-import { lightningDevResources } from "../_resources";
+import { layer2DevResources } from "../_resources";
 
 type Props = {
-  params: Promise<{ locale: LocaleType; category: LightningCategory }>;
+  params: Promise<{ locale: LocaleType; category: Layer2Category }>;
 };
-export default async function LightningPage({ params }: Props) {
+export default async function Layer2Page({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering
   setRequestLocale(locale);
-  const t = await getTranslations("developmentLightning");
+  const t = await getTranslations("developmentLayer2");
 
-  const lightningCategories: LightningCategories = [
+  const layer2Categories: Layer2Categories = [
     {
       label: t(categoryTitles["libraries-sdks"]),
       value: "libraries-sdks",
@@ -61,7 +61,7 @@ export default async function LightningPage({ params }: Props) {
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
         <div className="container mx-auto">
-          <DevNav activeLink="lightning" />
+          <DevNav activeLink="layer2" />
           <div className="hidden items-center gap-4 lg:flex">
             <Bitcoin className="text-primary h-12 w-12" />
             <div>
@@ -76,8 +76,8 @@ export default async function LightningPage({ params }: Props) {
       <div className="flex">
         <CategorySidebar
           title={t("categories.title")}
-          field="lightning"
-          categories={lightningCategories}
+          field="layer2"
+          categories={layer2Categories}
           selectedCategory={category}
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
         />
@@ -88,14 +88,14 @@ export default async function LightningPage({ params }: Props) {
             </h2>
             <div className="lg:hidden">
               <CategorySelect
-                field="lightning"
-                categories={lightningCategories}
+                field="layer2"
+                categories={layer2Categories}
                 placeholder={t("categories.title")}
               />
             </div>
           </div>
           <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {lightningDevResources[locale][category]?.map((resource) => (
+            {layer2DevResources[locale][category]?.map((resource) => (
               <li key={resource.name} className="h-full">
                 <ResourceCard
                   key={resource.url}
@@ -156,7 +156,7 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
   );
 }
 
-const categoryTitles: Record<LightningCategory, string> = {
+const categoryTitles: Record<Layer2Category, string> = {
   "libraries-sdks": "categories.librariesSdks",
   "lsps-enterprise": "categories.lspsEnterprise",
   "dashboards-monitoring": "categories.dashboardsMonitoring",
@@ -166,7 +166,7 @@ const categoryTitles: Record<LightningCategory, string> = {
   wallets: "categories.wallets",
 };
 
-type LightningCategories = {
+type Layer2Categories = {
   label: string;
-  value: LightningCategory;
+  value: Layer2Category;
 }[];

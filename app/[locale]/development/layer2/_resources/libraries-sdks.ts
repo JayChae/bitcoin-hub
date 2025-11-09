@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types";
+import { Layer2DevResources } from "@/types";
 
-export const librariesSdksEn: LightningDevResources["libraries-sdks"] = [
+export const librariesSdksEn: Layer2DevResources["libraries-sdks"] = [
   {
     name: "LND",
     description:
@@ -112,7 +112,7 @@ export const librariesSdksEn: LightningDevResources["libraries-sdks"] = [
   },
 ];
 
-export const librariesSdksKo: LightningDevResources["libraries-sdks"] = [
+export const librariesSdksKo: Layer2DevResources["libraries-sdks"] = [
   {
     name: "LND",
     description:

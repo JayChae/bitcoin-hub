@@ -1,6 +1,6 @@
-import { LightningDevResources } from "@/types/dev";
+import { Layer2DevResources } from "@/types/dev";
 
-export const dashboardsMonitoringEn: LightningDevResources["dashboards-monitoring"] =
+export const dashboardsMonitoringEn: Layer2DevResources["dashboards-monitoring"] =
   [
     {
       name: "ThunderHub",
@@ -31,7 +31,7 @@ export const dashboardsMonitoringEn: LightningDevResources["dashboards-monitorin
     },
   ];
 
-export const dashboardsMonitoringKo: LightningDevResources["dashboards-monitoring"] =
+export const dashboardsMonitoringKo: Layer2DevResources["dashboards-monitoring"] =
   [
     {
       name: "ThunderHub",

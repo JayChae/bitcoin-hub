@@ -1,4 +1,4 @@
-import { LightningDevResources, LocaleType } from "@/types";
+import { Layer2DevResources, LocaleType } from "@/types";
 
 import { apisPaymentsEn, apisPaymentsKo } from "./apis-payments";
 import {
@@ -11,8 +11,8 @@ import { researchEn, researchKo } from "./research";
 import { routingLiquidityEn, routingLiquidityKo } from "./routing-liquidity";
 import { walletsEn, walletsKo } from "./wallets";
 
-export const lightningDevResources: {
-  [key in LocaleType]: LightningDevResources;
+export const layer2DevResources: {
+  [key in LocaleType]: Layer2DevResources;
 } = {
   en: {
     "libraries-sdks": librariesSdksEn,

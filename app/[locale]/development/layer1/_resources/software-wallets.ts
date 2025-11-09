@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const softwareWalletsEn: BitcoinDevResources["software-wallets"] = [
+export const softwareWalletsEn: Layer1DevResources["software-wallets"] = [
   {
     name: "Bitcoin Core",
     description:
@@ -131,7 +131,7 @@ export const softwareWalletsEn: BitcoinDevResources["software-wallets"] = [
   },
 ];
 
-export const softwareWalletsKo: BitcoinDevResources["software-wallets"] = [
+export const softwareWalletsKo: Layer1DevResources["software-wallets"] = [
   {
     name: "Bitcoin Core",
     description:

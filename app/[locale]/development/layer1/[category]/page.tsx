@@ -11,21 +11,21 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Link } from "@/i18n/navigation";
-import { BitcoinCategory, DevResource, LocaleType } from "@/types";
+import { DevResource, Layer1Category, LocaleType } from "@/types";
 
 import { DevNav } from "../../_components/dev-nav";
-import { bitcoinDevResources } from "../_resources";
+import { layer1DevResources } from "../_resources";
 
 type Props = {
-  params: Promise<{ locale: LocaleType; category: BitcoinCategory }>;
+  params: Promise<{ locale: LocaleType; category: Layer1Category }>;
 };
-export default async function BitcoinPage({ params }: Props) {
+export default async function Layer1Page({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering
   setRequestLocale(locale);
-  const t = await getTranslations("developmentBitcoin");
+  const t = await getTranslations("developmentLayer1");
 
-  const bitcoinCategories: BitcoinCategories = [
+  const layer1Categories: Layer1Categories = [
     {
       label: t(categoryTitles["libraries-sdks"]),
       value: "libraries-sdks",
@@ -73,7 +73,7 @@ export default async function BitcoinPage({ params }: Props) {
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
         <div className="container mx-auto">
-          <DevNav activeLink="bitcoin" />
+          <DevNav activeLink="layer1" />
           <div className="hidden items-center gap-4 lg:flex">
             <Bitcoin className="text-primary h-12 w-12" />
             <div>
@@ -88,8 +88,8 @@ export default async function BitcoinPage({ params }: Props) {
       <div className="flex">
         <CategorySidebar
           title={t("categories.title")}
-          field="bitcoin"
-          categories={bitcoinCategories}
+          field="layer1"
+          categories={layer1Categories}
           selectedCategory={category}
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
         />
@@ -100,14 +100,14 @@ export default async function BitcoinPage({ params }: Props) {
             </h2>
             <div className="lg:hidden">
               <CategorySelect
-                field="bitcoin"
-                categories={bitcoinCategories}
+                field="layer1"
+                categories={layer1Categories}
                 placeholder={t("categories.title")}
               />
             </div>
           </div>
           <ResourceList
-            resources={bitcoinDevResources[locale][category]}
+            resources={layer1DevResources[locale][category]}
             category={category}
             t={t}
           />
@@ -119,7 +119,7 @@ export default async function BitcoinPage({ params }: Props) {
 
 type ResourceListProps = {
   resources?: DevResource[];
-  category: BitcoinCategory;
+  category: Layer1Category;
   t: (key: string) => string;
 };
 
@@ -240,7 +240,7 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
   );
 }
 
-const categoryTitles: Record<BitcoinCategory, string> = {
+const categoryTitles: Record<Layer1Category, string> = {
   "libraries-sdks": "categories.librariesSdks",
   "apis-payments": "categories.apisPayments",
   "l2s-smart-contracts": "categories.l2sSmartContracts",
@@ -253,7 +253,7 @@ const categoryTitles: Record<BitcoinCategory, string> = {
   research: "categories.research",
 };
 
-type BitcoinCategories = {
+type Layer1Categories = {
   label: string;
-  value: BitcoinCategory;
+  value: Layer1Category;
 }[];

@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const hardwareWalletsEn: BitcoinDevResources["hardware-wallets"] = [
+export const hardwareWalletsEn: Layer1DevResources["hardware-wallets"] = [
   {
     name: "Cold Card",
     description:
@@ -59,7 +59,7 @@ export const hardwareWalletsEn: BitcoinDevResources["hardware-wallets"] = [
   },
 ];
 
-export const hardwareWalletsKo: BitcoinDevResources["hardware-wallets"] = [
+export const hardwareWalletsKo: Layer1DevResources["hardware-wallets"] = [
   {
     name: "Cold Card",
     description:

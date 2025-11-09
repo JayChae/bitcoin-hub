@@ -1,6 +1,6 @@
-import { BitcoinDevResources } from "@/types";
+import { Layer1DevResources } from "@/types";
 
-export const nodeSoftwareEn: BitcoinDevResources["node-software"] = [
+export const nodeSoftwareEn: Layer1DevResources["node-software"] = [
   {
     name: "Bitcoin Core",
     description:
@@ -51,7 +51,7 @@ export const nodeSoftwareEn: BitcoinDevResources["node-software"] = [
   },
 ];
 
-export const nodeSoftwareKo: BitcoinDevResources["node-software"] = [
+export const nodeSoftwareKo: Layer1DevResources["node-software"] = [
   {
     name: "Bitcoin Core",
     description:

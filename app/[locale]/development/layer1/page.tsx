@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function BitcoinPage() {
-  return redirect("/development/bitcoin/libraries-sdks");
+export default function Layer1Page() {
+  return redirect("/development/layer1/libraries-sdks");
 }

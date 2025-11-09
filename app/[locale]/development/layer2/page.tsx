@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
-export default function BitcoinPage() {
-  return redirect("/development/lightning/libraries-sdks");
+export default function Layer2Page() {
+  return redirect("/development/layer2/libraries-sdks");
 }
