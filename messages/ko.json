@@ -241,7 +241,7 @@
     "contact": "이메일",
     "support": {
       "title": "후원하기",
-      "onChain": "온체인",
+      "onchain": "온체인",
       "lightning": "라이트닝"
     },
     "whitepaper": "비트코인 백서"
@@ -270,6 +270,28 @@
     "partnership": {
       "title": "PARTNERSHIP",
       "comingSoon": "Coming soon..."
+    },
+    "support": {
+      "title": "SUPPORT",
+      "description": "모든 금액은 개발자 양성, 자료 번역 및 관리, 무료 행사 개최에 사용됩니다.",
+      "onchain": "온체인",
+      "lightning": "라이트닝"
+    }
+  },
+  "supportModal": {
+    "onchain": {
+      "title": "온체인 후원",
+      "description": "모든 금액은 개발자 양성, 자료 번역 및 관리, 행사 개최에 사용됩니다."
+    },
+    "lightning": {
+      "title": "라이트닝 후원",
+      "description": "모든 금액은 개발자 양성, 자료 번역 및 관리, 행사 개최에 사용됩니다."
+    }
+  },
+  "action": {
+    "clipboard": {
+      "copy": "복사",
+      "copied": "복사됨!"
     }
   }
 }

@@ -239,7 +239,7 @@
     "contact": "Email",
     "support": {
       "title": "Support Us",
-      "onChain": "Onchain",
+      "onchain": "Onchain",
       "lightning": "Lightning"
     },
     "whitepaper": "Bitcoin Whitepaper"
@@ -268,6 +268,28 @@
     "partnership": {
       "title": "PARTNERSHIP",
       "comingSoon": "Coming soon..."
+    },
+    "support": {
+      "title": "SUPPORT",
+      "description": "All funds are used for developer training, material translation and management, and free events.",
+      "onchain": "Onchain",
+      "lightning": "Lightning"
+    }
+  },
+  "supportModal": {
+    "onchain": {
+      "title": "Onchain Support",
+      "description": "All funds are used for developer training, material translation and management, and free events."
+    },
+    "lightning": {
+      "title": "Lightning Support",
+      "description": "All funds are used for developer training, material translation and management, and free events."
+    }
+  },
+  "action": {
+    "clipboard": {
+      "copy": "Copy",
+      "copied": "Copied!"
     }
   }
 }

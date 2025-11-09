@@ -1,7 +1,15 @@
-import { BookOpen, Code2, GraduationCap, Users } from "lucide-react";
+import {
+  Bitcoin,
+  BookOpen,
+  Code2,
+  GraduationCap,
+  Users,
+  Zap,
+} from "lucide-react";
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
+import SupportModal from "@/components/support-modals";
 import IntroSection from "@/components/ui/intro-section";
 
 export default async function AboutPage() {
@@ -26,7 +34,7 @@ export default async function AboutPage() {
       {/* Program Overview Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("programs.title")}
           </h2>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
@@ -72,7 +80,7 @@ export default async function AboutPage() {
       {/* Team Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("team.title")}
           </h2>
           <div className="flex gap-6 md:gap-12">
@@ -99,7 +107,7 @@ export default async function AboutPage() {
       {/* Sponsor Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("sponsor.title")}
           </h2>
           <div className="text-center text-gray-500">
@@ -111,7 +119,7 @@ export default async function AboutPage() {
       {/* Partnership Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
-          <h2 className="text-primary mb-6 text-xs font-semibold sm:mb-8 sm:text-sm">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("partnership.title")}
           </h2>
           <div className="text-center text-gray-500">
@@ -119,6 +127,62 @@ export default async function AboutPage() {
               {t("partnership.comingSoon")}
             </p>
           </div>
+        </div>
+      </section>
+      {/* support section */}
+      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
+            {t("support.title")}
+          </h2>
+
+          <div className="mx-auto max-w-3xl">
+            {/* Support Cards */}
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
+              <SupportModal
+                type="onchain"
+                trigger={
+                  <button
+                    type="button"
+                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                  >
+                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Bitcoin className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    </div>
+                    <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
+                      {t("support.onchain")}
+                    </h3>
+                    <p className="text-xs text-gray-400 sm:text-sm">
+                      Bitcoin Address
+                    </p>
+                  </button>
+                }
+              />
+              <SupportModal
+                type="lightning"
+                trigger={
+                  <button
+                    type="button"
+                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                  >
+                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Zap className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    </div>
+                    <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
+                      {t("support.lightning")}
+                    </h3>
+                    <p className="text-xs text-gray-400 sm:text-sm">
+                      Lightning Address
+                    </p>
+                  </button>
+                }
+              />
+            </div>
+          </div>
+          {/* Description */}
+          <p className="mt-8 text-center text-sm leading-relaxed text-gray-400 sm:mb-10 sm:text-base">
+            {t("support.description")}
+          </p>
         </div>
       </section>
     </div>

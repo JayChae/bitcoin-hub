@@ -3,6 +3,8 @@ import { getTranslations } from "next-intl/server";
 
 import { Link } from "@/i18n/navigation";
 
+import SupportModal from "./support-modals";
+
 async function Footer() {
   const t = await getTranslations("footer");
 
@@ -22,13 +24,23 @@ async function Footer() {
         <div className="flex flex-col items-center justify-center">
           <span>{t("support.title")}: </span>
           <div className="flex items-center justify-center gap-2">
-            <span className="hover:text-primary cursor-pointer hover:underline">
-              {t("support.onChain")}
-            </span>
+            <SupportModal
+              type="onchain"
+              trigger={
+                <span className="hover:text-primary cursor-pointer hover:underline">
+                  {t("support.onchain")}
+                </span>
+              }
+            />
             <span>/</span>
-            <span className="hover:text-primary cursor-pointer hover:underline">
-              {t("support.lightning")}
-            </span>
+            <SupportModal
+              type="lightning"
+              trigger={
+                <span className="hover:text-primary cursor-pointer hover:underline">
+                  {t("support.lightning")}
+                </span>
+              }
+            />
           </div>
         </div>
         <p className="text-center">
