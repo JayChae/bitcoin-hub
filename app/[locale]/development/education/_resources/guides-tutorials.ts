@@ -125,7 +125,7 @@ export const guidesTutorialsEn: DevResource[] = [
     description:
       "Provides guides on understanding the fundementals of bitcoin.",
     url: "https://learnmeabitcoin.com",
-    logo: "https://placehold.co/80x80?text=Learn",
+    logo: "https://static.learnmeabitcoin.com/apple-touch-icon.png",
   },
   {
     name: "Lopp.net",
@@ -268,7 +268,7 @@ export const guidesTutorialsKo: DevResource[] = [
     description:
       "Bitcoin의 기본 원리를 이해하는 데 대한 가이드 제공 학습 도구.",
     url: "https://learnmeabitcoin.com",
-    logo: "https://placehold.co/80x80?text=Learn",
+    logo: "https://static.learnmeabitcoin.com/apple-touch-icon.png",
   },
   {
     name: "Lopp.net",
