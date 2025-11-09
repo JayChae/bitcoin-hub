@@ -1,11 +1,11 @@
 {
+  "Metadata": {
+    "title": "Bitomun",
+    "description": "한국 비트코인 환경 발전을 위한 올바른 비트코이너 양성"
+  },
   "landing": {
-    "Metadata": {
-      "title": "Bitcoin Hub",
-      "description": ""
-    },
     "hero": {
-      "title": "Bitcoin Hub",
+      "title": "Bitomun",
       "description": "한국 비트코인 환경 발전을 위한 올바른 비트코이너 양성",
       "button1": "자세히 알아보기",
       "button2": "개발 리소스"
