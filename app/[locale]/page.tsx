@@ -34,41 +34,6 @@ export default async function Home({ params }: Props) {
   const t = await getTranslations("landing");
   return (
     <div className="relative">
-      {/* Hero Section */}
-      {/* <section className="flex h-[calc(100dvh-4rem)] items-center px-4 sm:block sm:h-fit sm:py-48 lg:px-8">
-        <div className="mx-auto mb-16 max-w-4xl text-center sm:mb-0">
-          <div className="mb-6 flex justify-center">
-            <Bitcoin className="text-primary h-20 w-20 animate-pulse" />
-          </div>
-          <h1 className="from-primary to-secondary mb-6 bg-gradient-to-r bg-clip-text text-5xl font-bold text-transparent md:text-6xl">
-            {t("hero.title")}
-          </h1>
-          <p className="text-muted-foreground mx-auto mb-8 max-w-2xl text-base sm:text-xl">
-            {t("hero.description")}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/about" locale={locale}>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
-              >
-                {t("hero.button1")}
-              </Button>
-            </Link>
-
-            <Link href="/development" className="">
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
-              >
-                {t("hero.button2")}
-                <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section> */}
       <Hero
         description={t("hero.description")}
         button1={t("hero.button1")}
@@ -242,40 +207,8 @@ function Hero({ description, button1, button2 }: HeroProps) {
                   {button1}
                 </Button>
               </Link>
-              {/* <Link href="/development">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="hover:bg-foreground hover:text-background h-14 rounded-none border-2 px-8 text-base font-bold"
-                >
-                  {button2}
-                </Button>
-              </Link> */}
-
               <ExploreAllButton href="/development" text={button2} />
             </div>
-
-            {/* Stats */}
-            {/* <div className="grid max-w-xl grid-cols-3 gap-8 pt-8">
-              <div>
-                <div className="text-primary text-4xl font-black">130+</div>
-                <div className="text-muted-foreground mt-1 text-sm font-medium">
-                  글로벌 네트워크
-                </div>
-              </div>
-              <div>
-                <div className="text-secondary text-4xl font-black">50K+</div>
-                <div className="text-muted-foreground mt-1 text-sm font-medium">
-                  개발 자료
-                </div>
-              </div>
-              <div>
-                <div className="text-primary text-4xl font-black">6</div>
-                <div className="text-muted-foreground mt-1 text-sm font-medium">
-                  대륙
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {/* Right - Visual Element */}

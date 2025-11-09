@@ -111,7 +111,7 @@ export default async function AboutPage() {
           <div className="flex gap-6 md:gap-12">
             <div className="text-center">
               <div className="relative mb-3 size-24 rounded-full sm:mb-4 sm:size-28 md:size-32">
-                <Image src="/images/specter.png" alt="Specter" fill />
+                <Image src="/images/specter.webp" alt="Specter" fill />
               </div>
               <h3 className="text-lg font-semibold text-white sm:text-xl">
                 {t("team.members.specter")}
@@ -119,7 +119,7 @@ export default async function AboutPage() {
             </div>
             <div className="text-center">
               <div className="relative mb-3 size-24 rounded-full sm:mb-4 sm:size-28 md:size-32">
-                <Image src="/images/calvin.png" alt="Calvin" fill />
+                <Image src="/images/calvin.webp" alt="Calvin" fill />
               </div>
               <h3 className="text-lg font-semibold text-white sm:text-xl">
                 {t("team.members.calvin")}

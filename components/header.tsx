@@ -1,6 +1,7 @@
 "use client";
 
 import { Bitcoin, Languages, Menu } from "lucide-react";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -35,12 +36,12 @@ export default function Header({ locale }: { locale: LocaleType }) {
         <nav className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="text-primary hover:text-primary/80 flex items-center gap-2 transition-colors"
+            className="flex items-center gap-2 text-white transition-colors"
             locale={locale}
           >
-            <Bitcoin className="h-8 w-8" />
+            <Image src="/images/icon.webp" alt="logo" width={32} height={32} />
             <span className="block text-xl font-bold sm:hidden md:block">
-              Bitcoin Hub
+              Bitomun
             </span>
           </Link>
 
