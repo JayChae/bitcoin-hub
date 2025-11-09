@@ -158,13 +158,18 @@
       "explorersAnalytics": "탐색기 & 분석",
       "softwareWallets": "소프트웨어 지갑",
       "hardwareWallets": "하드웨어 지갑",
-      "research": "연구"
+      "research": "연구",
+      "mining": "마이닝"
     },
     "subcategories": {
       "onchain": "온체인",
       "lightning": "라이트닝",
       "airgap": "에어갭 지갑",
       "connected": "연결형 지갑"
+    },
+    "emptyState": {
+      "title": "준비중",
+      "description": "이 카테고리의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
     }
   },
   "developmentLayer2": {
@@ -191,7 +196,12 @@
       "books": "서적",
       "classesCourses": "수업 & 코스",
       "trainingPrograms": "훈련 프로그램",
-      "certifications": "인증"
+      "certifications": "인증",
+      "mining": "마이닝"
+    },
+    "emptyState": {
+      "title": "준비중",
+      "description": "이 카테고리의 리소스를 준비 중입니다. 곧 다시 확인해 주세요!"
     }
   },
   "comingSoon": {

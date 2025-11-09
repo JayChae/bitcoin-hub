@@ -11,6 +11,7 @@ import {
   l2sSmartContractsKo,
 } from "./l2s-smart-contracts";
 import { librariesSdksEn, librariesSdksKo } from "./libraries-sdks";
+import { miningEn, miningKo } from "./mining";
 import { nodeHardwareEn, nodeHardwareKo } from "./node-hardware";
 import { nodeSoftwareEn, nodeSoftwareKo } from "./node-software";
 import { researchEn, researchKo } from "./research";
@@ -30,6 +31,7 @@ export const layer1DevResources: { [key in LocaleType]: Layer1DevResources } =
       "software-wallets": softwareWalletsEn,
       "hardware-wallets": hardwareWalletsEn,
       research: researchEn,
+      mining: miningEn,
     },
     ko: {
       "libraries-sdks": librariesSdksKo,
@@ -42,5 +44,6 @@ export const layer1DevResources: { [key in LocaleType]: Layer1DevResources } =
       "software-wallets": softwareWalletsKo,
       "hardware-wallets": hardwareWalletsKo,
       research: researchKo,
+      mining: miningKo,
     },
   };

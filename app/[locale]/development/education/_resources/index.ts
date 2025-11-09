@@ -4,6 +4,7 @@ import { booksEn, booksKo } from "./books";
 import { certificationsEn, certificationsKo } from "./certifications";
 import { classesCoursesEn, classesCoursesKo } from "./classes-courses";
 import { guidesTutorialsEn, guidesTutorialsKo } from "./guides-tutorials";
+import { miningEn, miningKo } from "./mining";
 import { notesDocsEn, notesDocsKo } from "./notes-docs";
 import { trainingProgramsEn, trainingProgramsKo } from "./training-programs";
 
@@ -17,6 +18,7 @@ export const educationDevResources: {
     "classes-courses": classesCoursesEn,
     "training-programs": trainingProgramsEn,
     certifications: certificationsEn,
+    mining: miningEn,
   },
   ko: {
     "guides-tutorials": guidesTutorialsKo,
@@ -25,5 +27,6 @@ export const educationDevResources: {
     "classes-courses": classesCoursesKo,
     "training-programs": trainingProgramsKo,
     certifications: certificationsKo,
+    mining: miningKo,
   },
 };

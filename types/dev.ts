@@ -10,7 +10,8 @@ export type Layer1Category =
   | "utilities"
   | "software-wallets"
   | "hardware-wallets"
-  | "research";
+  | "research"
+  | "mining";
 
 export type Layer2Category =
   | "libraries-sdks"
@@ -26,7 +27,8 @@ export type EducationCategory =
   | "books"
   | "classes-courses"
   | "training-programs"
-  | "certifications";
+  | "certifications"
+  | "mining";
 
 export type DevelopmentResourceCategory =
   | Layer1Category

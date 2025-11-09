@@ -156,13 +156,18 @@
       "explorersAnalytics": "Explorers & Analytics",
       "softwareWallets": "Software Wallets",
       "hardwareWallets": "Hardware Wallets",
-      "research": "Research"
+      "research": "Research",
+      "mining": "Mining"
     },
     "subcategories": {
       "onchain": "Onchain",
       "lightning": "Lightning",
       "airgap": "Airgap Wallets",
       "connected": "Connected Wallets"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this category are being prepared. Check back soon!"
     }
   },
   "developmentLayer2": {
@@ -189,7 +194,12 @@
       "books": "Books",
       "classesCourses": "Courses",
       "trainingPrograms": "Training Programs",
-      "certifications": "Certifications"
+      "certifications": "Certifications",
+      "mining": "Mining"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this category are being prepared. Check back soon!"
     }
   },
   "comingSoon": {

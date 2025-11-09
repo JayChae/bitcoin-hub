@@ -19,7 +19,7 @@ import { educationDevResources } from "../_resources";
 type Props = {
   params: Promise<{ locale: LocaleType; category: EducationCategory }>;
 };
-export default async function LightningPage({ params }: Props) {
+export default async function EducationPage({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering
   setRequestLocale(locale);
@@ -45,6 +45,10 @@ export default async function LightningPage({ params }: Props) {
     {
       label: t(categoryTitles["training-programs"]),
       value: "training-programs",
+    },
+    {
+      label: t(categoryTitles["mining"]),
+      value: "mining",
     },
     {
       label: t(categoryTitles["certifications"]),
@@ -90,19 +94,28 @@ export default async function LightningPage({ params }: Props) {
               />
             </div>
           </div>
-          <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            {educationDevResources[locale][category]?.map((resource) => (
-              <li key={resource.name} className="h-full">
-                <ResourceCard
-                  key={resource.url}
-                  href={resource.url}
-                  logo={resource.logo}
-                  name={resource.name}
-                  description={resource.description}
-                />
-              </li>
-            ))}
-          </ul>
+          {educationDevResources[locale][category]?.length > 0 ? (
+            <ul className="mb-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+              {educationDevResources[locale][category].map((resource) => (
+                <li key={resource.name} className="h-full">
+                  <ResourceCard
+                    key={resource.url}
+                    href={resource.url}
+                    logo={resource.logo}
+                    name={resource.name}
+                    description={resource.description}
+                  />
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <div className="text-muted-foreground flex flex-col items-center justify-center py-16 text-center">
+              <h3 className="mb-2 text-xl font-semibold">
+                {t("emptyState.title")}
+              </h3>
+              <p>{t("emptyState.description")}</p>
+            </div>
+          )}
         </section>
       </div>
     </div>
@@ -159,6 +172,7 @@ const categoryTitles: Record<EducationCategory, string> = {
   "classes-courses": "categories.classesCourses",
   "training-programs": "categories.trainingPrograms",
   certifications: "categories.certifications",
+  mining: "categories.mining",
 };
 
 type EducationCategories = {

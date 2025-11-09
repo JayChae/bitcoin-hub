@@ -63,6 +63,10 @@ export default async function Layer1Page({ params }: Props) {
       value: "hardware-wallets",
     },
     {
+      label: t(categoryTitles["mining"]),
+      value: "mining",
+    },
+    {
       label: t(categoryTitles["research"]),
       value: "research",
     },
@@ -124,7 +128,14 @@ type ResourceListProps = {
 };
 
 function ResourceList({ resources, category, t }: ResourceListProps) {
-  if (!resources) return null;
+  if (!resources || resources.length === 0) {
+    return (
+      <div className="text-muted-foreground flex flex-col items-center justify-center py-16 text-center">
+        <h3 className="mb-2 text-xl font-semibold">{t("emptyState.title")}</h3>
+        <p>{t("emptyState.description")}</p>
+      </div>
+    );
+  }
 
   // Check if this category has subcategories
   const hasSubcategories =
@@ -251,6 +262,7 @@ const categoryTitles: Record<Layer1Category, string> = {
   "software-wallets": "categories.softwareWallets",
   "hardware-wallets": "categories.hardwareWallets",
   research: "categories.research",
+  mining: "categories.mining",
 };
 
 type Layer1Categories = {
