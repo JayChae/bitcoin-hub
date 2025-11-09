@@ -19,6 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -183,17 +184,14 @@ function Hero({ description, button1, button2 }: HeroProps) {
               {/* Title and Mobile Visual Element */}
               <div className="flex items-center justify-center gap-4 lg:block">
                 <h1 className="text-5xl leading-[0.9] font-black tracking-tighter sm:text-7xl lg:text-8xl xl:text-9xl">
-                  BITCOIN
-                  <br />
+                  BIT
                   <span className="from-primary to-secondary bg-gradient-to-r bg-clip-text font-bold text-transparent">
-                    EDUCATION
+                    OMUN
                   </span>
-                  <br />
-                  HUB
                 </h1>
               </div>
 
-              <p className="text-muted-foreground text-base leading-relaxed sm:text-lg md:text-xl">
+              <p className="text-muted-foreground text-sm leading-relaxed sm:text-lg md:text-xl">
                 {description}
               </p>
             </div>
@@ -220,7 +218,8 @@ function Hero({ description, button1, button2 }: HeroProps) {
 
               {/* Main Icon */}
               <div className="bg-background border-foreground absolute inset-8 flex items-center justify-center border-4">
-                <Bitcoin className="text-primary h-32 w-32" />
+                {/* <Bitcoin className="text-primary h-32 w-32" /> */}
+                <Logo width={128} height={128} />
               </div>
 
               {/* Floating Elements */}
@@ -228,7 +227,7 @@ function Hero({ description, button1, button2 }: HeroProps) {
                 <Zap className="text-background h-8 w-8" />
               </div>
               <div className="bg-primary border-foreground absolute -bottom-4 -left-4 -rotate-12 border-2 p-4">
-                <Globe className="text-background h-8 w-8" />
+                <Bitcoin className="text-background h-8 w-8" />
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { Bitcoin, Languages, Menu } from "lucide-react";
+import { Languages, Menu } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -16,6 +16,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import Logo from "./ui/logo";
 
 const links = [
   { href: "/about", label: "About Us" },
@@ -39,7 +40,7 @@ export default function Header({ locale }: { locale: LocaleType }) {
             className="flex items-center gap-2 text-white transition-colors"
             locale={locale}
           >
-            <Image src="/images/icon.webp" alt="logo" width={32} height={32} />
+            <Logo width={32} height={32} />
             <span className="block text-xl font-bold sm:hidden md:block">
               Bitomun
             </span>
