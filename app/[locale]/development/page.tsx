@@ -219,12 +219,12 @@ function Section({
           <h2 className="text-3xl font-bold">{title}</h2>
         </div>
 
-        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-6">
+        <div className="mx-auto flex flex-wrap justify-center gap-6">
           {resources.map((resource) => {
             const Icon = resource.icon;
             return (
               <Link href={resource.link} key={resource.link}>
-                <Card className="bg-card border-border hover:border-primary/50 h-full transition-colors">
+                <Card className="bg-card border-border hover:border-primary/50 h-full w-full max-w-sm transition-colors">
                   <CardHeader className="flex flex-col items-center text-center">
                     <Icon className="text-primary mb-2 size-8 sm:size-10" />
                     <CardTitle className="text-sm sm:text-lg">
@@ -232,7 +232,7 @@ function Section({
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="text-center">
-                    <CardDescription className="line-clamp-2 text-xs sm:text-sm">
+                    <CardDescription className="text-xs sm:text-sm">
                       {resource.description}
                     </CardDescription>
                   </CardContent>
