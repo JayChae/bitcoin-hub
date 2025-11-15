@@ -7,6 +7,7 @@ import {
   User,
   Zap,
 } from "lucide-react";
+import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
@@ -216,9 +217,14 @@ function Hero({ description, button1, button2 }: HeroProps) {
               <div className="bg-secondary/10 absolute inset-0 translate-x-4 translate-y-4 -rotate-6" />
 
               {/* Main Icon */}
-              <div className="bg-background border-foreground absolute inset-8 flex items-center justify-center border-4">
-                {/* <Bitcoin className="text-primary h-32 w-32" /> */}
-                <Logo width={128} height={128} />
+              <div className="border-foreground absolute inset-8 flex items-center justify-center border-4 bg-orange-500/70">
+                <Image
+                  src="/images/bitomun_key.webp"
+                  alt="Bitomun Key Icon"
+                  width={250}
+                  height={250}
+                  priority
+                />
               </div>
 
               {/* Floating Elements */}

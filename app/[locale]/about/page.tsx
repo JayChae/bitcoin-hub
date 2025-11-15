@@ -15,7 +15,7 @@ import IntroSection from "@/components/ui/intro-section";
 export default async function AboutPage() {
   const t = await getTranslations("about");
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="">
       {/* Intro Section */}
       <IntroSection>
         <div className="space-y-4 sm:space-y-6">
