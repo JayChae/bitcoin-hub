@@ -36,12 +36,12 @@ export default function Header({ locale }: { locale: LocaleType }) {
         <nav className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-white transition-colors"
+            className="flex items-center text-white transition-colors"
             locale={locale}
           >
-            <Logo width={32} height={32} />
-            <span className="block text-xl font-bold sm:hidden md:block">
-              Bitomun
+            <Logo width={42} height={42} />
+            <span className="block text-3xl font-bold sm:hidden md:block">
+              itomun
             </span>
           </Link>
 
