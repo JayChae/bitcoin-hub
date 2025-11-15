@@ -16,6 +16,17 @@ import { LocaleType } from "@/types";
 type Props = {
   params: Promise<{ locale: LocaleType }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("internship.title"),
+    description: t("internship.description"),
+  };
+}
+
 export default async function InternshipPage({ params }: Props) {
   const { locale } = await params;
   // Enable static rendering

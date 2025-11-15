@@ -6,11 +6,24 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import SupportModal from "@/components/support-modals";
 import IntroSection from "@/components/ui/intro-section";
+
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("about.title"),
+    description: t("about.description"),
+  };
+}
 
 export default async function AboutPage() {
   const t = await getTranslations("about");

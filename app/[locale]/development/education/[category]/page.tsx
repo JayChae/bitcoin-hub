@@ -19,6 +19,17 @@ import { educationDevResources } from "../_resources";
 type Props = {
   params: Promise<{ locale: LocaleType; category: EducationCategory }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("developmentEducation.title"),
+    description: t("developmentEducation.description"),
+  };
+}
+
 export default async function EducationPage({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering

@@ -2,18 +2,13 @@ import {
   ArrowRight,
   BanknoteArrowDown,
   Bitcoin,
-  Book,
-  BookOpen,
   Building2,
   ChartNetwork,
   CodeXml,
-  FileQuestionMark,
   Layers2,
   LucideIcon,
   Pickaxe,
   Route,
-  School,
-  ShieldCheck,
   ToolCase,
   Zap,
 } from "lucide-react";
@@ -35,6 +30,17 @@ import { LocaleType } from "@/types";
 type Props = {
   params: Promise<{ locale: LocaleType }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("development.title"),
+    description: t("development.description"),
+  };
+}
+
 export default async function DevelopmentPage({ params }: Props) {
   const { locale } = await params;
   // Enable static rendering

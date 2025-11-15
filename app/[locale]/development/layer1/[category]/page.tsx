@@ -19,6 +19,17 @@ import { layer1DevResources } from "../_resources";
 type Props = {
   params: Promise<{ locale: LocaleType; category: Layer1Category }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("developmentLayer1.title"),
+    description: t("developmentLayer1.description"),
+  };
+}
+
 export default async function Layer1Page({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering

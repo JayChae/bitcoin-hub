@@ -28,6 +28,16 @@ type Props = {
   params: Promise<{ locale: LocaleType }>;
 };
 
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("home.title"),
+    description: t("home.description"),
+  };
+}
+
 export default async function Home({ params }: Props) {
   const { locale } = await params;
   // Enable static rendering
