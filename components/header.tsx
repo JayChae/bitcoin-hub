@@ -23,6 +23,7 @@ const links = [
   { href: "/education", label: "Education" },
   { href: "/global", label: "Global" },
   { href: "/internship", label: "Internship" },
+  { href: "/apply", label: "Apply" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
