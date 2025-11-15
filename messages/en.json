@@ -2,11 +2,11 @@
   "landing": {
     "Metadata": {
       "title": "Bitomun",
-      "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea"
+      "description": "Bitomun is the key to unlocking the answers for those who want to learn about Bitcoin. We also support those who have the qualifications and organizations to spread the correct Bitcoin culture and expand the industry."
     },
     "hero": {
       "title": "Bitomun",
-      "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea",
+      "description": "Bitomun is the key to unlocking the answers for those who want to learn about Bitcoin. \nWe also support those who have the qualifications and organizations to spread the correct Bitcoin culture and expand the industry.",
       "button1": "Learn More",
       "button2": "Development Resources"
     },
@@ -261,7 +261,7 @@
     "whitepaper": "Bitcoin Whitepaper"
   },
   "about": {
-    "intro": "key that opens the door to Bitcoin as a new field of study.",
+    "intro": "key that opens the door to Bitcoin as a new field of study",
     "programs": {
       "title": "PROGRAM OVERVIEW",
       "internship": "Developer Internship",

@@ -19,7 +19,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import Logo from "@/components/ui/logo";
+// import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -191,7 +191,7 @@ function Hero({ description, button1, button2 }: HeroProps) {
                 </h1>
               </div>
 
-              <p className="text-muted-foreground text-sm leading-relaxed sm:text-lg md:text-xl">
+              <p className="text-muted-foreground text-center text-sm leading-relaxed whitespace-pre-line sm:text-lg md:text-xl lg:text-left">
                 {description}
               </p>
             </div>
