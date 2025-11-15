@@ -46,11 +46,15 @@ export default async function SupportModal({
     },
   };
 
-  const { title, description, address: ADDRESS, addressQR: ADDRESS_QR } =
-    config[type];
+  const {
+    title,
+    description,
+    address: ADDRESS,
+    addressQR: ADDRESS_QR,
+  } = config[type];
 
   return (
-    <Dialog modal={false}>
+    <Dialog>
       <DialogTrigger asChild>{trigger}</DialogTrigger>
       <DialogContent className="sm:max-w-md">
         <DialogHeader className="text-center sm:text-center">
