@@ -236,7 +236,7 @@ function ResourceCard({ href, logo, name, description }: ResourceCardProps) {
       <Card className="bg-card border-border hover:border-primary/50 h-full transition-all group-hover:shadow-lg">
         <CardHeader>
           <div className="flex flex-col items-start gap-4 lg:flex-row">
-            <div className="bg-muted relative flex size-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg sm:size-16 lg:size-20">
+            <div className="relative flex size-14 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg sm:size-16 lg:size-20">
               <Image
                 src={logo}
                 alt={name}
