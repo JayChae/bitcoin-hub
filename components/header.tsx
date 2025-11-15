@@ -1,6 +1,6 @@
 "use client";
 
-import { Languages, Menu } from "lucide-react";
+import { Languages, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -101,7 +101,11 @@ export default function Header({ locale }: { locale: LocaleType }) {
             className="text-muted-foreground sm:hidden"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
           >
-            <Menu className="size-6" />
+            {mobileMenuOpen ? (
+              <X className="size-6" />
+            ) : (
+              <Menu className="size-6" />
+            )}
           </Button>
         </nav>
 
