@@ -78,7 +78,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+      {/* <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("team.title")}
@@ -102,7 +102,7 @@ export default async function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Sponsor Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
