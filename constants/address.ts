@@ -1,4 +1,5 @@
-export const SUPPORT_LIGHTING_ADDRESS = "lno1zrxq8pjw7qjlm68mtp7e3yvxee4y5xrgjhhyf2fxhlphpckrvevh50u0qwldnnevyqcgffsw4s07rxljxp2pdnz7puamtvprcz07r2qcpta36qsrnsqyecc5frq0zazhypk56skjaa96vqgp0gu8knfrdqm5t46ampsqqvasnreh2yt4ljuway6zpn7kp5hl7p50g9pcs035c9z653mv97m7r7mdgzrmaj9d546p94x0rmnxmarsvsccqtng5mm3a2y39f7k3ffzhu5jahk75vq482c63ucfnywxwvz5hm0ccqqsm2xj4lpvwtdv0lf3g523fz2wwy"
-export const SUPPORT_ONCHAIN_ADDRESS = "bc1q0qrjz4shm2836t8nkq6c3tnr5u57q0lm075ssc"
-export const SUPPORT_ONCHAIN_ADDRESS_QR = "/images/onchain_address_qr.webp"
-export const SUPPORT_LIGHTING_ADDRESS_QR = "/images/lightning_address_qr.webp"
+export const SUPPORT_LIGHTING_ADDRESS = "lovebtc@blink.sv";
+export const SUPPORT_ONCHAIN_ADDRESS =
+  "bc1qjl4vl2rdqnryza2mv3q3kujrjmrvgy2jlw6x54";
+export const SUPPORT_ONCHAIN_ADDRESS_QR = "/images/onchain_qr.webp";
+export const SUPPORT_LIGHTING_ADDRESS_QR = "/images/lightning_qr.webp";

@@ -1,6 +1,6 @@
 "use client";
 
-import { Languages, Menu } from "lucide-react";
+import { Languages, Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -23,6 +23,7 @@ const links = [
   { href: "/education", label: "Education" },
   { href: "/global", label: "Global" },
   { href: "/internship", label: "Internship" },
+  { href: "/apply", label: "Apply" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
@@ -36,12 +37,12 @@ export default function Header({ locale }: { locale: LocaleType }) {
         <nav className="flex h-16 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 text-white transition-colors"
+            className="flex items-center text-white transition-colors"
             locale={locale}
           >
-            <Logo width={32} height={32} />
-            <span className="block text-xl font-bold sm:hidden md:block">
-              Bitomun
+            <Logo width={42} height={42} />
+            <span className="block text-3xl font-bold sm:hidden md:block">
+              itomun
             </span>
           </Link>
 
@@ -100,7 +101,11 @@ export default function Header({ locale }: { locale: LocaleType }) {
             className="text-muted-foreground sm:hidden"
             onClick={() => setMobileMenuOpen((prev) => !prev)}
           >
-            <Menu className="size-6" />
+            {mobileMenuOpen ? (
+              <X className="size-6" />
+            ) : (
+              <Menu className="size-6" />
+            )}
           </Button>
         </nav>
 

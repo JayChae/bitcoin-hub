@@ -27,12 +27,12 @@ export default async function Layout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className="size-full overflow-y-scroll">
+    <html lang={locale} className="size-full">
       <head>
         <link rel="preload" href="/images/icon.webp" as="image" />
       </head>
       <body
-        className={`relative size-full antialiased ${pretendardFont.className}`}
+        className={`relative size-full antialiased ${pretendardFont.className} overflow-y-scroll`}
       >
         <NextIntlClientProvider locale={locale}>
           <Header locale={locale} />

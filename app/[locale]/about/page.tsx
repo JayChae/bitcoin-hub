@@ -6,16 +6,29 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 
 import SupportModal from "@/components/support-modals";
 import IntroSection from "@/components/ui/intro-section";
 
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("about.title"),
+    description: t("about.description"),
+  };
+}
+
 export default async function AboutPage() {
   const t = await getTranslations("about");
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="">
       {/* Intro Section */}
       <IntroSection>
         <div className="space-y-4 sm:space-y-6">
@@ -78,7 +91,7 @@ export default async function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
+      {/* <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <h2 className="mb-6 text-xs font-semibold text-white sm:mb-8 sm:text-sm">
             {t("team.title")}
@@ -102,7 +115,7 @@ export default async function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Sponsor Section */}
       <section className="px-4 py-12 sm:px-6 sm:py-16 md:py-20">

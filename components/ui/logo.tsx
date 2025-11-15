@@ -10,5 +10,5 @@ export default function Logo({
   src = "/images/icon.webp",
   ...props
 }: LogoProps) {
-  return <Image alt={alt} src={src} {...props} />;
+  return <Image alt={alt} src={src} {...props} priority />;
 }

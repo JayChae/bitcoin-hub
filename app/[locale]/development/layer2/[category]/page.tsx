@@ -19,6 +19,17 @@ import { layer2DevResources } from "../_resources";
 type Props = {
   params: Promise<{ locale: LocaleType; category: Layer2Category }>;
 };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Metadata.pages" });
+
+  return {
+    title: t("developmentLayer2.title"),
+    description: t("developmentLayer2.description"),
+  };
+}
+
 export default async function Layer2Page({ params }: Props) {
   const { locale, category } = await params;
   // Enable static rendering

@@ -1,48 +1,110 @@
 {
+  "Metadata": {
+    "title": "Bitomun",
+    "description": "Bitomun is the key to unlocking the answers for those who want to learn about Bitcoin We also support those who have the qualifications and organizations to spread the correct Bitcoin culture and expand the industry",
+    "pages": {
+      "home": {
+        "title": "Bitomun",
+        "description": "Bitomun is the key to unlocking the answers for those who want to learn about Bitcoin We also support those who have the qualifications and organizations to spread the correct Bitcoin culture and expand the industry"
+      },
+      "about": {
+        "title": "About Us | Bitomun",
+        "description": "Learn about Bitomun's mission to advance Bitcoin development worldwide through education programs, internships, and community support"
+      },
+      "development": {
+        "title": "Development Resources | Bitomun",
+        "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem"
+      },
+      "developmentLayer1": {
+        "title": "Layer1 | Bitomun",
+        "description": "Comprehensive tools and libraries for Layer1 development including libraries, APIs, utilities, and SDKs"
+      },
+      "developmentLayer2": {
+        "title": "Layer2 | Bitomun",
+        "description": "Comprehensive tools and libraries for Layer2 development including Lightning Network resources"
+      },
+      "developmentEducation": {
+        "title": "Development Education | Bitomun",
+        "description": "Access curated learning materials, tutorials, courses, certifications, and books for Bitcoin and Lightning Network development"
+      },
+      "education": {
+        "title": "Education | Bitomun",
+        "description": "Learn the philosophy and technology behind Bitcoin through resources designed for everyone from beginners to developers"
+      },
+      "global": {
+        "title": "Global Communities | Bitomun",
+        "description": "Explore Bitcoin centers, organizations, and communities across all continents"
+      },
+      "globalAsia": {
+        "title": "Asia | Bitomun",
+        "description": "Discover Bitcoin centers, organizations, and communities across Asia"
+      },
+      "globalEurope": {
+        "title": "Europe | Bitomun",
+        "description": "Discover Bitcoin centers, organizations, and communities across Europe"
+      },
+      "globalAfrica": {
+        "title": "Africa | Bitomun",
+        "description": "Discover Bitcoin centers, organizations, and communities across Africa"
+      },
+      "globalNorthAmerica": {
+        "title": "North America | Bitomun",
+        "description": "Discover Bitcoin centers, organizations, and communities across North America"
+      },
+      "globalSouthAmerica": {
+        "title": "South America | Bitomun",
+        "description": "Discover Bitcoin centers, organizations, and communities across South America"
+      },
+      "globalOceania": {
+        "title": "Oceania | Bitomun",
+        "description": "Discover Bitcoin centers, organizations, and communities across Oceania"
+      },
+      "internship": {
+        "title": "Internship Program | Bitomun",
+        "description": "Join our mission to advance Bitcoin development worldwide through hands-on experience and mentorship"
+      }
+    }
+  },
   "landing": {
-    "Metadata": {
-      "title": "Bitomun",
-      "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea"
-    },
     "hero": {
       "title": "Bitomun",
-      "description": "Proper Bitcoin education to advance the Bitcoin environment in Korea",
+      "description": "Bitomun is the key to unlocking the answers for those who want to learn about Bitcoin \nWe also support those who have the qualifications and organizations to spread the correct Bitcoin culture and expand the industry",
       "button1": "Learn More",
       "button2": "Development Resources"
     },
     "development": {
       "title": "Bitcoin Development",
-      "description": "Explore development resources for Bitcoin, Lightning Network, and education.",
+      "description": "Explore development resources for Bitcoin, Lightning Network, and education",
       "resources": {
         "layer1": {
           "title": "Layer1",
-          "description": "Browse key Layer1 development resources — including libraries, APIs, utilities, and SDKs."
+          "description": "Browse key Layer1 development resources including libraries, APIs, utilities, and SDKs"
         },
         "layer2": {
           "title": "Layer2",
-          "description": "Explore Layer2 development resources — from libraries and SDKs to monitoring and routing tools."
+          "description": "Explore Layer2 development resources from libraries and SDKs to monitoring and routing tools"
         },
         "education": {
           "title": "Education",
-          "description": "Access curated learning materials, tutorials, courses, certifications, and books for Bitcoin and Lightning Network development."
+          "description": "Access curated learning materials, tutorials, courses, certifications, and books for Bitcoin and Lightning Network development"
         }
       }
     },
     "education": {
       "title": "Bitcoin Education",
-      "description": "Learn the philosophy and technology behind Bitcoin. Explore its fundamentals and mechanics through resources designed for everyone — from beginners to developers.",
+      "description": "Learn the philosophy and technology behind Bitcoin Explore its fundamentals and mechanics through resources designed for everyone from beginners to developers",
       "resources": {
         "educators": {
           "title": "Educators",
-          "description": "Discover leading Bitcoin educators and experts. Gain deeper insights through their courses, talks, and educational content."
+          "description": "Discover leading Bitcoin educators and experts Gain deeper insights through their courses, talks, and educational content"
         },
         "books": {
           "title": "Books",
-          "description": "From essential reading for newcomers to advanced technical books — explore a curated selection to understand Bitcoin in depth."
+          "description": "From essential reading for newcomers to advanced technical books explore a curated selection to understand Bitcoin in depth"
         },
         "materials": {
           "title": "Learning Materials",
-          "description": "Access tutorials, guides, and video lessons that help you learn and practice Bitcoin at your own pace."
+          "description": "Access tutorials, guides, and video lessons that help you learn and practice Bitcoin at your own pace"
         }
       }
     },
@@ -60,14 +122,14 @@
     },
     "internship": {
       "title": "Internship Program",
-      "description": "Join internship programs to deeply understand the technology and philosophy of Bitcoin while gaining hands-on experience through real projects. Learn Bitcoin development through lectures and mentoring, and experience contributing directly to the Bitcoin ecosystem through practical work.",
+      "description": "Join internship programs to deeply understand the technology and philosophy of Bitcoin while gaining hands-on experience through real projects Learn Bitcoin development through lectures and mentoring, and experience contributing directly to the Bitcoin ecosystem through practical work",
       "details": "Explore Programs"
     },
     "exploreAll": "Explore All"
   },
   "development": {
     "title": "Development Resources",
-    "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem.",
+    "description": "Curated collection of Bitcoin, Lightning Network, and educational resources for developers, learners, and builders in the Bitcoin ecosystem",
     "developmentLinks": {
       "layer1": "Layer1",
       "layer2": "Layer2",
@@ -80,19 +142,19 @@
         "items": {
           "librariesSdks": {
             "title": "Libraries",
-            "description": "Software libraries and development kits providing foundational code for building Bitcoin applications."
+            "description": "Software libraries and development kits providing foundational code for building Bitcoin applications"
           },
           "apisPayments": {
             "title": "APIs & Payments",
-            "description": "Tools and platforms for easy integration of Bitcoin payments in applications."
+            "description": "Tools and platforms for easy integration of Bitcoin payments in applications"
           },
           "utilities": {
             "title": "Utilities",
-            "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification."
+            "description": "Various tools including transaction simulation, script exploration, blockchain visualization, and code integrity verification"
           },
           "layer2s": {
             "title": "Layer 2s",
-            "description": "Technologies enabling extended functionalities like smart contracts and second-layer solutions on the Bitcoin network."
+            "description": "Technologies enabling extended functionalities like smart contracts and second-layer solutions on the Bitcoin network"
           }
         }
       },
@@ -102,19 +164,19 @@
         "items": {
           "librariesSdks": {
             "title": "Libraries",
-            "description": "Libraries and development kits for building Lightning Network applications."
+            "description": "Libraries and development kits for building Lightning Network applications"
           },
           "lspsEnterprise": {
             "title": "LSPs",
-            "description": "Enterprise-grade tools and services for businesses leveraging the Lightning Network."
+            "description": "Enterprise-grade tools and services for businesses leveraging the Lightning Network"
           },
           "dashboardsMonitoring": {
             "title": "Monitoring",
-            "description": "Web-based and text-based interfaces for managing and monitoring Lightning Network nodes."
+            "description": "Web-based and text-based interfaces for managing and monitoring Lightning Network nodes"
           },
           "routingLiquidity": {
             "title": "Routing",
-            "description": "Tools and services focused on managing payment routing and Lightning channel liquidity."
+            "description": "Tools and services focused on managing payment routing and Lightning channel liquidity"
           }
         }
       },
@@ -124,19 +186,19 @@
         "items": {
           "guidesTutorials": {
             "title": "Tutorials",
-            "description": "Text or video-based educational materials related to Bitcoin and Lightning Network development."
+            "description": "Text or video-based educational materials related to Bitcoin and Lightning Network development"
           },
           "classesCourses": {
             "title": "Classes",
-            "description": "Online or in-person formal educational programs for Bitcoin and Lightning Network development."
+            "description": "Online or in-person formal educational programs for Bitcoin and Lightning Network development"
           },
           "certifications": {
             "title": "Certifications",
-            "description": "Programs that issue certifications validating Bitcoin and Lightning Network development skills."
+            "description": "Programs that issue certifications validating Bitcoin and Lightning Network development skills"
           },
           "books": {
             "title": "Books",
-            "description": "Published books covering Bitcoin and Lightning Network development."
+            "description": "Published books covering Bitcoin and Lightning Network development"
           }
         }
       }
@@ -167,7 +229,7 @@
     },
     "emptyState": {
       "title": "Coming Soon",
-      "description": "Resources for this category are being prepared. Check back soon!"
+      "description": "Resources for this category are being prepared Check back soon!"
     }
   },
   "developmentLayer2": {
@@ -199,33 +261,33 @@
     },
     "emptyState": {
       "title": "Coming Soon",
-      "description": "Resources for this category are being prepared. Check back soon!"
+      "description": "Resources for this category are being prepared Check back soon!"
     }
   },
   "comingSoon": {
     "title": "Coming Soon",
     "subtitle": "This page is under construction",
-    "description": "We're building something amazing for the Bitcoin community. Stay tuned for exciting updates and new features."
+    "description": "We're building something amazing for the Bitcoin community Stay tuned for exciting updates and new features"
   },
   "notFound": {
     "title": "Page Not Found",
-    "description": "The page you are looking for does not exist.",
+    "description": "The page you are looking for does not exist",
     "goHome": "Go Home"
   },
   "errorPage": {
     "title": "Oops! Something went wrong",
-    "description": "We're sorry, but something went wrong. Please try again later.",
+    "description": "We're sorry, but something went wrong Please try again later",
     "retry": "Retry",
     "goHome": "Go Home"
   },
   "internship": {
     "hero": {
       "title": "Internship Program",
-      "description": "Join our mission to advance Bitcoin development worldwide through hands-on experience and mentorship."
+      "description": "Join our mission to advance Bitcoin development worldwide through hands-on experience and mentorship"
     },
     "status": {
       "noOpenings": "Currently No Openings",
-      "description": "We're always looking for passionate individuals interested in Bitcoin development. Check back soon for future opportunities!",
+      "description": "We're always looking for passionate individuals interested in Bitcoin development Check back soon for future opportunities!",
       "getNotified": "Get Notified",
       "learnAboutUs": "Learn About Us"
     },
@@ -233,20 +295,20 @@
       "title": "What Our Internship Program Offers",
       "expertise": {
         "title": "Bitcoin Expertise",
-        "description": "Learn from industry experts and gain deep understanding of Bitcoin technology and Lightning Network."
+        "description": "Learn from industry experts and gain deep understanding of Bitcoin technology and Lightning Network"
       },
       "mentorship": {
         "title": "Mentorship",
-        "description": "Work alongside experienced professionals in the Bitcoin development space with personalized guidance."
+        "description": "Work alongside experienced professionals in the Bitcoin development space with personalized guidance"
       },
       "projects": {
         "title": "Real Projects",
-        "description": "Contribute to meaningful projects that impact Bitcoin development globally and build your portfolio."
+        "description": "Contribute to meaningful projects that impact Bitcoin development globally and build your portfolio"
       }
     },
     "stayConnected": {
       "title": "Stay Connected",
-      "description": "Can't find the internship you're looking for? Explore our resources and join the Bitcoin development community.",
+      "description": "Can't find the internship you're looking for? Explore our resources and join the Bitcoin development community",
       "exploreCenters": "Global Communities",
       "developmentResources": "Development Resources"
     }
@@ -261,7 +323,7 @@
     "whitepaper": "Bitcoin Whitepaper"
   },
   "about": {
-    "intro": "key that opens the door to Bitcoin as a new field of study.",
+    "intro": "key that opens the door to Bitcoin as a new field of study",
     "programs": {
       "title": "PROGRAM OVERVIEW",
       "internship": "Developer Internship",
@@ -279,15 +341,15 @@
     },
     "sponsor": {
       "title": "SPONSOR",
-      "comingSoon": "Coming soon..."
+      "comingSoon": "Coming soon"
     },
     "partnership": {
       "title": "PARTNERSHIP",
-      "comingSoon": "Coming soon..."
+      "comingSoon": "Coming soon"
     },
     "support": {
       "title": "SUPPORT",
-      "description": "All funds are used for developer training, material translation and management, and free events.",
+      "description": "All funds are used for developer training, material translation and management, and free events",
       "onchain": "Onchain",
       "lightning": "Lightning"
     }
@@ -295,11 +357,11 @@
   "supportModal": {
     "onchain": {
       "title": "Onchain Support",
-      "description": "All funds are used for developer training, material translation and management, and free events."
+      "description": "All funds are used for developer training, material translation and management, and free events"
     },
     "lightning": {
       "title": "Lightning Support",
-      "description": "All funds are used for developer training, material translation and management, and free events."
+      "description": "All funds are used for developer training, material translation and management, and free events"
     }
   },
   "action": {
