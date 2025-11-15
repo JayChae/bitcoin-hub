@@ -29,7 +29,7 @@
       },
       "education": {
         "title": "Education | Bitomun",
-        "description": "Learn the philosophy and technology behind Bitcoin through resources designed for everyone — from beginners to developers."
+        "description": "Learn the philosophy and technology behind Bitcoin through resources designed for everyone from beginners to developers."
       },
       "global": {
         "title": "Global Communities | Bitomun",
@@ -78,11 +78,11 @@
       "resources": {
         "layer1": {
           "title": "Layer1",
-          "description": "Browse key Layer1 development resources — including libraries, APIs, utilities, and SDKs."
+          "description": "Browse key Layer1 development resources including libraries, APIs, utilities, and SDKs."
         },
         "layer2": {
           "title": "Layer2",
-          "description": "Explore Layer2 development resources — from libraries and SDKs to monitoring and routing tools."
+          "description": "Explore Layer2 development resources from libraries and SDKs to monitoring and routing tools."
         },
         "education": {
           "title": "Education",
@@ -92,7 +92,7 @@
     },
     "education": {
       "title": "Bitcoin Education",
-      "description": "Learn the philosophy and technology behind Bitcoin. Explore its fundamentals and mechanics through resources designed for everyone — from beginners to developers.",
+      "description": "Learn the philosophy and technology behind Bitcoin. Explore its fundamentals and mechanics through resources designed for everyone from beginners to developers.",
       "resources": {
         "educators": {
           "title": "Educators",
@@ -100,7 +100,7 @@
         },
         "books": {
           "title": "Books",
-          "description": "From essential reading for newcomers to advanced technical books — explore a curated selection to understand Bitcoin in depth."
+          "description": "From essential reading for newcomers to advanced technical books explore a curated selection to understand Bitcoin in depth."
         },
         "materials": {
           "title": "Learning Materials",

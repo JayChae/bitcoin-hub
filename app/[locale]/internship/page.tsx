@@ -99,7 +99,7 @@ export default async function InternshipPage({ params }: Props) {
               return (
                 <Card
                   key={offer.id}
-                  className="bg-card border-border hover:border-primary/50 transition-colors"
+                  className="bg-card border-border hover:border-primary/50 text-center transition-colors"
                 >
                   <CardHeader className="flex flex-col items-center justify-center">
                     <Icon className="text-primary mb-2 h-12 w-12" />
