@@ -18,14 +18,6 @@ export const hardwareWalletsEn: Layer1DevResources["hardware-wallets"] = [
     subcategory: "connected",
   },
   {
-    name: "Trezor",
-    description:
-      "One of the first hardware wallets, providing a secure and user-friendly way to store and manage various cryptocurrencies including Bitcoin",
-    url: "https://trezor.io",
-    logo: "https://pbs.twimg.com/profile_images/1876994745022529536/5FD_cxXO_400x400.jpg",
-    subcategory: "connected",
-  },
-  {
     name: "Foundation Devices",
     description:
       "Specializing in open-source hardware products for Bitcoin and the decentralized internet, including hardware wallets and nodes",
@@ -74,14 +66,6 @@ export const hardwareWalletsKo: Layer1DevResources["hardware-wallets"] = [
       "하드웨어 보안 모듈(HSM) 모드에서 Coldcard 하드웨어 지갑과 함께 사용하도록 설계된 소프트웨어 도구입니다 비트코인 트랜잭션의 자동화된 규칙 기반 서명을 가능하게 하여, 수동 확인 없이 Coldcard가 트랜잭션에 서명 제공",
     url: "https://ckbunker.com",
     logo: "https://avatars.githubusercontent.com/u/34548271?s=200&v=4",
-    subcategory: "connected",
-  },
-  {
-    name: "Trezor",
-    description:
-      "최초의 하드웨어 지갑 중 하나로, 비트코인을 포함한 다양한 암호화폐를 저장하고 관리할 수 있는 안전하고 사용자 친화적인 방법을 제공한다",
-    url: "https://trezor.io",
-    logo: "https://pbs.twimg.com/profile_images/1876994745022529536/5FD_cxXO_400x400.jpg",
     subcategory: "connected",
   },
   {
