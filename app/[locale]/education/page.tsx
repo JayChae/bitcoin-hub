@@ -274,7 +274,7 @@ function LevelCard({
               ))}
             </ul>
           </div>
-          <Button className="w-full h-9 px-6 text-sm md:h-12 md:px-16 md:text-base">
+          <Button className="h-9 w-full px-6 text-sm md:h-12 md:px-16 md:text-base">
             {applyLabel}
           </Button>
         </div>
@@ -325,8 +325,10 @@ function OnlineEducation({
       <Card className="w-full">
         <CardHeader>
           <div>
-            <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
-            <ul className="text-muted-foreground space-y-2 text-sm md:text-base">
+            <h3 className="mb-3 text-center text-lg font-semibold">
+              {targetsLabel}
+            </h3>
+            <ul className="text-muted-foreground flex flex-col items-center justify-center gap-2 text-sm md:text-base">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -339,7 +341,7 @@ function OnlineEducation({
       </Card>
       <Button
         variant="outline"
-        className="border-primary text-primary hover:bg-primary hover:text-white h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+        className="border-primary text-primary hover:bg-primary h-9 px-6 text-sm hover:text-white md:h-12 md:px-16 md:text-base"
         asChild
       >
         <a
@@ -366,8 +368,10 @@ function BookClub({ targetsLabel, applyLabel, targets }: BookClubProps) {
       <Card className="w-full">
         <CardHeader>
           <div>
-            <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
-            <ul className="text-muted-foreground space-y-2 text-sm md:text-base">
+            <h3 className="mb-3 text-center text-lg font-semibold">
+              {targetsLabel}
+            </h3>
+            <ul className="text-muted-foreground flex flex-col items-center justify-center gap-2 text-sm md:text-base">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -380,7 +384,7 @@ function BookClub({ targetsLabel, applyLabel, targets }: BookClubProps) {
       </Card>
       <Button
         variant="outline"
-        className="border-primary text-primary hover:bg-primary hover:text-white h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+        className="border-primary text-primary hover:bg-primary h-9 px-6 text-sm hover:text-white md:h-12 md:px-16 md:text-base"
       >
         {applyLabel}
       </Button>
@@ -421,7 +425,7 @@ function OneOnOneConsulting({
         <DialogTrigger asChild>
           <Button
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-white h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+            className="border-primary text-primary hover:bg-primary h-9 px-6 text-sm hover:text-white md:h-12 md:px-16 md:text-base"
           >
             {buttonText}
           </Button>
@@ -499,7 +503,7 @@ function DevSection({
           <Link href={buttonLink}>
             <Button
               variant="outline"
-              className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+              className="border-primary text-primary hover:text-primary h-9 px-6 text-sm hover:bg-transparent hover:underline md:h-12 md:px-16 md:text-base"
             >
               {buttonText}
             </Button>

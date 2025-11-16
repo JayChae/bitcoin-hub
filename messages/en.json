@@ -418,9 +418,9 @@
         "title": "Bitcoin Reading Club",
         "description": "We gather to discuss Bitcoin-related books that accurately explain Bitcoin",
         "targets": {
-          "item1": "Those who don't read books well alone",
-          "item2": "Those who want to share opinions about books with others",
-          "item3": "Those who want to read good books"
+          "item1": "Those who want to read good books",
+          "item2": "Those who don't read books well alone",
+          "item3": "Those who want to share opinions about books with others"
         }
       },
       "development": {
