@@ -1,0 +1,139 @@
+"use client";
+
+import { FormEvent, useState } from "react";
+import { Button } from "@/components/ui/button";
+
+export function ConsultingForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
+
+    try {
+      // TODO: 실제 API 엔드포인트로 데이터 전송
+      const response = await fetch("/api/consulting-request", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", phone: "", email: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error("상담 신청 중 오류 발생:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      <div className="space-y-2">
+        <label htmlFor="name" className="text-sm font-medium">
+          성함 <span className="text-destructive">*</span>
+        </label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          required
+          value={formData.name}
+          onChange={handleChange}
+          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="홍길동"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="phone" className="text-sm font-medium">
+          연락처 <span className="text-destructive">*</span>
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          required
+          value={formData.phone}
+          onChange={handleChange}
+          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="010-1234-5678"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="email" className="text-sm font-medium">
+          이메일 <span className="text-destructive">*</span>
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          required
+          value={formData.email}
+          onChange={handleChange}
+          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="example@email.com"
+        />
+      </div>
+
+      <div className="space-y-2">
+        <label htmlFor="message" className="text-sm font-medium">
+          상담 내용
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          rows={4}
+          className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          placeholder="상담 받고 싶은 내용을 자유롭게 작성해주세요"
+        />
+      </div>
+
+      {submitStatus === "success" && (
+        <div className="rounded-md bg-green-50 p-3 text-sm text-green-800 dark:bg-green-900/20 dark:text-green-400">
+          상담 신청이 성공적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.
+        </div>
+      )}
+
+      {submitStatus === "error" && (
+        <div className="rounded-md bg-red-50 p-3 text-sm text-red-800 dark:bg-red-900/20 dark:text-red-400">
+          상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.
+        </div>
+      )}
+
+      <Button
+        type="submit"
+        className="w-full"
+        size="lg"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? "제출 중..." : "상담 신청하기"}
+      </Button>
+    </form>
+  );
+}
