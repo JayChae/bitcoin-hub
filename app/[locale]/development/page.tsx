@@ -55,10 +55,6 @@ export default async function DevelopmentPage({ params }: Props) {
       href: "/development/layer2/libraries-sdks",
       label: t("developmentLinks.layer2"),
     },
-    // {
-    //   href: "/development/education/guides-tutorials",
-    //   label: t("developmentLinks.education"),
-    // },
   ];
   // Layer1 resources with translations
   const layer1Resources: Resource[] = [
@@ -116,34 +112,6 @@ export default async function DevelopmentPage({ params }: Props) {
     },
   ];
 
-  // Education resources with translations
-  // const educationResources: Resource[] = [
-  //   {
-  //     title: t("resources.education.items.guidesTutorials.title"),
-  //     description: t("resources.education.items.guidesTutorials.description"),
-  //     icon: FileQuestionMark,
-  //     link: "/development/education/guides-tutorials",
-  //   },
-  //   {
-  //     title: t("resources.education.items.classesCourses.title"),
-  //     description: t("resources.education.items.classesCourses.description"),
-  //     icon: School,
-  //     link: "/development/education/classes-courses",
-  //   },
-  //   {
-  //     title: t("resources.education.items.certifications.title"),
-  //     description: t("resources.education.items.certifications.description"),
-  //     icon: ShieldCheck,
-  //     link: "/development/education/certifications",
-  //   },
-  //   {
-  //     title: t("resources.education.items.books.title"),
-  //     description: t("resources.education.items.books.description"),
-  //     icon: Book,
-  //     link: "/development/education/books",
-  //   },
-  // ];
-
   return (
     <div className="relative">
       <IntroSection>
@@ -180,16 +148,6 @@ export default async function DevelopmentPage({ params }: Props) {
         icon={Zap}
         className="bg-gradient-to-l from-yellow-500/10 to-transparent"
       />
-
-      {/* Education Resources Section */}
-      {/* <Section
-        title={t("resources.education.sectionTitle")}
-        resources={educationResources}
-        buttonLink="/development/education/guides-tutorials"
-        buttonText={t("resources.education.exploreAll")}
-        icon={BookOpen}
-        className="bg-gradient-to-r from-teal-500/10 to-transparent"
-      /> */}
     </div>
   );
 }

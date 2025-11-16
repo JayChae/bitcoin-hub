@@ -6,7 +6,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import SupportModal from "@/components/support-modals";
 import IntroSection from "@/components/ui/intro-section";
@@ -17,6 +17,8 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
+  // Enable static rendering
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata.pages" });
 
   return {

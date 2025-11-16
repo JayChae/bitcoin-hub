@@ -1,10 +1,18 @@
-import { getTranslations } from "next-intl/server";
+import {
+  Book,
+  BookOpen,
+  FileQuestionMark,
+  School,
+  ShieldCheck,
+} from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
 import { ConsultingForm } from "@/components/consulting-form";
 import { Button } from "@/components/ui/button";
 import {
   Card,
+  CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
@@ -18,9 +26,18 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import IntroSection from "@/components/ui/intro-section";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
+import { LocaleType, LucideIcon } from "@/types";
 
-export default async function EducationPage() {
+type Props = {
+  params: Promise<{ locale: LocaleType }>;
+};
+
+export default async function EducationPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <div>
       <IntroSection>
@@ -58,6 +75,16 @@ export default async function EducationPage() {
       >
         <BookClub />
       </Section>
+
+      {/* Education Resources Section */}
+      <DevSection
+        title={"개발 교육"}
+        resources={educationResources}
+        buttonLink="education/development/guides-tutorials"
+        buttonText={""}
+        icon={BookOpen}
+        className="bg-gradient-to-r from-teal-500/10 to-transparent"
+      />
 
       <Section
         title={"1:1 컨설팅"}
@@ -97,7 +124,9 @@ function LevelCard({ level, description, targets }: Level) {
       <DialogTrigger asChild>
         <Card className="hover:border-primary/50 cursor-pointer transition-all hover:shadow-md">
           <CardHeader>
-            <CardTitle className="text-center text-xl">{level}</CardTitle>
+            <CardTitle className="text-primary text-center text-xl">
+              {level}
+            </CardTitle>
             <CardDescription className="text-center text-xs leading-relaxed lg:text-sm">
               {description}
             </CardDescription>
@@ -225,7 +254,7 @@ function BookClub() {
 }
 
 function OneOnOneConsulting() {
-  const description = `시간이 곧 돈인 사업가분과 자산은 많으나 새로운 기술을 배우고 이용하기에는 사정상 어려우신분에게 적합합니다. 모든 과정은 고객의 상황에 맞추어 진행하며 단발성이 아닌 사후 관리까지 도와드립니다.`;
+  const description = `시간이 곧 돈인 사업가분과 자산은 많으나 새로운 기술을 배우기에는 사정상 어려우신분에게 적합합니다. 모든 과정은 고객의 상황에 맞추어 진행하며 단발성이 아닌 사후 관리까지 도와드립니다.`;
 
   const recommendation = "해당 컨설팅은 10억 이상의 자산가에게 추천드립니다.";
 
@@ -237,7 +266,7 @@ function OneOnOneConsulting() {
             <p className="text-muted-foreground leading-relaxed">
               {description}
             </p>
-            <p className="text-primary font-semibold">{recommendation}</p>
+            <p className="text-muted-foreground font-bold">{recommendation}</p>
           </div>
           <div className="w-full text-center">
             <Dialog>
@@ -283,7 +312,7 @@ const LEVELS = [
   {
     level: "Level 2",
     description:
-      "비트코인 셀프 커스터디를 시작하는 입문자를 위한 강의로 다양한 옵션들 중 셀프커스터디에 필요한 최소한의 기능을 이용하는 방법을 전문가에게 배웁니다",
+      "셀프 커스터디를 시작하는 입문자를 위한 강의로 다양한 옵션들 중 셀프커스터디에 필요한 최소한의 기능을 이용하는 방법을 전문가에게 배웁니다",
     targets: [
       "비트코인을 안전하게 보관하고 싶으신 분",
       "비트코인을 내 명의로 보관하고 싶으신 분",
@@ -308,9 +337,108 @@ const LEVELS = [
   },
 ];
 
-type Props = {
-  params: Promise<{ locale: string }>;
+// Education resources with translations
+const educationResources: Resource[] = [
+  {
+    title: "Guides & Tutorials",
+    description:
+      "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development.",
+    icon: FileQuestionMark,
+    link: "/education/development/guides-tutorials",
+  },
+  {
+    title: "Classes & Courses",
+    description:
+      "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development.",
+    icon: School,
+    link: "/education/development/classes-courses",
+  },
+  {
+    title: "Developer Certifications",
+    description:
+      "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development.",
+    icon: ShieldCheck,
+    link: "/education/development/certifications",
+  },
+  {
+    title: "Developer Books",
+    description:
+      "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references.",
+    icon: Book,
+    link: "/education/development/books",
+  },
+];
+
+type Resource = {
+  title: string;
+  description: string;
+  icon: LucideIcon;
+  link: string;
 };
+
+type DevSectionProps = {
+  title: string;
+  resources: Resource[];
+  buttonLink: string;
+  buttonText: string;
+  icon: LucideIcon;
+  className?: string;
+};
+
+function DevSection({
+  title,
+  resources,
+  buttonLink,
+  buttonText,
+  icon,
+  className,
+}: DevSectionProps) {
+  const Icon = icon;
+  return (
+    <section className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
+      <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-12">
+        <div className="flex w-full items-center justify-center gap-3">
+          <Icon className="text-primary size-8" />
+          <h2 className="text-3xl font-bold">{title}</h2>
+        </div>
+
+        <div className="mx-auto flex flex-wrap justify-center gap-6">
+          {resources.map((resource) => {
+            const Icon = resource.icon;
+            return (
+              <Link href={resource.link} key={resource.link}>
+                <Card className="bg-card border-border hover:border-primary/50 h-full w-full max-w-sm transition-colors">
+                  <CardHeader className="flex flex-col items-center text-center">
+                    <Icon className="text-primary mb-2 size-8 sm:size-10" />
+                    <CardTitle className="text-sm sm:text-lg">
+                      {resource.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <CardDescription className="text-xs sm:text-sm">
+                      {resource.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </Link>
+            );
+          })}
+        </div>
+        <div className="flex justify-center">
+          <Link href={buttonLink}>
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
+            >
+              {buttonText}
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
