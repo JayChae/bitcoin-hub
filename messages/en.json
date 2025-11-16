@@ -369,5 +369,134 @@
       "copy": "Copy",
       "copied": "Copied!"
     }
+  },
+  "consultingForm": {
+    "fields": {
+      "name": {
+        "label": "Name",
+        "placeholder": "John Doe"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "010-1234-5678"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@email.com"
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": "Please describe what you'd like to discuss"
+      }
+    },
+    "required": "*",
+    "submitButton": "Coming Soon",
+    "success": "Your consultation request has been successfully submitted. We will contact you soon.",
+    "error": "An error occurred while submitting your request. Please try again."
+  },
+  "educationPage": {
+    "hero": {
+      "title": "Education",
+      "description": "We provide specialized learning and services focused on Bitcoin. For paid education, a certain percentage of all payments is used as donations. These donations are used for free Bitcoin education and industry expansion."
+    },
+    "sections": {
+      "offline": {
+        "title": "Offline Education",
+        "description": "Learn Bitcoin through in-person communication with experts"
+      },
+      "online": {
+        "title": "Online Education",
+        "description": "We offer online education where you can learn various Bitcoin courses at your desired time and place",
+        "targets": {
+          "item1": "Those who cannot attend offline education",
+          "item2": "Those who learn better through online courses",
+          "item3": "Those who want to study at their preferred time",
+          "item4": "Those who want to study without spatial constraints"
+        }
+      },
+      "bookClub": {
+        "title": "Bitcoin Reading Club",
+        "description": "We gather to discuss Bitcoin-related books that accurately explain Bitcoin",
+        "targets": {
+          "item1": "Those who don't read books well alone",
+          "item2": "Those who want to share opinions about books with others",
+          "item3": "Those who want to read good books"
+        }
+      },
+      "development": {
+        "title": "Development Education",
+        "buttonText": "View More +3"
+      },
+      "consulting": {
+        "title": "1:1 Consulting",
+        "description": "1:1 consulting for high-net-worth individuals to protect your valuable time",
+        "fullDescription": "Suitable for business people for whom time is money and those with significant assets but find it difficult to learn new technologies. All processes are tailored to the customer's situation and include follow-up support, not just one-time service.",
+        "recommendation": "This consulting is recommended for those with assets over 1 billion won.",
+        "dialogTitle": "1:1 Consulting Application",
+        "dialogDescription": "Please fill in the information below and our representative will contact you after review.",
+        "buttonText": "Apply for Consultation"
+      }
+    },
+    "common": {
+      "targets": "Target Audience",
+      "applyButton": "Apply"
+    },
+    "levels": {
+      "level1": {
+        "title": "Level 1",
+        "description": "Learn the basic concepts and operating principles of Bitcoin, its differences from other assets, and future utilization plans",
+        "targets": {
+          "item1": "Those who find Bitcoin difficult",
+          "item2": "Those who want to learn about Bitcoin",
+          "item3": "Those who want to learn about money",
+          "item4": "Those worried about inflation",
+          "item5": "Those who work hard but feel life is getting harder",
+          "item6": "Those who don't want to worry about retirement",
+          "item7": "Those who don't have time to learn about the economy"
+        }
+      },
+      "level2": {
+        "title": "Level 2",
+        "description": "A course for beginners starting self-custody, learning from experts how to use the minimum functions necessary for self-custody among various options",
+        "targets": {
+          "item1": "Those who want to store Bitcoin securely",
+          "item2": "Those who want to keep Bitcoin in their own name",
+          "item3": "Those who want to store Bitcoin the way exchanges do",
+          "item4": "Those who want to use Bitcoin freely from time and space constraints",
+          "item5": "Those who want to try using Bitcoin",
+          "item6": "Those who want to gain financial freedom"
+        }
+      },
+      "level3": {
+        "title": "Level 3",
+        "description": "Beyond self-custody, learn about Bitcoin mining, full nodes, and how to use them directly",
+        "targets": {
+          "item1": "Those curious about what Lightning, mining, and full nodes are",
+          "item2": "Completed 10 or more on-chain transactions",
+          "item3": "Those who want to try using Lightning",
+          "item4": "Those who have decided to mine and are curious about basic connection and operation methods (home mining)",
+          "item5": "Those who want to run a full node to protect their Bitcoin",
+          "item6": "Those who want to run a full node for the Bitcoin ecosystem"
+        }
+      }
+    },
+    "devResources": {
+      "guidesTutorials": {
+        "title": "Guides & Tutorials",
+        "description": "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development."
+      },
+      "classesCourses": {
+        "title": "Classes & Courses",
+        "description": "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development."
+      },
+      "certifications": {
+        "title": "Developer Certifications",
+        "description": "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development."
+      },
+      "books": {
+        "title": "Developer Books",
+        "description": "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references."
+      }
+    }
   }
 }

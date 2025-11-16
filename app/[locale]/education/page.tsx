@@ -1,6 +1,5 @@
 import {
   Book,
-  BookOpen,
   CodeXml,
   FileQuestionMark,
   MessageSquare,
@@ -41,65 +40,158 @@ type Props = {
 export default async function EducationPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "educationPage" });
+
+  const levels = [
+    {
+      level: t("levels.level1.title"),
+      description: t("levels.level1.description"),
+      targets: [
+        t("levels.level1.targets.item1"),
+        t("levels.level1.targets.item2"),
+        t("levels.level1.targets.item3"),
+        t("levels.level1.targets.item4"),
+        t("levels.level1.targets.item5"),
+        t("levels.level1.targets.item6"),
+        t("levels.level1.targets.item7"),
+      ],
+    },
+    {
+      level: t("levels.level2.title"),
+      description: t("levels.level2.description"),
+      targets: [
+        t("levels.level2.targets.item1"),
+        t("levels.level2.targets.item2"),
+        t("levels.level2.targets.item3"),
+        t("levels.level2.targets.item4"),
+        t("levels.level2.targets.item5"),
+        t("levels.level2.targets.item6"),
+      ],
+    },
+    {
+      level: t("levels.level3.title"),
+      description: t("levels.level3.description"),
+      targets: [
+        t("levels.level3.targets.item1"),
+        t("levels.level3.targets.item2"),
+        t("levels.level3.targets.item3"),
+        t("levels.level3.targets.item4"),
+        t("levels.level3.targets.item5"),
+        t("levels.level3.targets.item6"),
+      ],
+    },
+  ];
+
+  const educationDevResources: Resource[] = [
+    {
+      title: t("devResources.guidesTutorials.title"),
+      description: t("devResources.guidesTutorials.description"),
+      icon: FileQuestionMark,
+      link: "/education/development/guides-tutorials",
+    },
+    {
+      title: t("devResources.classesCourses.title"),
+      description: t("devResources.classesCourses.description"),
+      icon: School,
+      link: "/education/development/classes-courses",
+    },
+    {
+      title: t("devResources.certifications.title"),
+      description: t("devResources.certifications.description"),
+      icon: ShieldCheck,
+      link: "/education/development/certifications",
+    },
+    {
+      title: t("devResources.books.title"),
+      description: t("devResources.books.description"),
+      icon: Book,
+      link: "/education/development/books",
+    },
+  ];
 
   return (
     <div>
       <IntroSection>
         <div className="space-y-6">
           <h1 className="from-primary to-secondary bg-gradient-to-r bg-clip-text text-4xl font-bold text-transparent md:text-5xl">
-            Education
+            {t("hero.title")}
           </h1>
           <p className="text-muted-foreground text-lg sm:text-xl">
-            비트코인에 특화된 학습과 서비스를 제공합니다. 유료 교육의 경우 모든
-            결제 금액의 일정 퍼센트는 후원금으로 이용됩니다. 후원금은 비트코인
-            무료 교육과 산업 확산을 위해 사용합니다
+            {t("hero.description")}
           </p>
         </div>
       </IntroSection>
       <Section
-        title={"오프라인 교육"}
-        description="전문가와 오프라인에서 소통하며 비트코인을 배울 수 있습니다"
+        title={t("sections.offline.title")}
+        description={t("sections.offline.description")}
         className="from-secondary/10 bg-gradient-to-r to-transparent"
         icon={School}
       >
-        <OffLine levels={LEVELS} />
+        <OffLine
+          levels={levels}
+          targetsLabel={t("common.targets")}
+          applyLabel={t("common.applyButton")}
+        />
       </Section>
 
       <Section
-        title={"온라인 교육"}
-        description="다양한 비트코인 교육을 원하는 장소와 시간에 들을 수 있는 온라인 교육을 제공합니다"
+        title={t("sections.online.title")}
+        description={t("sections.online.description")}
         className="from-primary/10 bg-gradient-to-r to-transparent"
         icon={Monitor}
       >
-        <OnlineEducation />
+        <OnlineEducation
+          targetsLabel={t("common.targets")}
+          applyLabel={t("common.applyButton")}
+          targets={[
+            t("sections.online.targets.item1"),
+            t("sections.online.targets.item2"),
+            t("sections.online.targets.item3"),
+            t("sections.online.targets.item4"),
+          ]}
+        />
       </Section>
 
       <Section
-        title={"비트코인 독서 모임"}
-        description="비트코인과 관련된 서적 중 비트코인에 대해 올바르게 설명하는 서적들 위주로 함께 모여 이야기를 나누는 시간을 가집니다"
-        className="from-secondary/10 bg-gradient-to-r to-transparent"
+        title={t("sections.bookClub.title")}
+        description={t("sections.bookClub.description")}
+        className="from-yellow/10 bg-gradient-to-r to-transparent"
         icon={Users}
       >
-        <BookClub />
+        <BookClub
+          targetsLabel={t("common.targets")}
+          applyLabel={t("common.applyButton")}
+          targets={[
+            t("sections.bookClub.targets.item1"),
+            t("sections.bookClub.targets.item2"),
+            t("sections.bookClub.targets.item3"),
+          ]}
+        />
       </Section>
 
       {/* Education Resources Section */}
       <DevSection
-        title={"개발 교육"}
-        resources={educationResources}
+        title={t("sections.development.title")}
+        resources={educationDevResources}
         buttonLink="education/development/guides-tutorials"
-        buttonText={"더보기 +3"}
+        buttonText={t("sections.development.buttonText")}
         icon={CodeXml}
         className="bg-gradient-to-r from-teal-500/10 to-transparent"
       />
 
       <Section
-        title={"1:1 컨설팅"}
-        description="고액 자산가를 위한 1:1 컨설팅으로 고객님의 비싼 시간을 지켜줍니다"
+        title={t("sections.consulting.title")}
+        description={t("sections.consulting.description")}
         className="from-primary/10 bg-gradient-to-r to-transparent"
         icon={MessageSquare}
       >
-        <OneOnOneConsulting />
+        <OneOnOneConsulting
+          description={t("sections.consulting.fullDescription")}
+          recommendation={t("sections.consulting.recommendation")}
+          buttonText={t("sections.consulting.buttonText")}
+          dialogTitle={t("sections.consulting.dialogTitle")}
+          dialogDescription={t("sections.consulting.dialogDescription")}
+        />
       </Section>
     </div>
   );
@@ -137,7 +229,18 @@ function Section({
   );
 }
 
-function LevelCard({ level, description, targets }: Level) {
+type LevelCardProps = Level & {
+  targetsLabel: string;
+  applyLabel: string;
+};
+
+function LevelCard({
+  level,
+  description,
+  targets,
+  targetsLabel,
+  applyLabel,
+}: LevelCardProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -161,7 +264,7 @@ function LevelCard({ level, description, targets }: Level) {
         </DialogHeader>
         <div className="space-y-4">
           <div className="">
-            <h3 className="mb-3 text-lg font-semibold">대상자</h3>
+            <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
             <ul className="text-muted-foreground space-y-2 text-sm">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
@@ -172,7 +275,7 @@ function LevelCard({ level, description, targets }: Level) {
             </ul>
           </div>
           <Button className="w-full" size="lg">
-            신청하기
+            {applyLabel}
           </Button>
         </div>
       </DialogContent>
@@ -187,32 +290,42 @@ type Level = {
 };
 type OffLineProps = {
   levels: Level[];
+  targetsLabel: string;
+  applyLabel: string;
 };
 
-function OffLine({ levels }: OffLineProps) {
+function OffLine({ levels, targetsLabel, applyLabel }: OffLineProps) {
   return (
     <div className="grid w-full gap-6 md:grid-cols-3">
       {levels.map((levelData, index) => (
-        <LevelCard key={index} {...levelData} />
+        <LevelCard
+          key={index}
+          {...levelData}
+          targetsLabel={targetsLabel}
+          applyLabel={applyLabel}
+        />
       ))}
     </div>
   );
 }
 
-function OnlineEducation() {
-  const targets = [
-    "오프라인 교육이 불가한 사람",
-    "인터넷 강의로 더 잘 배우는 사람",
-    "원하는 시간대에 학습하고 싶은 사람",
-    "공간의 제약을 받지 않고 학습하고 싶은 사람",
-  ];
+type OnlineEducationProps = {
+  targetsLabel: string;
+  applyLabel: string;
+  targets: string[];
+};
 
+function OnlineEducation({
+  targetsLabel,
+  applyLabel,
+  targets,
+}: OnlineEducationProps) {
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader className="space-y-6">
         <div className="space-y-5">
           <div>
-            <h3 className="mb-3 text-lg font-semibold">대상자</h3>
+            <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
             <ul className="text-muted-foreground space-y-2 text-sm">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
@@ -229,7 +342,7 @@ function OnlineEducation() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                신청하기
+                {applyLabel}
               </a>
             </Button>
           </div>
@@ -239,19 +352,19 @@ function OnlineEducation() {
   );
 }
 
-function BookClub() {
-  const targets = [
-    "혼자서는 책을 잘 안읽는 사람",
-    "읽은 책의 내용을 다른 사람과 의견을 나누어보고 싶은 사람",
-    "좋은 책을 읽어보고 싶은 사람",
-  ];
+type BookClubProps = {
+  targetsLabel: string;
+  applyLabel: string;
+  targets: string[];
+};
 
+function BookClub({ targetsLabel, applyLabel, targets }: BookClubProps) {
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader className="space-y-6">
         <div className="space-y-5">
           <div>
-            <h3 className="mb-3 text-lg font-semibold">대상자</h3>
+            <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
             <ul className="text-muted-foreground space-y-2 text-sm">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
@@ -263,7 +376,7 @@ function BookClub() {
           </div>
           <div className="w-full text-center">
             <Button className="w-sm" size="lg">
-              신청하기
+              {applyLabel}
             </Button>
           </div>
         </div>
@@ -272,11 +385,21 @@ function BookClub() {
   );
 }
 
-function OneOnOneConsulting() {
-  const description = `시간이 곧 돈인 사업가분과 자산은 많으나 새로운 기술을 배우기에는 사정상 어려우신분에게 적합합니다. 모든 과정은 고객의 상황에 맞추어 진행하며 단발성이 아닌 사후 관리까지 도와드립니다.`;
+type OneOnOneConsultingProps = {
+  description: string;
+  recommendation: string;
+  buttonText: string;
+  dialogTitle: string;
+  dialogDescription: string;
+};
 
-  const recommendation = "해당 컨설팅은 10억 이상의 자산가에게 추천드립니다.";
-
+function OneOnOneConsulting({
+  description,
+  recommendation,
+  buttonText,
+  dialogTitle,
+  dialogDescription,
+}: OneOnOneConsultingProps) {
   return (
     <Card className="w-full max-w-2xl">
       <CardHeader className="space-y-6">
@@ -291,16 +414,14 @@ function OneOnOneConsulting() {
             <Dialog>
               <DialogTrigger asChild>
                 <Button className="w-sm" size="lg">
-                  상담 신청
+                  {buttonText}
                 </Button>
               </DialogTrigger>
               <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-[500px]">
                 <DialogHeader>
-                  <DialogTitle className="text-2xl">
-                    1:1 컨설팅 상담 신청
-                  </DialogTitle>
+                  <DialogTitle className="text-2xl">{dialogTitle}</DialogTitle>
                   <DialogDescription className="text-base leading-relaxed">
-                    아래 정보를 입력해주시면 담당자가 확인 후 연락드리겠습니다.
+                    {dialogDescription}
                   </DialogDescription>
                 </DialogHeader>
                 <ConsultingForm />
@@ -312,81 +433,6 @@ function OneOnOneConsulting() {
     </Card>
   );
 }
-
-const LEVELS = [
-  {
-    level: "Level 1",
-    description:
-      "비트코인의 기본 개념과 작동 원리에 대해 배우며 다른 자산과의 차이점과 미래의 활용 방안에 대해 배웁니다",
-    targets: [
-      "비트코인이 어려운 분",
-      "비트코인을 알아보고 싶으신 분",
-      "돈에 대해 알아보고 싶으신 분",
-      "물가 상승이 걱정되시는 분",
-      "열심히는 사는데 갈 수록 살기가 힘들다고 느껴지시는 분",
-      "노후 걱정을 안하고 싶으신 분",
-      "경제에 대해 알아 볼 시간이 없으신 분",
-    ],
-  },
-  {
-    level: "Level 2",
-    description:
-      "셀프 커스터디를 시작하는 입문자를 위한 강의로 다양한 옵션들 중 셀프커스터디에 필요한 최소한의 기능을 이용하는 방법을 전문가에게 배웁니다",
-    targets: [
-      "비트코인을 안전하게 보관하고 싶으신 분",
-      "비트코인을 내 명의로 보관하고 싶으신 분",
-      "거래소가 비트코인을 보관하는 방식으로 보관하고 싶으신 분",
-      "시간과 공간의 조건에서 자유롭게 비트코인을 이용하고 싶으신 분",
-      "비트코인을 사용해보고 싶으신 분",
-      "금융의 자유를 얻고 싶으신 분",
-    ],
-  },
-  {
-    level: "Level 3",
-    description:
-      "셀프커스터디를 넘어 비트코인 채굴과 풀노드 그리고 직접 사용하는 방법에 대해서 알아봅니다",
-    targets: [
-      "라이트닝, 채굴 그리고 풀노드가 뭔지 궁금한 분",
-      "온체인 트랜잭션 10회 이상 완료",
-      "라이트닝을 이용해보고 싶은 분",
-      "채굴을 해보기로 결심했는데 기본 연결 방법과 운영 방법이 궁금한 분(홈마이닝)",
-      "내 비트코인을 지키기 위해 풀노드를 돌리고 싶은 분",
-      "비트코인 생태계를 위해 풀노드를 돌리고 싶은 분",
-    ],
-  },
-];
-
-// Education resources with translations
-const educationResources: Resource[] = [
-  {
-    title: "Guides & Tutorials",
-    description:
-      "Written or video-based educational materials that provide step-by-step instructions on specific topics related to Bitcoin and/or Lightning Network development.",
-    icon: FileQuestionMark,
-    link: "/education/development/guides-tutorials",
-  },
-  {
-    title: "Classes & Courses",
-    description:
-      "Formal educational programs, either online or in-person, that offer a structured curriculum covering various aspects of Bitcoin and/or Lightning Network development.",
-    icon: School,
-    link: "/education/development/classes-courses",
-  },
-  {
-    title: "Developer Certifications",
-    description:
-      "Programs that evaluate the skills and knowledge of developers through examinations, resulting in a certification that validates proficiency in Bitcoin and/or Lightning Network development.",
-    icon: ShieldCheck,
-    link: "/education/development/certifications",
-  },
-  {
-    title: "Developer Books",
-    description:
-      "Published books that offer in-depth information and insights into various areas of Bitcoin and/or Lightning Network development, often serving as comprehensive references.",
-    icon: Book,
-    link: "/education/development/books",
-  },
-];
 
 type Resource = {
   title: string;

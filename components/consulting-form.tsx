@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { FormEvent, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 
 export function ConsultingForm() {
+  const t = useTranslations("consultingForm");
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -38,7 +40,7 @@ export function ConsultingForm() {
         setSubmitStatus("error");
       }
     } catch (error) {
-      console.error("상담 신청 중 오류 발생:", error);
+      console.error("Error submitting consultation request:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -56,7 +58,8 @@ export function ConsultingForm() {
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="space-y-2">
         <label htmlFor="name" className="text-sm font-medium">
-          성함 <span className="text-destructive">*</span>
+          {t("fields.name.label")}{" "}
+          <span className="text-destructive">{t("required")}</span>
         </label>
         <input
           id="name"
@@ -66,13 +69,14 @@ export function ConsultingForm() {
           value={formData.name}
           onChange={handleChange}
           className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="홍길동"
+          placeholder={t("fields.name.placeholder")}
         />
       </div>
 
       <div className="space-y-2">
         <label htmlFor="phone" className="text-sm font-medium">
-          연락처 <span className="text-destructive">*</span>
+          {t("fields.phone.label")}{" "}
+          <span className="text-destructive">{t("required")}</span>
         </label>
         <input
           id="phone"
@@ -82,13 +86,14 @@ export function ConsultingForm() {
           value={formData.phone}
           onChange={handleChange}
           className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="010-1234-5678"
+          placeholder={t("fields.phone.placeholder")}
         />
       </div>
 
       <div className="space-y-2">
         <label htmlFor="email" className="text-sm font-medium">
-          이메일 <span className="text-destructive">*</span>
+          {t("fields.email.label")}{" "}
+          <span className="text-destructive">{t("required")}</span>
         </label>
         <input
           id="email"
@@ -98,13 +103,13 @@ export function ConsultingForm() {
           value={formData.email}
           onChange={handleChange}
           className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex h-10 w-full rounded-md border px-3 py-2 text-sm file:border-0 file:bg-transparent file:text-sm file:font-medium focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="example@email.com"
+          placeholder={t("fields.email.placeholder")}
         />
       </div>
 
       <div className="space-y-2">
         <label htmlFor="message" className="text-sm font-medium">
-          상담 내용
+          {t("fields.message.label")}
         </label>
         <textarea
           id="message"
@@ -113,25 +118,24 @@ export function ConsultingForm() {
           onChange={handleChange}
           rows={4}
           className="border-input bg-background ring-offset-background placeholder:text-muted-foreground focus-visible:ring-ring flex min-h-[80px] w-full rounded-md border px-3 py-2 text-sm focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-          placeholder="상담 받고 싶은 내용을 자유롭게 작성해주세요"
+          placeholder={t("fields.message.placeholder")}
         />
       </div>
 
       {submitStatus === "success" && (
         <div className="rounded-md bg-green-50 p-3 text-sm text-green-800 dark:bg-green-900/20 dark:text-green-400">
-          상담 신청이 성공적으로 접수되었습니다. 빠른 시일 내에
-          연락드리겠습니다.
+          {t("success")}
         </div>
       )}
 
       {submitStatus === "error" && (
         <div className="rounded-md bg-red-50 p-3 text-sm text-red-800 dark:bg-red-900/20 dark:text-red-400">
-          상담 신청 중 오류가 발생했습니다. 다시 시도해주세요.
+          {t("error")}
         </div>
       )}
 
       <Button type="submit" className="w-full" size="lg" disabled={true}>
-        준비 중입니다
+        {t("submitButton")}
       </Button>
     </form>
   );
