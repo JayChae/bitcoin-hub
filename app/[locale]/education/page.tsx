@@ -274,7 +274,7 @@ function LevelCard({
               ))}
             </ul>
           </div>
-          <Button className="w-full" size="lg">
+          <Button className="w-full h-9 px-6 text-sm md:h-12 md:px-16 md:text-base">
             {applyLabel}
           </Button>
         </div>
@@ -321,9 +321,9 @@ function OnlineEducation({
   targets,
 }: OnlineEducationProps) {
   return (
-    <Card className="w-full max-w-2xl">
-      <CardHeader className="space-y-6">
-        <div className="space-y-5">
+    <div className="flex w-full max-w-2xl flex-col items-center gap-4">
+      <Card className="w-full">
+        <CardHeader>
           <div>
             <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
             <ul className="text-muted-foreground space-y-2 text-sm md:text-base">
@@ -335,20 +335,22 @@ function OnlineEducation({
               ))}
             </ul>
           </div>
-          <div className="w-full text-center">
-            <Button className="w-sm" size="lg" asChild>
-              <a
-                href="https://example.com/online-course"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {applyLabel}
-              </a>
-            </Button>
-          </div>
-        </div>
-      </CardHeader>
-    </Card>
+        </CardHeader>
+      </Card>
+      <Button
+        variant="outline"
+        className="border-primary text-primary hover:bg-primary hover:text-white h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+        asChild
+      >
+        <a
+          href="https://example.com/online-course"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {applyLabel}
+        </a>
+      </Button>
+    </div>
   );
 }
 
@@ -360,9 +362,9 @@ type BookClubProps = {
 
 function BookClub({ targetsLabel, applyLabel, targets }: BookClubProps) {
   return (
-    <Card className="w-full max-w-2xl">
-      <CardHeader className="space-y-6">
-        <div className="space-y-5">
+    <div className="flex w-full max-w-2xl flex-col items-center gap-4">
+      <Card className="w-full">
+        <CardHeader>
           <div>
             <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
             <ul className="text-muted-foreground space-y-2 text-sm md:text-base">
@@ -374,14 +376,15 @@ function BookClub({ targetsLabel, applyLabel, targets }: BookClubProps) {
               ))}
             </ul>
           </div>
-          <div className="w-full text-center">
-            <Button className="w-sm" size="lg">
-              {applyLabel}
-            </Button>
-          </div>
-        </div>
-      </CardHeader>
-    </Card>
+        </CardHeader>
+      </Card>
+      <Button
+        variant="outline"
+        className="border-primary text-primary hover:bg-primary hover:text-white h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+      >
+        {applyLabel}
+      </Button>
+    </div>
   );
 }
 
@@ -401,9 +404,9 @@ function OneOnOneConsulting({
   dialogDescription,
 }: OneOnOneConsultingProps) {
   return (
-    <Card className="w-full max-w-2xl">
-      <CardHeader className="space-y-6">
-        <div className="space-y-5">
+    <div className="flex w-full max-w-2xl flex-col items-center gap-4">
+      <Card className="w-full">
+        <CardHeader>
           <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
               {description}
@@ -412,27 +415,28 @@ function OneOnOneConsulting({
               {recommendation}
             </p>
           </div>
-          <div className="w-full text-center">
-            <Dialog>
-              <DialogTrigger asChild>
-                <Button className="w-sm" size="lg">
-                  {buttonText}
-                </Button>
-              </DialogTrigger>
-              <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-[500px]">
-                <DialogHeader>
-                  <DialogTitle className="text-2xl">{dialogTitle}</DialogTitle>
-                  <DialogDescription className="text-base leading-relaxed">
-                    {dialogDescription}
-                  </DialogDescription>
-                </DialogHeader>
-                <ConsultingForm />
-              </DialogContent>
-            </Dialog>
-          </div>
-        </div>
-      </CardHeader>
-    </Card>
+        </CardHeader>
+      </Card>
+      <Dialog>
+        <DialogTrigger asChild>
+          <Button
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-white h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
+          >
+            {buttonText}
+          </Button>
+        </DialogTrigger>
+        <DialogContent className="max-h-[80vh] overflow-y-auto sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl">{dialogTitle}</DialogTitle>
+            <DialogDescription className="text-base leading-relaxed">
+              {dialogDescription}
+            </DialogDescription>
+          </DialogHeader>
+          <ConsultingForm />
+        </DialogContent>
+      </Dialog>
+    </div>
   );
 }
 
@@ -494,9 +498,8 @@ function DevSection({
         <div className="flex justify-center">
           <Link href={buttonLink}>
             <Button
-              size="lg"
               variant="outline"
-              className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline"
+              className="border-primary text-primary hover:text-primary hover:bg-transparent hover:underline h-9 px-6 text-sm md:h-12 md:px-16 md:text-base"
             >
               {buttonText}
             </Button>
