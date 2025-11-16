@@ -9,10 +9,10 @@ export const walletsEn: Layer2DevResources["wallets"] = [
     logo: "https://pbs.twimg.com/profile_images/1711296158021431296/bs1nK5N4_400x400.png",
   },
   {
-    name: "Zap",
+    name: "Strike",
     description:
-      "Known for its clean interface and advanced features, Zap offers a cross-platform experience for Lightning Network users",
-    url: "https://zaphq.io",
+      "All-in-one Bitcoin platform Ultra- low fees, no limits, superior security, and real, human support.",
+    url: "https://strike.me/",
     logo: "https://pbs.twimg.com/profile_images/1659656788910678032/xQz7SrIC_400x400.png",
   },
   {
@@ -54,10 +54,10 @@ export const walletsKo: Layer2DevResources["wallets"] = [
     logo: "https://pbs.twimg.com/profile_images/1711296158021431296/bs1nK5N4_400x400.png",
   },
   {
-    name: "Zap",
+    name: "Strike",
     description:
-      "깔끔한 인터페이스와 고급 기능으로 유명한 지갑 라이트닝 네트워크 사용자에게 크로스 플랫폼 경험을 제공하는 도구",
-    url: "https://zaphq.io",
+      "비트코인의 모든 것을 담은 프리미엄 플랫폼 업계 최저 수수료, 한도 없는 유연성, 빈틈없는 보안 시스템, 그리고 24시간 대기하는 '전문가'의 밀착 지원",
+    url: "https://strike.me/",
     logo: "https://pbs.twimg.com/profile_images/1659656788910678032/xQz7SrIC_400x400.png",
   },
   {

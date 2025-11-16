@@ -6,7 +6,7 @@ import {
   Users,
   Zap,
 } from "lucide-react";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import SupportModal from "@/components/support-modals";
 import IntroSection from "@/components/ui/intro-section";
@@ -25,7 +25,10 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  // Enable static rendering
+  setRequestLocale(locale);
   const t = await getTranslations("about");
   return (
     <div className="">

@@ -56,7 +56,8 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   locale={locale}
                   className={cn(
                     "hover:text-primary size-fit text-sm font-medium transition-colors",
-                    `/${withoutLocale}` === link.href
+                    `/${withoutLocale}` === link.href ||
+                      `/${withoutLocale}`.startsWith(`${link.href}/`)
                       ? "text-primary"
                       : "text-muted-foreground",
                   )}
@@ -125,7 +126,8 @@ export default function Header({ locale }: { locale: LocaleType }) {
                     locale={locale}
                     className={cn(
                       "hover:bg-accent block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black",
-                      `/${withoutLocale}` === link.href
+                      `/${withoutLocale}` === link.href ||
+                        `/${withoutLocale}`.startsWith(`${link.href}/`)
                         ? "text-primary"
                         : "text-muted-foreground",
                     )}

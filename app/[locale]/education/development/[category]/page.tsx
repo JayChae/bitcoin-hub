@@ -2,8 +2,6 @@ import { Bitcoin, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 
-import { CategorySelect } from "@/components/category-select";
-import { CategorySidebar } from "@/components/category-sidebar";
 import {
   Card,
   CardDescription,
@@ -13,7 +11,8 @@ import {
 import { Link } from "@/i18n/navigation";
 import { EducationCategory, LocaleType } from "@/types";
 
-import { DevNav } from "../../_components/dev-nav";
+import { CategorySelect } from "../_components/category-select";
+import { CategorySidebar } from "../_components/category-sidebar";
 import { educationDevResources } from "../_resources";
 
 type Props = {
@@ -72,7 +71,6 @@ export default async function EducationPage({ params }: Props) {
       {/* Header */}
       <section className="border-border relative border-b px-4 py-6 lg:px-8 lg:pt-8 lg:pb-10">
         <div className="container mx-auto">
-          <DevNav activeLink="education" />
           <div className="hidden items-center gap-4 lg:flex">
             <Bitcoin className="text-primary h-12 w-12" />
             <div>
@@ -87,7 +85,6 @@ export default async function EducationPage({ params }: Props) {
       <div className="flex">
         <CategorySidebar
           title={t("categories.title")}
-          field="education"
           categories={educationCategories}
           selectedCategory={category}
           className="border-border sticky top-20 mt-8 hidden self-start border-r px-4 lg:block"
@@ -99,7 +96,6 @@ export default async function EducationPage({ params }: Props) {
             </h2>
             <div className="lg:hidden">
               <CategorySelect
-                field="education"
                 categories={educationCategories}
                 placeholder={t("categories.title")}
               />
