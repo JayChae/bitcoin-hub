@@ -1,9 +1,13 @@
 import {
   Book,
   BookOpen,
+  CodeXml,
   FileQuestionMark,
+  MessageSquare,
+  Monitor,
   School,
   ShieldCheck,
+  Users,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
@@ -56,6 +60,7 @@ export default async function EducationPage({ params }: Props) {
         title={"오프라인 교육"}
         description="전문가와 오프라인에서 소통하며 비트코인을 배울 수 있습니다"
         className="from-secondary/10 bg-gradient-to-r to-transparent"
+        icon={School}
       >
         <OffLine levels={LEVELS} />
       </Section>
@@ -64,6 +69,7 @@ export default async function EducationPage({ params }: Props) {
         title={"온라인 교육"}
         description="다양한 비트코인 교육을 원하는 장소와 시간에 들을 수 있는 온라인 교육을 제공합니다"
         className="from-primary/10 bg-gradient-to-r to-transparent"
+        icon={Monitor}
       >
         <OnlineEducation />
       </Section>
@@ -72,6 +78,7 @@ export default async function EducationPage({ params }: Props) {
         title={"비트코인 독서 모임"}
         description="비트코인과 관련된 서적 중 비트코인에 대해 올바르게 설명하는 서적들 위주로 함께 모여 이야기를 나누는 시간을 가집니다"
         className="from-secondary/10 bg-gradient-to-r to-transparent"
+        icon={Users}
       >
         <BookClub />
       </Section>
@@ -81,8 +88,8 @@ export default async function EducationPage({ params }: Props) {
         title={"개발 교육"}
         resources={educationResources}
         buttonLink="education/development/guides-tutorials"
-        buttonText={""}
-        icon={BookOpen}
+        buttonText={"더보기 +3"}
+        icon={CodeXml}
         className="bg-gradient-to-r from-teal-500/10 to-transparent"
       />
 
@@ -90,6 +97,7 @@ export default async function EducationPage({ params }: Props) {
         title={"1:1 컨설팅"}
         description="고액 자산가를 위한 1:1 컨설팅으로 고객님의 비싼 시간을 지켜줍니다"
         className="from-primary/10 bg-gradient-to-r to-transparent"
+        icon={MessageSquare}
       >
         <OneOnOneConsulting />
       </Section>
@@ -102,14 +110,25 @@ type SectionProps = {
   description: string;
   className?: string;
   children?: ReactNode;
+  icon?: LucideIcon;
 };
 
-function Section({ title, description, className, children }: SectionProps) {
+function Section({
+  title,
+  description,
+  className,
+  children,
+  icon,
+}: SectionProps) {
+  const Icon = icon;
   return (
     <section className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-12">
         <div className="flex flex-col items-center justify-center gap-4">
-          <h2 className="text-3xl font-bold">{title}</h2>
+          <div className="flex items-center justify-center gap-3">
+            {Icon && <Icon className="text-primary size-8" />}
+            <h2 className="text-3xl font-bold">{title}</h2>
+          </div>
           <span>{description}</span>
         </div>
         {children}
