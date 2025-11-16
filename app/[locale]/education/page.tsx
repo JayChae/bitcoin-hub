@@ -137,7 +137,7 @@ export default async function EducationPage({ params }: Props) {
       <Section
         title={t("sections.online.title")}
         description={t("sections.online.description")}
-        className="from-primary/10 bg-gradient-to-r to-transparent"
+        className="from-blue-500/10 bg-gradient-to-l to-transparent"
         icon={Monitor}
       >
         <OnlineEducation
@@ -155,7 +155,7 @@ export default async function EducationPage({ params }: Props) {
       <Section
         title={t("sections.bookClub.title")}
         description={t("sections.bookClub.description")}
-        className="from-yellow/10 bg-gradient-to-r to-transparent"
+        className="from-amber-500/10 bg-gradient-to-r to-transparent"
         icon={Users}
       >
         <BookClub
@@ -176,13 +176,13 @@ export default async function EducationPage({ params }: Props) {
         buttonLink="education/development/guides-tutorials"
         buttonText={t("sections.development.buttonText")}
         icon={CodeXml}
-        className="bg-gradient-to-r from-teal-500/10 to-transparent"
+        className="bg-gradient-to-l from-teal-500/10 to-transparent"
       />
 
       <Section
         title={t("sections.consulting.title")}
         description={t("sections.consulting.description")}
-        className="from-primary/10 bg-gradient-to-r to-transparent"
+        className="from-purple-500/10 bg-gradient-to-r to-transparent"
         icon={MessageSquare}
       >
         <OneOnOneConsulting
