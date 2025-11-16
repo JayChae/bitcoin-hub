@@ -17,8 +17,6 @@ type Props = {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  // Enable static rendering
-  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "Metadata.pages" });
 
   return {
@@ -27,7 +25,10 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function AboutPage() {
+export default async function AboutPage({ params }: Props) {
+  const { locale } = await params;
+  // Enable static rendering
+  setRequestLocale(locale);
   const t = await getTranslations("about");
   return (
     <div className="">
