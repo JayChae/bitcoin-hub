@@ -137,7 +137,7 @@ export default async function EducationPage({ params }: Props) {
       <Section
         title={t("sections.online.title")}
         description={t("sections.online.description")}
-        className="from-blue-500/10 bg-gradient-to-l to-transparent"
+        className="bg-gradient-to-l from-blue-500/10 to-transparent"
         icon={Monitor}
       >
         <OnlineEducation
@@ -155,7 +155,7 @@ export default async function EducationPage({ params }: Props) {
       <Section
         title={t("sections.bookClub.title")}
         description={t("sections.bookClub.description")}
-        className="from-amber-500/10 bg-gradient-to-r to-transparent"
+        className="bg-gradient-to-r from-amber-500/10 to-transparent"
         icon={Users}
       >
         <BookClub
@@ -182,7 +182,7 @@ export default async function EducationPage({ params }: Props) {
       <Section
         title={t("sections.consulting.title")}
         description={t("sections.consulting.description")}
-        className="from-purple-500/10 bg-gradient-to-r to-transparent"
+        className="bg-gradient-to-r from-purple-500/10 to-transparent"
         icon={MessageSquare}
       >
         <OneOnOneConsulting
@@ -265,7 +265,7 @@ function LevelCard({
         <div className="space-y-4">
           <div className="">
             <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
-            <ul className="text-muted-foreground space-y-2 text-sm">
+            <ul className="text-muted-foreground space-y-2 text-sm lg:text-base">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -326,7 +326,7 @@ function OnlineEducation({
         <div className="space-y-5">
           <div>
             <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
-            <ul className="text-muted-foreground space-y-2 text-sm">
+            <ul className="text-muted-foreground space-y-2 text-sm md:text-base">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -365,7 +365,7 @@ function BookClub({ targetsLabel, applyLabel, targets }: BookClubProps) {
         <div className="space-y-5">
           <div>
             <h3 className="mb-3 text-lg font-semibold">{targetsLabel}</h3>
-            <ul className="text-muted-foreground space-y-2 text-sm">
+            <ul className="text-muted-foreground space-y-2 text-sm md:text-base">
               {targets.map((target, index) => (
                 <li key={index} className="flex items-start gap-2">
                   <span className="text-primary mt-1">•</span>
@@ -408,7 +408,9 @@ function OneOnOneConsulting({
             <p className="text-muted-foreground leading-relaxed">
               {description}
             </p>
-            <p className="text-muted-foreground font-bold">{recommendation}</p>
+            <p className="text-muted-foreground font-semibold">
+              {recommendation}
+            </p>
           </div>
           <div className="w-full text-center">
             <Dialog>
