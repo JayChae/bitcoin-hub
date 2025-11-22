@@ -80,6 +80,15 @@ export default async function EducationPage({ params }: Props) {
         t("levels.level3.targets.item6"),
       ],
     },
+    {
+      level: t("levels.level4.title"),
+      description: t("levels.level4.description"),
+      targets: [
+        t("levels.level4.targets.item1"),
+        t("levels.level4.targets.item2"),
+        t("levels.level4.targets.item3"),
+      ],
+    },
   ];
 
   const educationDevResources: Resource[] = [
@@ -299,7 +308,7 @@ type OffLineProps = {
 
 function OffLine({ levels, targetsLabel, applyLabel }: OffLineProps) {
   return (
-    <div className="grid w-full gap-6 md:grid-cols-3">
+    <div className="grid w-full max-w-4xl gap-6 md:grid-cols-2">
       {levels.map((levelData, index) => (
         <LevelCard
           key={index}

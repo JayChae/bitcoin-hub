@@ -548,6 +548,15 @@
           "item5": "Those who want to run a full node to protect their Bitcoin",
           "item6": "Those who want to run a full node for the Bitcoin ecosystem"
         }
+      },
+      "level4": {
+        "title": "Level 4",
+        "description": "A gathering where those who have mastered the basic principles and concepts of the Bitcoin protocol come together to share and develop insights",
+        "targets": {
+          "item1": "Those who have mastered Level 1-3",
+          "item2": "Those who know about Bitcoin protocol's basic consensus and BIPs",
+          "item3": "Those who want to establish their own standards on specific topics"
+        }
       }
     },
     "devResources": {

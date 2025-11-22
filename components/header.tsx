@@ -23,6 +23,7 @@ const links = [
   { href: "/education", label: "Education" },
   { href: "/global", label: "Global" },
   { href: "/apply", label: "Apply" },
+  { href: "https://mini.bitcoinconf.org/", label: "Mini Conference" },
 ];
 export default function Header({ locale }: { locale: LocaleType }) {
   const pathname = usePathname();
@@ -53,6 +54,10 @@ export default function Header({ locale }: { locale: LocaleType }) {
                   key={link.href}
                   href={link.href}
                   locale={locale}
+                  {...(link.href.startsWith("http") && {
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                  })}
                   className={cn(
                     "hover:text-primary size-fit text-sm font-medium transition-colors",
                     `/${withoutLocale}` === link.href ||
@@ -123,6 +128,10 @@ export default function Header({ locale }: { locale: LocaleType }) {
                     key={link.href}
                     href={link.href}
                     locale={locale}
+                    {...(link.href.startsWith("http") && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
                     className={cn(
                       "hover:bg-accent block rounded-md px-4 py-3 text-sm font-medium transition-colors hover:text-black",
                       `/${withoutLocale}` === link.href ||
