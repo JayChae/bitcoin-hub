@@ -470,6 +470,45 @@
       "messagePlaceholder": "Please provide details..."
     }
   },
+  "global": {
+    "title": "Global Communities",
+    "description": "Explore Bitcoin centers, organizations, and communities across all continents. Connect with Bitcoiners worldwide and discover local meetups, educational initiatives, and development hubs.",
+    "continentLinks": {
+      "asia": "Asia",
+      "europe": "Europe",
+      "africa": "Africa",
+      "northAmerica": "North America",
+      "southAmerica": "South America",
+      "oceania": "Oceania"
+    },
+    "continents": {
+      "asia": {
+        "sectionTitle": "Asia",
+        "description": "Discover Bitcoin communities, centers, and organizations across Asia"
+      },
+      "europe": {
+        "sectionTitle": "Europe",
+        "description": "Discover Bitcoin communities, centers, and organizations across Europe"
+      },
+      "africa": {
+        "sectionTitle": "Africa",
+        "description": "Discover Bitcoin communities, centers, and organizations across Africa"
+      },
+      "northAmerica": {
+        "sectionTitle": "North America",
+        "description": "Discover Bitcoin communities, centers, and organizations across North America"
+      },
+      "southAmerica": {
+        "sectionTitle": "South America",
+        "description": "Discover Bitcoin communities, centers, and organizations across South America"
+      },
+      "oceania": {
+        "sectionTitle": "Oceania",
+        "description": "Discover Bitcoin communities, centers, and organizations across Oceania"
+      }
+    },
+    "exploreAll": "Explore All"
+  },
   "educationPage": {
     "hero": {
       "title": "Education",

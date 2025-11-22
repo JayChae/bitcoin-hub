@@ -472,6 +472,45 @@
       "messagePlaceholder": "자세히 작성해주세요..."
     }
   },
+  "global": {
+    "title": "글로벌 커뮤니티",
+    "description": "전 세계 대륙의 비트코인 센터, 단체, 커뮤니티를 살펴보세요. 전 세계 비트코이너들과 연결하고 지역 밋업, 교육 이니셔티브, 개발 허브를 발견하세요.",
+    "continentLinks": {
+      "asia": "아시아",
+      "europe": "유럽",
+      "africa": "아프리카",
+      "northAmerica": "북아메리카",
+      "southAmerica": "남아메리카",
+      "oceania": "오세아니아"
+    },
+    "continents": {
+      "asia": {
+        "sectionTitle": "아시아",
+        "description": "아시아 전역의 비트코인 커뮤니티, 센터, 단체를 살펴보세요"
+      },
+      "europe": {
+        "sectionTitle": "유럽",
+        "description": "유럽 전역의 비트코인 커뮤니티, 센터, 단체를 살펴보세요"
+      },
+      "africa": {
+        "sectionTitle": "아프리카",
+        "description": "아프리카 전역의 비트코인 커뮤니티, 센터, 단체를 살펴보세요"
+      },
+      "northAmerica": {
+        "sectionTitle": "북아메리카",
+        "description": "북아메리카 전역의 비트코인 커뮤니티, 센터, 단체를 살펴보세요"
+      },
+      "southAmerica": {
+        "sectionTitle": "남아메리카",
+        "description": "남아메리카 전역의 비트코인 커뮤니티, 센터, 단체를 살펴보세요"
+      },
+      "oceania": {
+        "sectionTitle": "오세아니아",
+        "description": "오세아니아 전역의 비트코인 커뮤니티, 센터, 단체를 살펴보세요"
+      }
+    },
+    "exploreAll": "자세히 알아보기"
+  },
   "educationPage": {
     "hero": {
       "title": "Education",

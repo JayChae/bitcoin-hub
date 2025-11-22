@@ -11,6 +11,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 
+import BackgroundDecoration from "@/components/ui/background-decoration";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,7 +20,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-// import Logo from "@/components/ui/logo";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { LocaleType } from "@/types";
@@ -186,6 +186,7 @@ type HeroProps = {
 function Hero({ description, button1, button2 }: HeroProps) {
   return (
     <section className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden">
+      <BackgroundDecoration />
       <div className="container mx-auto h-full px-4 sm:px-6 lg:px-8">
         <div className="grid h-full items-center gap-8 py-12 lg:grid-cols-12">
           {/* Left - Main Content */}
