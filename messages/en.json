@@ -509,6 +509,50 @@
     },
     "exploreAll": "Explore All"
   },
+  "globalAsia": {
+    "title": "Asia",
+    "description": "Discover Bitcoin organizations across Asia. Learn about various industries and events.",
+    "countriesTitle": "Countries",
+    "countries": {
+      "japan": "Japan",
+      "korea": "Korea",
+      "taiwan": "Taiwan",
+      "indonesia": "Indonesia",
+      "india": "India"
+    },
+    "categories": {
+      "center": "Center",
+      "events": "Events",
+      "meetups": "Meetups",
+      "mining": "Mining",
+      "nodes": "Nodes",
+      "retail": "Retail",
+      "charity": "Charity & Bodies",
+      "lightning": "Lightning"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this country are being prepared. Check back soon!"
+    }
+  },
+  "globalOceania": {
+    "title": "Oceania",
+    "description": "Discover Bitcoin organizations across Oceania. Learn about various industries and events.",
+    "categories": {
+      "center": "Center",
+      "events": "Events",
+      "meetups": "Meetups",
+      "mining": "Mining",
+      "nodes": "Nodes",
+      "retail": "Retail",
+      "charity": "Charity & Bodies",
+      "lightning": "Lightning"
+    },
+    "emptyState": {
+      "title": "Coming Soon",
+      "description": "Resources for this region are being prepared. Check back soon!"
+    }
+  },
   "educationPage": {
     "hero": {
       "title": "Education",
