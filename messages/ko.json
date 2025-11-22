@@ -433,6 +433,12 @@
         "description": "협업, 제안, 문의 사항을 자유롭게 보내주세요"
       }
     },
+    "support": {
+      "title": "직접 후원하기",
+      "description": "비토문을 직접 후원하여 비트코인 교육 확산에 기여하세요",
+      "onchain": "온체인",
+      "lightning": "라이트닝"
+    },
     "common": {
       "apply": "신청하기",
       "back": "← 뒤로 가기",

@@ -431,6 +431,12 @@
         "description": "Send us your collaboration ideas, proposals, or questions"
       }
     },
+    "support": {
+      "title": "Support Directly",
+      "description": "Support Bitomun directly to help spread Bitcoin education",
+      "onchain": "Onchain",
+      "lightning": "Lightning"
+    },
     "common": {
       "apply": "Apply",
       "back": "← Go Back",
