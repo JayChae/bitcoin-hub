@@ -62,6 +62,18 @@
       "internship": {
         "title": "Internship Program | Bitomun",
         "description": "Join our mission to advance Bitcoin development worldwide through hands-on experience and mentorship"
+      },
+      "apply": {
+        "title": "Apply | Bitomun",
+        "description": "Join the Bitcoin ecosystem"
+      },
+      "sponsorship": {
+        "title": "Sponsorship | Bitomun",
+        "description": "Support Bitcoin education projects and grow together"
+      },
+      "other": {
+        "title": "Other Inquiries | Bitomun",
+        "description": "Send us your collaboration ideas, proposals, or questions"
       }
     }
   },
@@ -393,6 +405,61 @@
     "submitButton": "Coming Soon",
     "success": "Your consultation request has been successfully submitted. We will contact you soon.",
     "error": "An error occurred while submitting your request. Please try again."
+  },
+  "apply": {
+    "hero": {
+      "title": "APPLY",
+      "description": "Join the Bitcoin ecosystem"
+    },
+    "categories": {
+      "internship": {
+        "title": "Developer Internship",
+        "subtitle": "Intern Program",
+        "description": "Gain hands-on experience as a Bitcoin development intern"
+      },
+      "sponsorship": {
+        "title": "Sponsorship",
+        "subtitle": "Sponsorship Application",
+        "description": "Support Bitcoin education projects and grow together"
+      },
+      "other": {
+        "title": "Other Inquiries",
+        "subtitle": "Questions & Proposals",
+        "description": "Send us your collaboration ideas, proposals, or questions"
+      }
+    },
+    "common": {
+      "apply": "Apply",
+      "back": "← Go Back",
+      "submit": "Submit",
+      "comingSoon": "Coming Soon",
+      "submitted": {
+        "title": "Application Submitted!",
+        "description": "We will contact you soon."
+      }
+    },
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "010-1234-5678",
+      "experience": "Development Experience",
+      "experiencePlaceholder": "e.g., 2 years, or student",
+      "skills": "Tech Stack",
+      "skillsPlaceholder": "e.g., JavaScript, Python, Bitcoin Core",
+      "github": "GitHub Profile",
+      "githubPlaceholder": "https://github.com/username",
+      "organization": "Organization/Company",
+      "organizationPlaceholder": "Company name or Individual",
+      "amount": "Sponsorship Amount",
+      "amountPlaceholder": "e.g., $1,000/month, one-time $10,000",
+      "messageInternship": "Motivation & Introduction",
+      "messageSponsorship": "Sponsorship Intent & Message",
+      "messageOther": "Inquiry Details",
+      "messagePlaceholder": "Please provide details..."
+    }
   },
   "educationPage": {
     "hero": {

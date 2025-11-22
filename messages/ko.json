@@ -62,6 +62,18 @@
       "internship": {
         "title": "인턴십 프로그램 | Bitomun",
         "description": "실무 경험과 멘토링을 통해 전 세계 비트코인 발전에 기여하세요"
+      },
+      "apply": {
+        "title": "신청 | Bitomun",
+        "description": "비트코인 생태계에 참여하세요"
+      },
+      "sponsorship": {
+        "title": "후원 신청 | Bitomun",
+        "description": "비트코인 교육 프로젝트에 후원하여 함께 성장하세요"
+      },
+      "other": {
+        "title": "기타 문의 | Bitomun",
+        "description": "협업, 제안, 문의 사항을 자유롭게 보내주세요"
       }
     }
   },
@@ -395,6 +407,61 @@
     "submitButton": "준비 중입니다",
     "success": "상담 신청이 성공적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다.",
     "error": "상담 신청 중 오류가 발생했습니다. 다시 시도해주세요."
+  },
+  "apply": {
+    "hero": {
+      "title": "APPLY",
+      "description": "비트코인 생태계에 참여하세요"
+    },
+    "categories": {
+      "internship": {
+        "title": "개발자 인턴쉽",
+        "subtitle": "Developer Internship",
+        "description": "비트코인 개발 인턴으로 참여하여 실무 경험을 쌓으세요"
+      },
+      "sponsorship": {
+        "title": "후원 신청",
+        "subtitle": "Sponsorship Application",
+        "description": "비트코인 교육 프로젝트에 후원하여 함께 성장하세요"
+      },
+      "other": {
+        "title": "기타 사항",
+        "subtitle": "Other Inquiries",
+        "description": "협업, 제안, 문의 사항을 자유롭게 보내주세요"
+      }
+    },
+    "common": {
+      "apply": "신청하기",
+      "back": "← 뒤로 가기",
+      "submit": "제출하기",
+      "comingSoon": "준비 중",
+      "submitted": {
+        "title": "신청이 완료되었습니다!",
+        "description": "빠른 시일 내에 연락드리겠습니다."
+      }
+    },
+    "form": {
+      "name": "이름",
+      "namePlaceholder": "홍길동",
+      "email": "이메일",
+      "emailPlaceholder": "your@email.com",
+      "phone": "연락처",
+      "phonePlaceholder": "010-1234-5678",
+      "experience": "개발 경력",
+      "experiencePlaceholder": "예: 2년, 또는 학생",
+      "skills": "기술 스택",
+      "skillsPlaceholder": "예: JavaScript, Python, Bitcoin Core",
+      "github": "GitHub 프로필",
+      "githubPlaceholder": "https://github.com/username",
+      "organization": "조직/회사명",
+      "organizationPlaceholder": "회사명 또는 개인",
+      "amount": "후원 희망 규모",
+      "amountPlaceholder": "예: 월 100만원, 일시 1,000만원",
+      "messageInternship": "지원 동기 및 자기소개",
+      "messageSponsorship": "후원 의향 및 메시지",
+      "messageOther": "문의 내용",
+      "messagePlaceholder": "자세히 작성해주세요..."
+    }
   },
   "educationPage": {
     "hero": {
