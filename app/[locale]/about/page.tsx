@@ -184,10 +184,10 @@ export default async function AboutPage({ params }: Props) {
                 trigger={
                   <button
                     type="button"
-                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                    className="group hover:border-[#f7931a] w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
                   >
-                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
-                      <Bitcoin className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="bg-[#f7931a]/10 group-hover:bg-[#f7931a]/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Bitcoin className="text-[#f7931a] h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
                       {t("support.onchain")}
@@ -203,10 +203,10 @@ export default async function AboutPage({ params }: Props) {
                 trigger={
                   <button
                     type="button"
-                    className="group hover:border-primary/50 w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
+                    className="group hover:border-[#fbbf24] w-full rounded-lg border border-zinc-800 bg-zinc-900 p-6 transition-all hover:bg-zinc-800 sm:p-8"
                   >
-                    <div className="bg-primary/10 group-hover:bg-primary/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
-                      <Zap className="text-primary/60 h-6 w-6 sm:h-7 sm:w-7" />
+                    <div className="bg-[#fbbf24]/10 group-hover:bg-[#fbbf24]/20 mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full transition-colors sm:h-14 sm:w-14">
+                      <Zap className="text-[#fbbf24] h-6 w-6 sm:h-7 sm:w-7" />
                     </div>
                     <h3 className="mb-2 text-lg font-semibold text-white sm:text-xl">
                       {t("support.lightning")}
