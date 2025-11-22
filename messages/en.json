@@ -339,10 +339,13 @@
     "programs": {
       "title": "PROGRAM OVERVIEW",
       "internship": "Developer Internship",
+      "internshipSubtitle": "Bitcoin Developer",
       "education": "Education Program",
       "educationLevel": "Level 1 - Level 4",
-      "reading": "Reading Club",
-      "conference": "Bitcoin Onni Conference"
+      "consulting": "Consulting",
+      "consultingSubtitle": "1:1 Consulting",
+      "conference": "Bitcoin Mini Conference",
+      "conferenceSubtitle": "Bitcoin Only Conference"
     },
     "team": {
       "title": "TEAM",

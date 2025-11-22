@@ -341,10 +341,13 @@
     "programs": {
       "title": "PROGRAM OVERVIEW",
       "internship": "개발자 인턴십",
+      "internshipSubtitle": "Bitcoin Developer",
       "education": "교육 프로그램",
       "educationLevel": "Level 1 - Level 4",
-      "reading": "독서 모임",
-      "conference": "Bitcoin Only Conference"
+      "consulting": "컨설팅",
+      "consultingSubtitle": "1:1 Consulting",
+      "conference": "비트코인 미니 컨퍼런스",
+      "conferenceSubtitle": "Bitcoin Only Conference"
     },
     "team": {
       "title": "TEAM",

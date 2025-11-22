@@ -47,7 +47,7 @@ export default async function ApplyPage({ params }: Props) {
   const t = await getTranslations("apply");
 
   const categories = [
-    { id: "internship", href: "/apply/internship" },
+    { id: "internship", href: "/internship" },
     { id: "sponsorship", href: "/apply/sponsorship" },
     { id: "other", href: "/apply/other" },
   ] as const;

@@ -180,6 +180,7 @@ export default async function EducationPage({ params }: Props) {
       />
 
       <Section
+        id="consulting"
         title={t("sections.consulting.title")}
         description={t("sections.consulting.description")}
         className="bg-gradient-to-r from-purple-500/10 to-transparent"
@@ -198,6 +199,7 @@ export default async function EducationPage({ params }: Props) {
 }
 
 type SectionProps = {
+  id?: string;
   title: string;
   description: string;
   className?: string;
@@ -206,6 +208,7 @@ type SectionProps = {
 };
 
 function Section({
+  id,
   title,
   description,
   className,
@@ -214,7 +217,7 @@ function Section({
 }: SectionProps) {
   const Icon = icon;
   return (
-    <section className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
+    <section id={id} className={cn("px-4 py-24 sm:px-6 lg:px-8", className)}>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center gap-12">
         <div className="flex flex-col items-center justify-center gap-4">
           <div className="flex items-center justify-center gap-3">
