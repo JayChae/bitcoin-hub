@@ -24,8 +24,7 @@ async function Footer() {
         </Link>
 
         <p className="text-center">
-          © {new Date().getFullYear()} Bitcoin Education Hub. Empowering
-          through knowledge.
+          © {new Date().getFullYear()} Bitomun. Empowering through knowledge.
         </p>
 
         <Link
