@@ -34,7 +34,6 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-rose-500/40 group-hover:via-orange-500/40 group-hover:to-amber-500/40",
       borderColor: "hover:border-orange-500/50",
-      size: "large",
     },
     {
       key: "europe",
@@ -45,7 +44,6 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-blue-500/40 group-hover:via-indigo-500/40 group-hover:to-violet-500/40",
       borderColor: "hover:border-blue-500/50",
-      size: "medium",
     },
     {
       key: "africa",
@@ -56,7 +54,6 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-amber-500/40 group-hover:via-yellow-500/40 group-hover:to-lime-500/40",
       borderColor: "hover:border-yellow-500/50",
-      size: "medium",
     },
     {
       key: "northAmerica",
@@ -67,7 +64,6 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-emerald-500/40 group-hover:via-teal-500/40 group-hover:to-cyan-500/40",
       borderColor: "hover:border-emerald-500/50",
-      size: "large",
     },
     {
       key: "southAmerica",
@@ -78,7 +74,6 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-green-500/40 group-hover:via-emerald-500/40 group-hover:to-teal-500/40",
       borderColor: "hover:border-green-500/50",
-      size: "small",
     },
     {
       key: "oceania",
@@ -89,7 +84,6 @@ export default async function GlobalPage({ params }: Props) {
       hoverGradient:
         "group-hover:from-cyan-500/40 group-hover:via-sky-500/40 group-hover:to-blue-500/40",
       borderColor: "hover:border-cyan-500/50",
-      size: "small",
     },
   ];
 
@@ -108,37 +102,11 @@ export default async function GlobalPage({ params }: Props) {
 
       {/* Continents Grid */}
       <section className="px-4 pb-24 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-            {/* Asia - Large */}
-            <ContinentCard
-              continent={continents[0]}
-              className="md:col-span-2 lg:row-span-2"
-            />
-
-            {/* Europe */}
-            <ContinentCard
-              continent={continents[1]}
-              className="lg:col-span-2"
-            />
-
-            {/* Africa */}
-            <ContinentCard
-              continent={continents[2]}
-              className="lg:col-span-2"
-            />
-
-            {/* North America - Large */}
-            <ContinentCard
-              continent={continents[3]}
-              className="md:col-span-2 lg:row-span-2"
-            />
-
-            {/* South America */}
-            <ContinentCard continent={continents[4]} />
-
-            {/* Oceania */}
-            <ContinentCard continent={continents[5]} />
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {continents.map((continent) => (
+              <ContinentCard key={continent.key} continent={continent} />
+            ))}
           </div>
         </div>
       </section>
@@ -154,25 +122,20 @@ type ContinentData = {
   gradient: string;
   hoverGradient: string;
   borderColor: string;
-  size: "small" | "medium" | "large";
 };
 
 type ContinentCardProps = {
   continent: ContinentData;
-  className?: string;
 };
 
-function ContinentCard({ continent, className }: ContinentCardProps) {
-  const isLarge = continent.size === "large";
-
+function ContinentCard({ continent }: ContinentCardProps) {
   return (
-    <Link href={continent.href} className={cn("group", className)}>
+    <Link href={continent.href} className="group">
       <div
         className={cn(
-          "border-border bg-card/50 relative h-full min-h-[180px] overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-500",
+          "border-border bg-card/50 relative h-full min-h-[200px] overflow-hidden rounded-2xl border backdrop-blur-sm transition-all duration-500",
           "hover:scale-[1.02] hover:shadow-xl",
           continent.borderColor,
-          isLarge && "min-h-[280px] md:min-h-[380px]",
         )}
       >
         {/* Gradient background */}
@@ -186,20 +149,10 @@ function ContinentCard({ continent, className }: ContinentCardProps) {
 
         {/* Content */}
         <div className="relative flex h-full flex-col justify-end p-6">
-          <h2
-            className={cn(
-              "mb-2 font-bold transition-transform duration-300 group-hover:translate-x-1",
-              isLarge ? "text-2xl md:text-3xl" : "text-xl md:text-2xl",
-            )}
-          >
+          <h2 className="mb-2 text-xl font-bold transition-transform duration-300 group-hover:translate-x-1 md:text-2xl">
             {continent.title}
           </h2>
-          <p
-            className={cn(
-              "text-muted-foreground line-clamp-2 transition-opacity duration-300 group-hover:opacity-80",
-              isLarge ? "text-sm md:text-base" : "text-xs md:text-sm",
-            )}
-          >
+          <p className="text-muted-foreground line-clamp-2 text-sm transition-opacity duration-300 group-hover:opacity-80">
             {continent.description}
           </p>
 
